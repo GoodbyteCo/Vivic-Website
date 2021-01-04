@@ -1,7 +1,8 @@
 <header id=nav>
     <a href="/about.html" class="link">about</a>
-    <a id="logo-link" href="/index.html">
-        <svg xmlns="http://www.w3.org/2000/svg" width="302.719" height="116.926" viewBox="0 0 302.719 116.926">
+    <a id="logo-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="302.719" height="116.926" viewBox="0 0 302.719 116.926"
+            onclick="this.classList.toggle('fade')">
             <g id="Vivic-Logo" transform="translate(-3.631 -1.532)">
                 <g id="Logo">
                     <path id="Path_25" data-name="Path 25"
@@ -14,17 +15,17 @@
                         fill="#f55a8a" />
                 </g>
                 <g id="Vivic">
-                    <path id="Path_28" data-name="Path 28"
+                    <path id="logo-v" data-name="Path 28"
                         d="M55.14,16.57H65.4l7.65,22.89,7.72-22.89H90.84L77.39,51h-8.8Z" fill="#fff" />
-                    <path id="Path_29" data-name="Path 29" d="M95.51,16.57h9.69V51H95.51Z" fill="#fff" />
-                    <path id="Path_30" data-name="Path 30"
+                    <path id="logo-i" data-name="Path 29" d="M95.51,16.57h9.69V51H95.51Z" fill="#fff" />
+                    <path id="logo-2-v" data-name="Path 30"
                         d="M109.77,16.57H120l7.65,22.89,7.72-22.89h10.07L132,51h-8.8Z" fill="#fff" />
-                    <path id="Path_31" data-name="Path 31" d="M150.14,16.57h9.69V51h-9.69Z" fill="#fff" />
-                    <path id="Path_32" data-name="Path 32"
+                    <path id="logo-2-i" data-name="Path 31" d="M150.14,16.57h9.69V51h-9.69Z" fill="#fff" />
+                    <path id="logo-c" data-name="Path 32"
                         d="M166.27,33.85v-.13a17.54,17.54,0,0,1,17.91-17.78c6.44,0,10.46,2.16,13.65,5.74l-5.93,6.37c-2.17-2.29-4.34-3.76-7.78-3.76-4.85,0-8.29,4.27-8.29,9.31v.12c0,5.23,3.38,9.44,8.67,9.44,3.25,0,5.48-1.4,7.84-3.63L198,45.26a17.223,17.223,0,0,1-14,6.25,17.44,17.44,0,0,1-17.73-17.66Z"
                         fill="#fff" />
                 </g>
-                <g id="Reseach">
+                <g id="Research">
                     <path id="Path_33" data-name="Path 33"
                         d="M81.35,69.54c-7.52,0-14.09,5.67-14.09,16.26V99.42H64.14V65.94h3.12v9.91c2.55-5.8,8-10,14.41-9.75v3.44Z"
                         fill="#fff" />
@@ -54,4 +55,60 @@
         </svg>
     </a>
     <a href="/contact" class="link">contact</a>
+
+    <style>
+        .fade #Research {
+            display: none;
+        }
+
+        .fade #Vivic {
+            transform: translateY(16px) scale(1.3) translateX(-11px)
+        }
+
+        #Vivic {
+            transition: transform 0.9s ease;
+        }
+
+        .fade #logo-i {
+            opacity: 0;
+            transition-delay: 0.45s;
+        }
+
+        .fade #logo-2-v {
+            opacity: 0;
+            transition-delay: 0.3s;
+
+        }
+
+        .fade #logo-2-i {
+            opacity: 0;
+            transition-delay: 0.15s;
+        }
+
+        .fade #logo-c {
+            opacity: 0;
+            transition-delay: 0s;
+        }
+
+        #logo-c {
+            transition: opacity 0.15s ease;
+            transition-delay: 0.45s;
+        }
+
+        #logo-2-i {
+            transition: opacity 0.15s ease;
+            transition-delay: 0.3s;
+        }
+
+        #logo-2-v {
+            transition: opacity 0.15s ease;
+            transition-delay: 0.15s;
+        }
+
+        #logo-i {
+            transition: opacity 0.15s ease;
+            transition-delay: 0s;
+        }
+    </style>
+
 </header>
