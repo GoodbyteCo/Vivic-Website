@@ -92,7 +92,7 @@ svg {
 
 }
 
-#contact{
+#contact {
     width: 50%;
     margin: auto;
 }
@@ -115,7 +115,7 @@ h1 {
     letter-spacing: 4px;
 }
 
-#title-contact{
+#title-contact {
     text-align: center;
 }
 
@@ -312,4 +312,38 @@ p.photo-left {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 3;
+}
+
+#loading {
+	width: 50px;
+	height: 50px;
+	background: var(--white);
+	margin: auto;
+	
+	box-shadow: 0px 0px 0 0px var(--secondary), 0px 0px 0 0px var(--tertiary);
+	animation: loading-animation 1s ease infinite;
+	animation-direction: alternate;
+}
+
+#loading-container {
+	position: absolute;
+	top: 200px;
+	width: 100%;
+	z-index: -99;
+	animation: flip 2s steps(1) infinite;
+}
+
+@keyframes loading-animation
+{
+	to { 
+		box-shadow: 20px -20px 0 20px var(--secondary), -20px 20px 0 20px var(--tertiary);
+		transform: scale(0.7);
+	}
+}
+
+@keyframes flip
+{
+	to {
+		transform: rotate(180deg);
+	}
 }
