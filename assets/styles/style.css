@@ -327,10 +327,11 @@ p.photo-left {
 
 #loading-container {
 	position: absolute;
-	top: 200px;
+	top: 400px;
 	width: 100%;
 	z-index: -99;
-	animation: flip 2s steps(1) infinite;
+	animation: flip 4s steps(2) infinite;
+	animation-delay: 3.9s;
 }
 
 @keyframes loading-animation
@@ -344,6 +345,6 @@ p.photo-left {
 @keyframes flip
 {
 	to {
-		transform: rotate(180deg);
+		transform: rotate(360deg);
 	}
 }
