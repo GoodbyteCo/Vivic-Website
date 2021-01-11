@@ -1,0 +1,31 @@
+---
+layout: main
+---
+<div id="contact">
+    <h1 id="title-contact">
+        Contact Us
+    </h1>
+    <form name="contact" method="POST" data-netlify="true">
+        <div id="name-email">
+            <div class="form-block">
+                <label for="name">Name: </label>
+                <input id="name" type="text" name="name" class="userfield" />
+            </div>
+            <div class="form-block">
+                <label for="email">Email: </label>
+                <input id="email" type="email" name="email" class="userfield" />
+            </div>
+        </div>
+        <div>
+            <label>Phone Number: </label>
+            <input type="tel" name="phone" class="userfield" />
+        </div>
+        <div id="textmessage">
+            <label for="message">Message: </label>
+            <textarea id="message" name="message" class="userfield"></textarea>
+        </div>
+        <div>
+            <button type="submit">Contact Us</button>
+        </div>
+    </form>
+</div>
