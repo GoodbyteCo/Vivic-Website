@@ -1,8 +1,7 @@
 <header id=nav>
     <a href="/about.html" class="link">about</a>
     <a id="logo-link">
-        <svg xmlns="http://www.w3.org/2000/svg" width="302.719" height="116.926" viewBox="0 0 302.719 116.926"
-            onclick="this.classList.toggle('fade')">
+        <svg xmlns="http://www.w3.org/2000/svg" width="302.719" height="116.926" viewBox="0 0 302.719 116.926">
             <g id="Vivic-Logo" transform="translate(-3.631 -1.532)">
                 <g id="Logo">
                     <path id="Path_25" data-name="Path 25"
@@ -57,8 +56,19 @@
     <a href="/contact" class="link">contact</a>
 
     <style>
+        svg {
+            --time: 0.1s;
+            --delay-time: 0.13s;
+        }
+
         .fade #Research {
-            display: none;
+            opacity: 0;
+            transition: opacity var(--time);
+        }
+
+        #Research {
+            opacity: 1;
+            transition: opacity var(--time);
         }
 
         .fade #Vivic {
@@ -71,44 +81,68 @@
 
         .fade #logo-i {
             opacity: 0;
-            transition-delay: 0.45s;
+            transition-delay: calc((var(--delay-time)*3) + var(--time));
         }
 
         .fade #logo-2-v {
             opacity: 0;
-            transition-delay: 0.3s;
+            transition-delay: calc((var(--delay-time)*2) + var(--time));
 
         }
 
         .fade #logo-2-i {
             opacity: 0;
-            transition-delay: 0.15s;
+            transition-delay: calc(var(--delay-time) + var(--time));
         }
 
         .fade #logo-c {
             opacity: 0;
-            transition-delay: 0s;
+            transition-delay: calc((var(--delay-time)*0) + var(--time));
         }
 
         #logo-c {
-            transition: opacity 0.15s ease;
-            transition-delay: 0.45s;
+            transition: opacity var(--delay-time) ease;
+            transition-delay: calc((var(--delay-time)*3) + var(--time));
         }
 
         #logo-2-i {
-            transition: opacity 0.15s ease;
-            transition-delay: 0.3s;
+            transition: opacity var(--delay-time) ease;
+            transition-delay: calc((var(--delay-time)*2) + var(--time));
         }
 
         #logo-2-v {
-            transition: opacity 0.15s ease;
-            transition-delay: 0.15s;
+            transition: opacity var(--delay-time) ease;
+            transition-delay: calc(var(--delay-time) + var(--time));
         }
 
         #logo-i {
-            transition: opacity 0.15s ease;
-            transition-delay: 0s;
+            transition: opacity var(--delay-time) ease;
+            transition-delay: calc((var(--delay-time)*0) + var(--time));
         }
     </style>
+
+    <script>
+        let scrollpos = window.scrollY
+        const header = document.querySelector("#nav")
+        const header_height = header.offsetHeight / 2;
+
+        console.log(header_height)
+
+        const add_class_one_scroll = () => header.classList.add("fade")
+        const remove_class_on_scroll = () => header.classList.remove("fade")
+
+        window.addEventListener('scroll', function () {
+            scrollpos = window.scrollY;
+
+            if (scrollpos >= header_height) {
+                add_class_one_scroll()
+            }
+            else {
+                remove_class_on_scroll()
+            }
+
+            console.log(scrollpos)
+        })
+    </script>
 
 </header>
