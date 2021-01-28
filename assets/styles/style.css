@@ -68,9 +68,12 @@ header {
     text-align: center;
 }
 
+
 a.cta {
 	display: block;
 	padding: 15px 20px;
+    margin-left: 81%;
+    max-width: 130px;
 
 	text-decoration: none;
 	text-transform: uppercase;
@@ -88,14 +91,30 @@ a.cta:hover, a.cta:focus {
     transform: scale(0.95);
 }
 
+
+a.desc-cta{
+    margin-left: 0;
+    margin-top: 20px;
+}
+
+
+
 svg {
     width: 85%;
 }
 
+main {
+    font-family: main;
+}
+
 #maincontent {
     font-family: main;
-    padding: 150px 0 0 0;
+    margin: 250px 0 0;
 
+}
+
+#maincontent.space {
+    /* margin-top: 450px; */
 }
 
 #hero {
@@ -140,6 +159,9 @@ h1 {
 }
 
 #nav {
+    /* position: fixed; */
+    /* top: 0; */
+    width: calc(100% - 80px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -288,8 +310,8 @@ label {
 
 #photos img{
 
-    /* -webkit-filter: url(#monochrome); */
-    /* filter:  url(#monochrome); */
+    -webkit-filter: url(#monochrome);
+    filter:  url(#monochrome);
     width: 100%;
     max-width: 300px;
 
@@ -303,12 +325,14 @@ img.photo-left{
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
+    clip-path: polygon(13% 0, 100% 0, 100% 100%, 0 100%, 0 30%);
 }
 
 img.photo-right{
     grid-column-start: 4;
     grid-column-end: 5;
     grid-row-start: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 85% 100%, 0 100%);
 }
 
 h3.photo-right {
