@@ -20,18 +20,15 @@
 <script>
     let scrollpos = window.scrollY
     const header = document.querySelector("#nav")
-    const maincontent = document.getElementById("maincontent")
-    const header_height = 20;
+    const header_height = 70;
 
     console.log(header_height)
 
     const add_class_one_scroll = () => {
         header.classList.add("fade");
-        maincontent.classList.add("space");
     }
     const remove_class_on_scroll = () => {
         header.classList.remove("fade");
-        maincontent.classList.remove("space");
     }
 
     window.addEventListener('scroll', function () {

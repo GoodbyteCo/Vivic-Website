@@ -56,15 +56,22 @@
     <a href="/contact" class="link" id="contact-link">contact</a>
 
     <style>
-        /* .fade {
-            margin-top: 10px
-        } */
+        #nav {
+            position: fixed;
+            top: 0
+        }
 
-        /* 
-        .sticky svg {
+        .fade#nav {
+            padding-top: 10px;
+            /* background: rgba(255, 255, 255, 0.2); */
+            backdrop-filter: blur(7px);
+            -webkit-backdrop-filter: blur(7px);
+        }
 
-            transform: scale(.75);
-        } */
+        .fade svg {
+            transition: scale 0.2s ease;
+            scale: 0.9
+        }
 
         svg {
             --time: 0.15s;
@@ -233,7 +240,7 @@
         }
 
         .fade #about {
-            transform: translateX(71px);
+            transform: translateX(95px);
             transition-delay: var(--time);
             transition: transform 0.5s ease;
         }
@@ -243,7 +250,7 @@
         }
 
         .fade #contact-link {
-            transform: translateX(-104px);
+            transform: translateX(-133px);
             transition-delay: var(--time);
             transition: transform 0.5s ease;
         }
