@@ -63,8 +63,6 @@ body {
 }
 
 header {
-    padding: 3rem 0;
-    margin-left: 50px;
     text-align: center;
 }
 
@@ -72,8 +70,8 @@ header {
 a.cta {
 	display: block;
 	padding: 15px 20px;
-    margin-left: 81%;
     max-width: 130px;
+    margin: 0 auto;
 
 	text-decoration: none;
 	text-transform: uppercase;
@@ -137,12 +135,17 @@ main {
 }
 
 #about {
-
     max-width: 700px;
     margin: 0 auto 75px auto;
     padding: 20px;
     /* line-height: 1.2rem; */
     font-weight: 100;
+}
+
+#prioities {
+    max-width: 1500px;
+    margin: 0 auto 75px auto;
+    
 }
 
 
@@ -154,14 +157,81 @@ h1 {
     letter-spacing: 4px;
 }
 
+
+#pillars {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 5rem;
+}
+
+.pillar {
+    margin: 0 50px;
+    max-width: 400px;
+}
+
+
+
+.pillar p {
+    padding: .5em 0 .5em 35px;
+    text-align:left;
+}
+
+#pillar2 {
+    margin-top: 50px
+}
+
+#pillar3 {
+    margin-top: 100px
+}
+
+.pillar-box {
+    text-align: center;
+    padding: 10px 20px;
+    color: black;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 7% 100%);
+    font-weight: bold;
+    border-radius: 2px;
+    
+}
+
+.pillar-box#pink {
+    background-color: var(--secondary);
+}
+
+.pillar-box#white { 
+    background-color: var(--white);
+}
+
+.pillar-box#blue {
+    background-color: var(--tertiary);
+}
+
+@media screen and (max-width: 850px){
+    .pillar {
+        max-width: unset;
+        margin-bottom: 50px;
+    }
+    #pillars {
+        display: unset;
+    }
+    #pillar3{
+        margin-top: 50px;
+    }
+    #pillar1{
+        margin-top: 50px;
+    }
+
+} 
+
 #title-contact {
     text-align: center;
 }
 
 #nav {
-    /* position: fixed; */
-    /* top: 0; */
-    width: calc(100% - 80px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -197,6 +267,12 @@ h1 {
 
 #logo-link {
     width: 15%;
+}
+
+@media only screen and (max-width: 1150px) {
+    #logo-link {
+        width: 25%;
+    }
 }
 
 #form {
@@ -302,6 +378,13 @@ label {
     grid-template-rows: auto;
     display: grid;
     text-align: left;
+}
+
+@media screen and (max-width: 900px) {
+    #photos {
+        grid-template-columns: auto 220px 40px 220px auto;
+        grid-template-rows: auto;
+    }
 }
 
 #photos p {

@@ -17,7 +17,8 @@ layout: main
         <a id="circleblue"></a>
     </div> -->
 
-    <svg xmlns="http://www.w3.org/2000/svg" width="488.001" height="307" viewBox="0 0 488.001 307">
+    <svg xmlns="http://www.w3.org/2000/svg" width="488.001" height="307" viewBox="0 0 488.001 307"
+        preserveAspectRatio="xMidYMid meet">
         <style>
             .name {
                 font: bold 22px main;
@@ -36,20 +37,29 @@ layout: main
                     transform="translate(5871.852 181)" fill="none" />
             </a>
             <a id="Center" href="inezrobin">
-                <path
-                    d="M0,124.214A153.5,153.5,0,0,1,63.149,0,153.5,153.5,0,0,1,126.3,124.214,153.5,153.5,0,0,1,63.149,248.428,153.5,153.5,0,0,1,0,124.214Z"
-                    transform="translate(776.134 283.501)" fill="#fff" />
+                <g transform="translate(776.134 283.501)">
+                    <path
+                        d="M0,124.214A153.5,153.5,0,0,1,63.149,0,153.5,153.5,0,0,1,126.3,124.214,153.5,153.5,0,0,1,63.149,248.428,153.5,153.5,0,0,1,0,124.214Z"
+                        fill="none" />
+                </g>
             </a>
             <a id="PinkCircle" href="inez">
                 <g transform="translate(748.783 407.715)">
                     <circle cx="0" cy="0" r="153.5" fill="#f55a8a" />
-                    <text x="0" y="0" text-anchor="middle" class="name" dy=".3em">Inez</text>
+                    <text x="-35" y="0" text-anchor="middle" class="name" dy=".3em">Inez</text>
+                    <!-- <g id="Over">
+                        <text x="-35" y="0" text-anchor="middle" class="name" dy=".3em">Inez</text>
+                        <text x="-35" y="0" text-anchor="middle" class="name" dy=".3em">&</text>
+                        <text x="-35" y="0" text-anchor="middle" class="name" dy=".3em">Robin</text>
+                    </g> -->
+
                 </g>
             </a>
+
             <a id="BlueCircle" href="robin">
                 <g transform="translate(929.783 407.715)">
                     <circle cx="0" cy="0" r="153.5" fill="#7ee6e6" />
-                    <text x="0" y="0" text-anchor="middle" class="name">Robin</text>
+                    <text x="35" y="0" text-anchor="middle" class="name" dy=".3em">Robin</text>
                 </g>
             </a>
         </g>
@@ -62,6 +72,7 @@ layout: main
 <style>
     svg {
         pointer-events: none;
+        overflow: visible;
     }
 
     #Center {
@@ -71,8 +82,23 @@ layout: main
         /* position: relative; */
     }
 
+    #BlueCircle text {
+        fill: black;
+        transition: fill 1s;
+    }
+
+    #Center:hover~#BlueCircle text {
+        fill: #f55a8a;
+        /* opacity: 0; */
+        /* transition: opacity .5s; */
+    }
+
     #VivicVenn {
         isolation: isolate;
+    }
+
+    #Test {
+        mix-blend-mode: darken;
     }
 
     #PinkCircle {
@@ -129,7 +155,6 @@ layout: main
         transition: transform .5s ease;
 
     }
-
 
 
     #box {
@@ -209,7 +234,7 @@ layout: main
 
     main {
         margin-left: 50px;
-        padding-top: 100px;
+        padding-top: 150px;
     }
 </style>
 
