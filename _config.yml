@@ -1,5 +1,8 @@
 name: Vivic Research
 
-description: Sitfor Vivic Research
+description: Site for Vivic Research
 
 url: "https://vivic.ca"
+
+exclude: 
+  - contact-temp.html
