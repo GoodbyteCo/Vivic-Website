@@ -16,7 +16,43 @@
     <main>
         {{ content }}
     </main>
+    <!-- <div class="v-container">
+        <div class="triangle" id="bluetriangle">
+
+        </div>
+        <div class="triangle" id="pinktriangle">
+
+        </div>
+    </div> -->
 </body>
+
+<style>
+    .v-container {
+        display: flex;
+        isolation: isolate;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    .triangle {
+        height: 140px;
+        width: 210px;
+        clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+        mix-blend-mode: color-dodge;
+    }
+
+    #pinktriangle {
+        position: relative;
+        left: -100px;
+        background-color: var(--secondary);
+    }
+
+    #bluetriangle {
+        background-color: var(--tertiary);
+    }
+</style>
+
 <script>
     let scrollpos = window.scrollY
     const header = document.querySelector("#nav")
