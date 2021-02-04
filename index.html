@@ -50,7 +50,7 @@ layout: main
                 <div class="pillar-box" id="blue">
                     Data Science
                 </div>
-                <p id="blue">
+                <p>
                     We develop processes for procuring, organizing, and analyzing information effectively and
                     efficiently. We also provide our clients with analysis they can easily replicate such as annual
                     factsheets or reports.
@@ -59,16 +59,141 @@ layout: main
             </div>
 
         </div>
-        <a href="contact/index.html" class="cta">Get in Touch</a>
+        <h2 id="work-title">Our Work</h2>
+        <div id="our-work">
+            <div id="work-0" class="work work-selected">
+                <h3>
+                    Ottawa Coalition for a People’s Budget
+                </h3>
+                <p>
+                    Summery Text... as cities around the world grapple with crises due to changing climate, Ottawa is at
+                    a crossroads to make historical decisions to address the risk of approaching environmental
+                    catastrophe. Moreover, the pandemic has exposed the deep-rooted gender... <a
+                        href="https://mcusercontent.com/d74005846bef8cd39c3346d23/files/340904a2-cc49-46f3-bc85-2d2d456be6a3/Alternative_Budget_Report_FINAL_NOV_02_2020.pdf"
+                        target="_blank">
+                        Read More</a>
+                </p>
+            </div>
+            <div id="work-1" class="work work-unselected">
+                <h3>
+                    Test
+                </h3>
+                <p>
+                    Summery Text... as cities around the world grapple with crises due to changing climate, Ottawa is at
+                    a crossroads to make historical decisions to address the risk of approaching environmental
+                    catastrophe. Moreover, the pandemic has exposed the deep-rooted gender... <a href="/"> Read More</a>
+                </p>
+            </div>
 
+        </div>
     </div>
+    <a href="contact/index.html" id="bottom-cta" class="cta">Get in Touch</a>
 
 
 </div>
+
+<script>
+    var current = 0;
+    var total = document.getElementsByClassName("work").length;
+
+    console.log(total)
+
+    function changeWork() {
+        var cur = document.getElementById("work-" + current);
+        cur.className = "work work-unselected";
+        current = (current + 1) % total;
+        var next = document.getElementById("work-" + current);
+        next.className = "work work-selected";
+    }
+
+    var repeat = setInterval(changeWork, 8000);
+
+</script>
 
 <style>
     h2 {
         text-align: center;
         font-size: 30pt;
+    }
+
+    #work-title {
+        margin-top: 50px;
+    }
+
+    #our-work {
+        max-width: 800px;
+        width: 95%;
+        height: 200px;
+        margin: 10px auto 0px auto;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .work h3 {
+        text-align: center;
+        font-size: 22pt;
+    }
+
+    .work p {
+        line-height: 27px;
+    }
+
+    .work {
+        position: absolute;
+        top: 0;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+    }
+
+    .work-unselected {
+        animation-name: quote-out;
+        animation-duration: 2s;
+        animation-timing-function: cubic-bezier(0.48, -0.04, 0.31, 0.99);
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .work-selected {
+        animation-name: quote-in;
+        animation-duration: 2.5s;
+        animation-timing-function: cubic-bezier(0.48, -0.04, 0.31, 0.99);
+    }
+
+    #bottom-cta {
+        margin-bottom: 6em;
+    }
+
+    @keyframes quote-in {
+        0% {
+            opacity: 0;
+            transform: translateX(40px);
+        }
+
+        90% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+
+    @keyframes quote-out {
+        0% {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+
+        90% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 0;
+            transform: translateX(-40px);
+        }
     }
 </style>

@@ -240,7 +240,7 @@ h1 {
 }
 
 
-@media screen and (max-width: 850px){
+@media screen and (max-width: 1050px){
     .pillar {
         max-width: unset;
         margin-bottom: 50px;
@@ -967,12 +967,6 @@ svg {
     transition: fill 1s;
 }
 
-#Center:hover~#BlueCircle text {
-    fill: #f55a8a;
-    /* opacity: 0; */
-    /* transition: opacity .5s; */
-}
-
 #VivicVenn {
     isolation: isolate;
 }
@@ -983,7 +977,6 @@ svg {
 
 #PinkCircle {
     mix-blend-mode: color-dodge;
-    /* transform: translate(595.283px, 254.215px); */
     -webkit-transition: -webkit-transform .5s ease;
     transition: -webkit-transform .5s ease;
     -o-transition: transform .5s ease;
@@ -991,6 +984,33 @@ svg {
     transition: transform .5s ease, -webkit-transform .5s ease;
     pointer-events: none;
 }
+
+#Center~#PinkCircle .fadein {
+    fill-opacity: 0;
+
+}
+
+#Center:hover~#PinkCircle .fadein {
+    fill-opacity: 1;
+    transition-delay: .5s;
+    transition: fill-opacity .2s ease;
+}
+
+#Center:hover~#PinkCircle #text-group {
+    transform: translateX(-9.5px);
+}
+
+#Center:hover~#BlueCircle text {
+    fill-opacity: 0;
+    transition: fill-opacity .1s;
+}
+
+#Center~#BlueCircle text {
+    fill-opacity: 1;
+    transition-delay: 1s;
+    transition: fill-opacity .9s;
+}
+
 
 #BlueCircleClick {
     pointer-events: all;
