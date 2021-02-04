@@ -6,12 +6,6 @@
 </head>
 
 <body>
-    <svg class="defs-only">
-        <filter id="monochrome" color-interpolation-filters="sRGB" x="0" y="0" height="100%" width="100%">
-            <feColorMatrix result="original" id="svgcolormatrix" type="matrix"
-                values="0.8 0 0 0 -0.1 0 0.5 0 0 0 0 0 1 0 0 0 0 0 1 -0.04"></feColorMatrix>
-        </filter>
-    </svg>
     {% include nav.html %}
     <main>
         {{ content }}

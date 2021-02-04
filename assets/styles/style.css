@@ -113,7 +113,7 @@ a.desc-cta{
     margin-top: 20px;
 }
 
-svg {
+#mainlogo {
     width: 85%;
 }
 
@@ -336,7 +336,6 @@ button {
     border-radius: 4px;
     outline: none;
     cursor: pointer;
-    /* letter-spacing: .04em; */
 }
 
 button:hover{
@@ -370,7 +369,6 @@ button:focus-visible{
 
 .form-block{
     width: 48%;
-    /* margin: auto; */
     display: inline-block;
 }
 
@@ -432,6 +430,8 @@ label {
     text-align: left;
 }
 
+
+
 #photos p {
     font-size: 13pt;
     line-height: 25px;
@@ -462,34 +462,7 @@ label {
     -ms-grid-column: 5;
 }
 
-@media screen and (max-width: 900px) {
-    #photos {
-        -ms-grid-columns: auto 250px 40px 250px auto;
-        grid-template-columns: auto 250px 40px 250px auto;
-        -ms-grid-rows: auto;
-        grid-template-rows: auto;
-    }
-    #photos > *:nth-child(1) {
-        -ms-grid-row: 1;
-        -ms-grid-column: 1;
-    }
-    #photos > *:nth-child(2) {
-        -ms-grid-row: 1;
-        -ms-grid-column: 2;
-    }
-    #photos > *:nth-child(3) {
-        -ms-grid-row: 1;
-        -ms-grid-column: 3;
-    }
-    #photos > *:nth-child(4) {
-        -ms-grid-row: 1;
-        -ms-grid-column: 4;
-    }
-    #photos > *:nth-child(5) {
-        -ms-grid-row: 1;
-        -ms-grid-column: 5;
-    }
-}
+
 
 #photos p {
     font-weight: 100;
@@ -564,6 +537,68 @@ p.photo-left {
     grid-column-end: 3;
     -ms-grid-row: 3;
         grid-row-start: 3;
+}
+
+@media screen and (max-width: 900px) {
+    #photos {
+        -ms-grid-columns: auto 250px 40px 250px auto;
+        grid-template-columns: auto 250px 40px 250px auto;
+        -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    }
+    #photos > *:nth-child(1) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+    }
+    #photos > *:nth-child(2) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 2;
+    }
+    #photos > *:nth-child(3) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 3;
+    }
+    #photos > *:nth-child(4) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 4;
+    }
+    #photos > *:nth-child(5) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 5;
+    }
+}
+
+@media screen and (max-width: 520px) 
+{
+    #photos {
+        grid-template-columns: 1fr 5fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    img.photo-right
+    {
+        padding-top: 50px;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 7;
+        grid-row-end: 8;
+    }
+
+    h3.photo-right
+    {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 8;
+        grid-row-end: 9;
+    }
+
+    p.photo-right
+    {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 9;
+        grid-row-end: 10;
+    }
 }
 
 #loading {
@@ -905,7 +940,7 @@ svg {
     transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
-.fade #about {
+.fade #about-link {
     -webkit-transform: translateX(95px);
             -ms-transform: translateX(95px);
         transform: translateX(95px);
@@ -919,7 +954,7 @@ svg {
     transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
-#about {
+#about-link {
     -webkit-transition: -webkit-transform 0.5s ease;
     transition: -webkit-transform 0.5s ease;
     -o-transition: transform 0.5s ease;
@@ -939,6 +974,99 @@ svg {
     -o-transition: transform 0.5s ease;
     transition: transform 0.5s ease;
     transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+@media screen and (max-width: 520px) {
+
+    .fade #contact-link
+    {
+        transform: translateX(-45px);
+    } 
+
+    #contact-link
+    {
+        transform: translateX(-45px);
+    } 
+
+    .fade #about-link
+    {
+        transform: translateX(48px);
+    }
+
+    #about-link
+    {
+        transform: translateX(48px);
+    }
+
+    .fade svg {
+        transform: unset;
+    }
+
+    .fade #Vivic-Logo {
+        transform: translateX(-65px)
+    }
+
+    #logo-i {
+        opacity: 0;
+    }
+    
+    #logo-2-v {
+        opacity: 0;
+    
+    }
+    
+    #logo-2-i {
+        opacity: 0;
+    }
+    
+    #logo-c {
+        opacity: 0;
+    }
+
+    #logo-h {
+        opacity: 0;
+    }
+    
+    #logo-3-c {
+        opacity: 0;
+    }
+    
+    #logo-2-r {
+        opacity: 0;
+    }
+    
+    #logo-a {
+        opacity: 0;
+    }
+    
+    #logo-2-e {
+        opacity: 0;
+    }
+    
+    #logo-s {
+        opacity: 0;
+    }
+    
+    #logo-e {
+        opacity: 0;
+    }
+    
+    #logo-r {
+        opacity: 0;
+    }
+    #Vivic {
+        -webkit-transform: translateY(16px) scale(1.3) translateX(-11px);
+        -ms-transform: translateY(16px) scale(1.3) translateX(-11px);
+    transform: translateY(16px) scale(1.3) translateX(-11px);
+    }
+
+    #Vivic-Logo {
+        transform: translateX(-80px);
+    }
+    #mainlogo {
+        scale: .6;
+        width: unset;
+    }
 }
 
 #contact-link {
