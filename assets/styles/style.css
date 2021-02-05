@@ -115,6 +115,7 @@ a.desc-cta{
 
 #mainlogo {
     width: 85%;
+    height: 85%;
 }
 
 main {
@@ -275,8 +276,9 @@ h1 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 10px;
+    padding: 30px 10px 5px 10px;
     z-index: 999;
+    transition: background 0.4s ease, padding-top 0.4s ease, box-shadow 0.4s ease;
 }
 
 #nav .link {
@@ -666,10 +668,11 @@ p.photo-left {
 .fade#nav { 
     -webkit-box-shadow: 2px 10px 30px 0px rgba(36, 26, 56, .5); 
             box-shadow: 2px 10px 30px 0px rgba(36, 26, 56, .5);
-    padding-top: 10px;
-    background: rgba(36, 26, 56, 0.5); 
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    padding-top: 12px;
+    background: rgba(45, 26, 75, 0.7); 
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    transition: padding-top 0.8s ease, background 0.4s ease, box-shadow 0.4s ease;
 }
 
 .fade svg {
