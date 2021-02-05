@@ -60,32 +60,44 @@ layout: main
 
         </div>
         <h2 id="work-title">Our Work</h2>
-        <div id="our-work">
-            <div id="work-0" class="work work-selected">
-                <h3>
-                    Ottawa Coalition for a People’s Budget
-                </h3>
-                <p>
-                    This Alternative Budget presents a progressive and ambitious vision for the City of Ottawa and its
-                    finances. The proposals put forward in this alternative budget require substantial funding. To fund
-                    them, we have reallocated millions of dollars from the police budget to other City programs, reduced
-                    spending on fossil fuel infrastructure, and implemented new taxes. <a
-                        href="https://mcusercontent.com/d74005846bef8cd39c3346d23/files/340904a2-cc49-46f3-bc85-2d2d456be6a3/Alternative_Budget_Report_FINAL_NOV_02_2020.pdf"
-                        target="_blank">
-                        Read More</a>
-                </p>
-            </div>
-            <div id="work-1" class="work work-unselected">
-                <h3>
-                    Test
-                </h3>
-                <p>
-                    Summery Text... as cities around the world grapple with crises due to changing climate, Ottawa is at
-                    a crossroads to make historical decisions to address the risk of approaching environmental
-                    catastrophe. Moreover, the pandemic has exposed the deep-rooted gender... <a href="/"> Read More</a>
-                </p>
-            </div>
+        <div id="button-continer">
+            <button onclick="changeWork(1)" id="left-btn" class="next-btn">&lsaquo;</button>
+            <div id="our-work">
 
+                <div id="work-0" class="work work-selected">
+                    <h3>
+                        Ottawa Coalition for a People’s Budget
+                    </h3>
+                    <p>
+                        This Alternative Budget presents a progressive and ambitious vision for the City of Ottawa and
+                        its
+                        finances. The proposals put forward in this alternative budget require substantial funding. To
+                        fund
+                        them, we have reallocated millions of dollars from the police budget to other City programs,
+                        reduced
+                        spending on fossil fuel infrastructure, and implemented new taxes. <a class="read-more"
+                            href="https://mcusercontent.com/d74005846bef8cd39c3346d23/files/340904a2-cc49-46f3-bc85-2d2d456be6a3/Alternative_Budget_Report_FINAL_NOV_02_2020.pdf"
+                            target="_blank">
+                            Read More</a>
+                    </p>
+                </div>
+                <div id="work-1" class="work work-unselected">
+                    <h3>
+                        Test
+                    </h3>
+                    <p>
+                        Summery Text... as cities around the world grapple with crises due to changing climate, Ottawa
+                        is at
+                        a crossroads to make historical decisions to address the risk of approaching environmental
+                        catastrophe. Moreover, the pandemic has exposed the deep-rooted gender... <a class="read-more"
+                            href="/"> Read
+                            More</a>
+                    </p>
+                </div>
+
+
+            </div>
+            <button onclick="changeWork(1)" id="right-btn" class="next-btn">&rsaquo;</button>
         </div>
     </div>
     <a href="contact/index.html" id="bottom-cta" class="cta">Get in Touch</a>
@@ -99,19 +111,63 @@ layout: main
 
     console.log(total)
 
-    function changeWork() {
+    function changeWork(change) {
         var cur = document.getElementById("work-" + current);
         cur.className = "work work-unselected";
-        current = (current + 1) % total;
+        current = (current + change) % total;
         var next = document.getElementById("work-" + current);
         next.className = "work work-selected";
     }
 
-    var repeat = setInterval(changeWork, 8000);
+    function moveFoward() {
+        changeWork(1)
+    }
+
+    var repeat = setInterval(moveFoward, 8000);
 
 </script>
 
 <style>
+    .read-more {
+        display: inline-block;
+        color: var(--secondary);
+        text-decoration: none;
+    }
+
+    .read-more::after {
+        content: '';
+        margin-top: -2.5px;
+        display: block;
+        width: 100%;
+        opacity: 1;
+        height: 2px;
+        background: var(--secondary);
+    }
+
+    #button-continer {
+        position: relative;
+    }
+
+    #left-btn {
+        position: absolute;
+        left: 280px;
+        bottom: 30%;
+    }
+
+    #right-btn {
+        position: absolute;
+        bottom: 30%;
+        right: 290px;
+    }
+
+    .next-btn {
+        background: none;
+        border: none;
+        color: var(--white);
+        font-size: 22pt;
+        cursor: pointer;
+    }
+
     h2 {
         text-align: center;
         font-size: 30pt;
