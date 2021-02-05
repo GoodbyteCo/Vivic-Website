@@ -603,8 +603,6 @@ label {
 }
 
 #photos img{
-    -webkit-filter: url(#monochrome);
-    filter:  url(#monochrome);
     width: 100%;
     max-width: 300px;
     z-index: -99;
