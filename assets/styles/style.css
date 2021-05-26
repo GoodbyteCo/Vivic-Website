@@ -184,12 +184,11 @@ h1 {
 .pillar {
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
-    margin: 0 50px;
+    margin: 0 25px;
     max-width: 400px;
     -webkit-clip-path: polygon(0 7%, 100% 0, 100% 93%, 0 100%);
     clip-path: polygon(0 7%, 100% 0, 100% 93%, 0 100%);
-    padding: 3rem;
-    /* padding-top: .8rem; */
+    padding: 2.5rem 2.8;
     min-height: 400px;
 }
 
