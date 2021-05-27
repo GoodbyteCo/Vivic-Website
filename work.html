@@ -35,7 +35,7 @@ layout: main
 
     #work-content {
         margin: 20px auto 100px auto;
-        width: 80%;
+        width: 100%;
         display: grid;
         justify-items: center;
         grid-template-columns: repeat(auto-fit, 500px);
@@ -58,12 +58,39 @@ layout: main
 
     .work-card h3 {
         text-align: center;
+        padding: 0 35px
     }
 
     .work-card p {
         font-weight: 100;
         font-size: 13pt;
         line-height: 25px;
+    }
+
+    @media screen and (max-width: 1310px) {
+        #work-content {
+            grid-template-columns: repeat(auto-fit, 350px);
+            column-gap: 30px;
+            row-gap: 30px;
+        }
+
+        .work-card {
+            min-height: 600px;
+        }
+
+
+    }
+
+    @media screen and (max-width: 920px) {
+        #work-content {
+            display: unset;
+        }
+
+        .work-card {
+            margin-bottom: 30px;
+            min-height: 400px;
+        }
+
     }
 
     @media screen and (max-width: 600px) {
@@ -74,7 +101,7 @@ layout: main
         }
 
         .work-card {
-            margin-bottom: 30px;
+            min-height: 350px;
         }
 
         #our-work-content {
