@@ -104,8 +104,9 @@ a.cta:focus {
 }
 
 a.desc-cta {
-    margin-left: 0;
-    margin-top: 50px;
+    width: 50%;
+    margin: 50px auto;
+    padding: 7px;
 }
 
 #mainlogo {
