@@ -11,13 +11,14 @@ layout: main
         <div class="work-card">
             <h3>{{ work.title }}</h3>
             <p>
-                {{ work.content | remove: '<p>' | remove: '</p>' }}<a class="read-more" href="{{ work.pdf }}"
-                    target="_blank">
+                {{ work.content | remove: '<p>' | remove: '</p>' }}<a class="read-more"
+                    href="/assets/PDFS/{{ work.pdf }}" target="_blank">
                     Read More</a>
             </p>
         </div>
         {% endfor %}
     </div>
+    <a href="/contact/index.html" id="bottom-cta" class="cta">Get in Touch</a>
 </div>
 
 <style>
