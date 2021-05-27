@@ -238,6 +238,15 @@ h1 {
     margin-top: 130px;
 }
 
+#work-title a {
+    text-align: center;
+    width: 15%;
+    margin: 0 auto;
+    display: block;
+    text-decoration: unset;
+    color: var(--white);
+}
+
 #our-work {
     max-width: 800px;
     width: 95%;
@@ -249,6 +258,10 @@ h1 {
 
 .about-link {
     color: rgba(246, 90, 138, 1.00);
+}
+
+.center-title {
+    text-align: center;
 }
 
 .work h3 {
@@ -411,10 +424,18 @@ h1 {
     }
 }
 
+@media screen and (max-width: 1290px) {
+    .pillar {
+        margin: 0 12px;
+    }
+
+}
 
 @media screen and (max-width: 1050px) {
     .pillar {
         max-width: unset;
+        margin: 50px 0;
+        padding: 2.5rem 1.2rem;
         margin-bottom: 50px;
     }
 
@@ -422,15 +443,9 @@ h1 {
         display: unset;
     }
 
-    #pillar3 {
-        margin-top: 50px;
-    }
-
-    #pillar1 {
-        margin-top: 50px;
-    }
-
 }
+
+
 
 #title-contact {
     text-align: center;
@@ -470,7 +485,7 @@ h1 {
     letter-spacing: 0.2em;
 }
 
-#nav .link::after {
+.link::after {
     content: '';
     margin-top: 0.3rem;
     display: block;
@@ -483,7 +498,7 @@ h1 {
     transition: width 0.3s;
 }
 
-#nav a:hover::after {
+a:hover::after {
     opacity: 1;
     width: 100%;
 }

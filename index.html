@@ -17,7 +17,7 @@ layout: main
         </p>
     </div>
     <div class="maincenter" id="prioities">
-        <h2>Our Priorities</h2>
+        <h2 class="center-title">Our Priorities</h2>
 
         <div id="pillars">
             <div class="pillar" id="pillar1">
@@ -59,7 +59,7 @@ layout: main
             </div>
 
         </div>
-        <h2 id="work-title">Our Work</h2>
+        <h2 id="work-title"><a class="link" href="/work">Our Work</a></h2>
         <div id="button-continer">
             <div id="our-work">
                 {% assign works = site.works | sort: "work" %}
@@ -83,7 +83,7 @@ layout: main
                 </div>
             </div>
         </div>
-        <a href="contact/index.html" id="bottom-cta" class="cta">Get in Touch</a>
+        <a href="/work" id="bottom-cta" class="cta">All Our Work</a>
 
 
     </div>
@@ -111,7 +111,6 @@ layout: main
 
     <style>
         h2 {
-            text-align: center;
             font-size: 30pt;
         }
     </style>
