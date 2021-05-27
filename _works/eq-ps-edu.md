@@ -1,5 +1,5 @@
 ---
-title: Towards equitable post-secondary education in Canada
+title: Towards Equitable Post-secondary Education in Canada
 pdf: "CFS Literature Review January 18 REVISED - with funding section.pdf"
 work: 2
 ---
