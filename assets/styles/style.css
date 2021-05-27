@@ -293,6 +293,48 @@ h1 {
     margin-bottom: 6em;
 }
 
+
+.read-more {
+    display: inline-block;
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+.read-more::after {
+    content: '';
+    margin-top: -2.5px;
+    display: block;
+    width: 100%;
+    opacity: 1;
+    height: 2px;
+    background: var(--secondary);
+}
+
+#button-continer {
+    position: relative;
+    /* display: inline-block; */
+}
+
+#left-btn {
+    position: absolute;
+    left: 280px;
+    bottom: 30%;
+}
+
+#right-btn {
+    position: absolute;
+    bottom: 30%;
+    right: 290px;
+}
+
+.next-btn {
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 22pt;
+    cursor: pointer;
+}
+
 @-webkit-keyframes quote-in {
     0% {
         color: var(--tertiary);

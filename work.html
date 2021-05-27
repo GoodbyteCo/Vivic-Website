@@ -1,0 +1,67 @@
+---
+layout: main
+---
+
+<div id="our-work-content">
+    <h2>Our Work</h2>
+    <div id="work-content">
+
+        {% assign works = site.works | sort: "work" %}
+        {% for work in works %}
+        <div class="work-card">
+            <h3>{{ work.title }}</h3>
+            <p>
+                {{ work.content | remove: '<p>' | remove: '</p>' }}<a class="read-more" href="{{ work.pdf }}"
+                    target="_blank">
+                    Read More</a>
+            </p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<style>
+    #our-work-content {
+        margin: 250px auto 100px auto;
+        width: 80%;
+    }
+
+    #our-work-content h2 {
+        font-size: 28pt;
+        text-align: center;
+        margin-bottom: 65px;
+    }
+
+    #work-content {
+        margin: 20px auto 100px auto;
+        width: 80%;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat(auto-fit, 500px);
+        column-gap: 50px;
+        row-gap: 50px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .work-card {
+        min-height: 350px;
+        position: relative;
+        padding: 20px;
+        border: 10px solid;
+        border-image-slice: 1;
+        border-width: 5px;
+        border-image-source: linear-gradient(to right, #fcd5e1, #fff, #def8f8);
+    }
+
+
+    .work-card h3 {
+        text-align: center;
+    }
+
+    .work-card p {
+        font-weight: 100;
+        font-size: 13pt;
+        line-height: 25px;
+    }
+</style>
