@@ -104,6 +104,7 @@ a.cta:focus {
 }
 
 a.desc-cta {
+    text-transform: capitalize;
     margin-left: 0;
     margin-top: 50px;
 }
