@@ -1482,7 +1482,51 @@ a.cont-cta {
 
 }
 
+@media screen and (max-width: 815px) {
+    #nav .link {
+        margin: auto 35px;
+    }
+
+}
+
+@media screen and (max-width: 725px) {
+    #nav .link {
+        margin: auto 25px;
+    }
+
+    .fade .right-link {
+        -webkit-transform: translateX(-66px);
+        -ms-transform: translateX(-66px);
+        transform: translateX(-66px);
+    }
+
+    .fade .left-link {
+        -webkit-transform: translateX(67px);
+        -ms-transform: translateX(67px);
+        transform: translateX(67px);
+    }
+
+}
+
+@media screen and (max-width: 575px) {
+    #nav .link {
+        font-size: 9pt;
+    }
+}
+
 @media screen and (max-width: 520px) {
+
+    #nav .link {
+        margin: auto 5px;
+    }
+
+    #contact-link {
+        margin-right: 28px !important;
+    }
+
+    #work-link {
+        margin-left: 28px !important;
+    }
 
     .fade .right-link {
         -webkit-transform: translateX(-45px);
@@ -1515,9 +1559,9 @@ a.cont-cta {
     }
 
     .fade #Vivic-Logo {
-        -webkit-transform: translateX(-65px);
-        -ms-transform: translateX(-65px);
-        transform: translateX(-65px)
+        -webkit-transform: translateX(-187px);
+        -ms-transform: translateX(-187px);
+        transform: translateX(-187px)
     }
 
     #logo-i {
@@ -1576,15 +1620,15 @@ a.cont-cta {
     }
 
     #Vivic-Logo {
-        -webkit-transform: translateX(-65px);
-        -ms-transform: translateX(-65px);
-        transform: translateX(-65px);
+        -webkit-transform: translateX(-187px);
+        -ms-transform: translateX(-187px);
+        transform: translateX(-187px);
     }
 
     #mainlogo {
-        -webkit-transform: scale(0.6);
-        -ms-transform: scale(0.6);
-        transform: scale(0.6);
+        -webkit-transform: scale(0.35);
+        -ms-transform: scale(0.35);
+        transform: scale(0.35);
         width: unset;
     }
 }
