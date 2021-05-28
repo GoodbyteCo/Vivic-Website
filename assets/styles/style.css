@@ -104,9 +104,9 @@ a.cta:focus {
 }
 
 a.desc-cta {
-    width: 50%;
-    margin: 50px auto;
-    padding: 7px;
+    text-transform: capitalize;
+    margin-left: 0;
+    margin-top: 50px;
 }
 
 #mainlogo {
@@ -239,6 +239,15 @@ h1 {
     margin-top: 130px;
 }
 
+#work-title a {
+    text-align: center;
+    width: 20%;
+    margin: 0 auto;
+    display: block;
+    text-decoration: unset;
+    color: var(--white);
+}
+
 #our-work {
     max-width: 800px;
     width: 95%;
@@ -250,6 +259,10 @@ h1 {
 
 .about-link {
     color: rgba(246, 90, 138, 1.00);
+}
+
+.center-title {
+    text-align: center;
 }
 
 .work h3 {
@@ -292,6 +305,48 @@ h1 {
 
 #bottom-cta {
     margin-bottom: 6em;
+}
+
+
+.read-more {
+    display: inline-block;
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+.read-more::after {
+    content: '';
+    margin-top: -2.5px;
+    display: block;
+    width: 100%;
+    opacity: 1;
+    height: 2px;
+    background: var(--secondary);
+}
+
+#button-continer {
+    position: relative;
+    /* display: inline-block; */
+}
+
+#left-btn {
+    position: absolute;
+    left: 280px;
+    bottom: 30%;
+}
+
+#right-btn {
+    position: absolute;
+    bottom: 30%;
+    right: 290px;
+}
+
+.next-btn {
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 22pt;
+    cursor: pointer;
 }
 
 @-webkit-keyframes quote-in {
@@ -370,10 +425,18 @@ h1 {
     }
 }
 
+@media screen and (max-width: 1290px) {
+    .pillar {
+        margin: 0 12px;
+    }
+
+}
 
 @media screen and (max-width: 1050px) {
     .pillar {
         max-width: unset;
+        margin: 50px 0;
+        padding: 2.5rem 1.2rem;
         margin-bottom: 50px;
     }
 
@@ -381,15 +444,9 @@ h1 {
         display: unset;
     }
 
-    #pillar3 {
-        margin-top: 50px;
-    }
-
-    #pillar1 {
-        margin-top: 50px;
-    }
-
 }
+
+
 
 #title-contact {
     text-align: center;
@@ -429,7 +486,7 @@ h1 {
     letter-spacing: 0.2em;
 }
 
-#nav .link::after {
+.link::after {
     content: '';
     margin-top: 0.3rem;
     display: block;
@@ -442,7 +499,7 @@ h1 {
     transition: width 0.3s;
 }
 
-#nav a:hover::after {
+a:hover::after {
     opacity: 1;
     width: 100%;
 }
@@ -1126,7 +1183,7 @@ svg {
     transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
-.fade #about-link {
+.fade .left-link {
     -webkit-transform: translateX(105px);
     -ms-transform: translateX(105px);
     transform: translateX(105px);
@@ -1140,7 +1197,7 @@ svg {
     transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
-#about-link {
+.left-link {
     -webkit-transition: -webkit-transform 0.5s ease;
     transition: -webkit-transform 0.5s ease;
     -o-transition: transform 0.5s ease;
@@ -1148,7 +1205,7 @@ svg {
     transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
-.fade #contact-link {
+.fade .right-link {
     -webkit-transform: translateX(-100px);
     -ms-transform: translateX(-100px);
     transform: translateX(-100px);
@@ -1162,12 +1219,20 @@ svg {
     transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
-#contact-link {
+.right-link {
     -webkit-transition: -webkit-transform 0.5s ease;
     transition: -webkit-transform 0.5s ease;
     -o-transition: transform 0.5s ease;
     transition: transform 0.5s ease;
     transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+#pri-link {
+    margin-left: 0 !important;
+}
+
+#about-link {
+    margin-right: 0 !important;
 }
 
 svg {
@@ -1417,27 +1482,71 @@ a.cont-cta {
 
 }
 
+@media screen and (max-width: 815px) {
+    #nav .link {
+        margin: auto 35px;
+    }
+
+}
+
+@media screen and (max-width: 725px) {
+    #nav .link {
+        margin: auto 25px;
+    }
+
+    .fade .right-link {
+        -webkit-transform: translateX(-66px);
+        -ms-transform: translateX(-66px);
+        transform: translateX(-66px);
+    }
+
+    .fade .left-link {
+        -webkit-transform: translateX(67px);
+        -ms-transform: translateX(67px);
+        transform: translateX(67px);
+    }
+
+}
+
+@media screen and (max-width: 575px) {
+    #nav .link {
+        font-size: 9pt;
+    }
+}
+
 @media screen and (max-width: 520px) {
 
-    .fade #contact-link {
-        -webkit-transform: translateX(-45px);
-        -ms-transform: translateX(-45px);
-        transform: translateX(-45px);
+    #nav .link {
+        margin: auto 5px;
     }
 
     #contact-link {
+        margin-right: 28px !important;
+    }
+
+    #work-link {
+        margin-left: 28px !important;
+    }
+
+    .fade .right-link {
         -webkit-transform: translateX(-45px);
         -ms-transform: translateX(-45px);
         transform: translateX(-45px);
     }
 
-    .fade #about-link {
+    .right-link {
+        -webkit-transform: translateX(-45px);
+        -ms-transform: translateX(-45px);
+        transform: translateX(-45px);
+    }
+
+    .fade .left-link {
         -webkit-transform: translateX(48px);
         -ms-transform: translateX(48px);
         transform: translateX(48px);
     }
 
-    #about-link {
+    .left-link {
         -webkit-transform: translateX(48px);
         -ms-transform: translateX(48px);
         transform: translateX(48px);
@@ -1450,9 +1559,9 @@ a.cont-cta {
     }
 
     .fade #Vivic-Logo {
-        -webkit-transform: translateX(-65px);
-        -ms-transform: translateX(-65px);
-        transform: translateX(-65px)
+        -webkit-transform: translateX(-187px);
+        -ms-transform: translateX(-187px);
+        transform: translateX(-187px)
     }
 
     #logo-i {
@@ -1511,15 +1620,15 @@ a.cont-cta {
     }
 
     #Vivic-Logo {
-        -webkit-transform: translateX(-65px);
-        -ms-transform: translateX(-65px);
-        transform: translateX(-65px);
+        -webkit-transform: translateX(-187px);
+        -ms-transform: translateX(-187px);
+        transform: translateX(-187px);
     }
 
     #mainlogo {
-        -webkit-transform: scale(0.6);
-        -ms-transform: scale(0.6);
-        transform: scale(0.6);
+        -webkit-transform: scale(0.35);
+        -ms-transform: scale(0.35);
+        transform: scale(0.35);
         width: unset;
     }
 }

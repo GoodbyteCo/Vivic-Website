@@ -6,3 +6,6 @@ url: "https://vivicresearch.ca"
 
 exclude: 
   - contact-temp.html
+
+collections:
+  - works

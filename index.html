@@ -7,17 +7,16 @@ layout: main
             today. tomorrow. together.
         </h1>
         <p>At Vivic Research, we support agents working toward social justice with economic and data-driven research.
-        </p>
-    </div>
-    <div class="maincenter" id="about">
-        <p>
-            Vivic Research is an economic consulting firm. We serve advocates, think tanks, governments, labour unions,
+            We serve advocates, think tanks, governments, labour unions,
             and other agents engaged in the development of public policy. We empower our clients with economic knowledge
             through our practice areas: economic research, data science, and training.
         </p>
     </div>
+    <div class="maincenter" id="about">
+
+    </div>
     <div class="maincenter" id="prioities">
-        <h2>Our Priorities</h2>
+        <h2 class="center-title">Our Priorities</h2>
 
         <div id="pillars">
             <div class="pillar" id="pillar1">
@@ -59,143 +58,59 @@ layout: main
             </div>
 
         </div>
-        <h2 id="work-title">Our Work</h2>
+        <h2 id="work-title"><a class="link" href="/work">Our Work</a></h2>
         <div id="button-continer">
-            <!-- <button onclick="changeWork(1)" id="left-btn" class="next-btn">&lsaquo;</button> -->
             <div id="our-work">
-                <div id="work-0" class="work work-selected">
-                    <h3>
-                        Alternative Municipal Budget for the City of Ottawa
-                    </h3>
-                    <p>
-                        In work done for the Ottawa Coalition for a People’s Budget, Vivic Research created the
-                        Alternative Budget which presents a progressive and ambitious vision for the City of Ottawa and
-                        its
-                        finances. The proposals put forward in this alternative budget require substantial funding. To
-                        fund
-                        them, we have reallocated millions of dollars from the police budget to other City programs,
-                        reduced
-                        spending on fossil fuel infrastructure, and implemented new taxes. <a class="read-more"
-                            href="/assets/PDFS/Alternative_Budget_Report_FINAL_NOV_02_2020.pdf" target="_blank">
-                            Read More</a>
-                    </p>
-                </div>
-                <div id="work-1" class="work work-unselected">
-                    <h3>
-                        Towards equitable post-secondary education in Canada
-                    </h3>
-                    <p>
-                        In work done for the Canadian Federation of Students, Vivic Research presented a series of
-                        policy
-                        recommendations aimed at easing the burden of student debt and tuition prices. The
-                        recommendations we put forward prioritized the needs of low-income and otherwise marginalized
-                        students, in doing so, advocating for progressive change in Canada’s approach to education
-                        funding. <a class="read-more"
-                            href="/assets/PDFS/CFS Literature Review January 18 REVISED - with funding section.pdf">
-                            Read
-                            More</a>
-                    </p>
-                </div>
-                <div id="work-2" class="work work-unselected">
-                    <h3>
-                        Reforming the Competition Act
-                    </h3>
-                    <p>
-                        Vivic’s Robin Shaban testified to the Standing Committee on Industry, Science, and Technology on
-                        April 6th and 20th, 2021. She highlighted the need for reform to Canada’s Competition Policy to
-                        make our economy more equitable for all Canadians. To learn more, check out our briefing note to
-                        the Committee <a class="read-more"
-                            href="/assets/PDFS/INDU-Committee-Submission-April-29-2021.pdf">
-                            Read More</a>
-                    </p>
-                </div>
-                <div id="work-3" class="work work-unselected">
-                    <h3>
-                        Key Performance Indicator Roadmap: A Path Forward for measuring Fort Calgary's Impact
-                    </h3>
-                    <p>
-                        Vivic worked with the Fort Calgary Society to develop key performance indicators to track their
-                        success in advancing reconciliation and cultural heritage in the City of Calgary. These KPIs
-                        were anchored in a logic model for the organization that mapped out how each of Fort Calgary's
-                        activities created the outcomes they wanted to provide to the community.<a class="read-more"
-                            href="/assets/PDFS/KPI-Roadmap-March-2-2021.pdf">
-                            Read More</a>
-                    </p>
+                {% assign works = site.works | sort: "work" %}
+                {% for work in works %}
+                {% assign worknum = work.work | minus: 1 %}
+                {% if work.work == 1 %}
+                <div id="work-{{ worknum }}" class="work work-selected">
+                    {% else %}
+                    <div id="work-{{ worknum }}" class="work work-unselected">
+                        {% endif %}
+                        <h3>
+                            {{work.title}}
+                        </h3>
+                        <p>
+                            {{ work.content | remove: '<p>' | remove: '</p>' }}<a class="read-more"
+                                href="/assets/PDFS/{{ work.pdf }}" target="_blank">
+                                Read More</a>
+                        </p>
+                    </div>
+                    {% endfor %}
+
                 </div>
             </div>
-            <!-- <button onclick="changeWork(1)" id="right-btn" class="next-btn">&rsaquo;</button> -->
         </div>
+        <a href="/work" id="bottom-cta" class="cta">See All Our Work</a>
+
+
     </div>
-    <a href="contact/index.html" id="bottom-cta" class="cta">Get in Touch</a>
 
+    <script>
+        var current = 0;
+        var total = document.getElementsByClassName("work").length;
 
-</div>
+        console.log(total)
 
-<script>
-    var current = 0;
-    var total = document.getElementsByClassName("work").length;
+        function changeWork(change) {
+            var cur = document.getElementById("work-" + current);
+            cur.className = "work work-unselected";
+            current = (current + change) % total;
+            var next = document.getElementById("work-" + current);
+            next.className = "work work-selected";
+        }
 
-    console.log(total)
+        function moveFoward() {
+            changeWork(1)
+        }
 
-    function changeWork(change) {
-        var cur = document.getElementById("work-" + current);
-        cur.className = "work work-unselected";
-        current = (current + change) % total;
-        var next = document.getElementById("work-" + current);
-        next.className = "work work-selected";
-    }
+        var repeat = setInterval(moveFoward, 7000);
+    </script>
 
-    function moveFoward() {
-        changeWork(1)
-    }
-
-    var repeat = setInterval(moveFoward, 7000);
-</script>
-
-<style>
-    .read-more {
-        display: inline-block;
-        color: var(--secondary);
-        text-decoration: none;
-    }
-
-    .read-more::after {
-        content: '';
-        margin-top: -2.5px;
-        display: block;
-        width: 100%;
-        opacity: 1;
-        height: 2px;
-        background: var(--secondary);
-    }
-
-    #button-continer {
-        position: relative;
-        /* display: inline-block; */
-    }
-
-    #left-btn {
-        position: absolute;
-        left: 280px;
-        bottom: 30%;
-    }
-
-    #right-btn {
-        position: absolute;
-        bottom: 30%;
-        right: 290px;
-    }
-
-    .next-btn {
-        background: none;
-        border: none;
-        color: var(--white);
-        font-size: 22pt;
-        cursor: pointer;
-    }
-
-    h2 {
-        text-align: center;
-        font-size: 30pt;
-    }
-</style>
+    <style>
+        h2 {
+            font-size: 30pt;
+        }
+    </style>
