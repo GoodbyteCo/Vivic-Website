@@ -1228,11 +1228,11 @@ svg {
 }
 
 #pri-link {
-    margin-left: 0;
+    margin-left: 0 !important;
 }
 
 #about-link {
-    margin-right: 0;
+    margin-right: 0 !important;
 }
 
 svg {
