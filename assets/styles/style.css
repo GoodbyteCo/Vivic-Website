@@ -104,8 +104,9 @@ a.cta:focus {
 }
 
 a.desc-cta {
-    margin-left: 0;
-    margin-top: 50px;
+    width: 50%;
+    margin: 50px auto;
+    padding: 7px;
 }
 
 #mainlogo {
@@ -616,13 +617,15 @@ label {
   } */
 
 #photos {
-    -ms-grid-columns: auto 300px 12% 300px auto;
-    grid-template-columns: auto 300px 12% 300px auto;
+    -ms-grid-columns: auto 500px 12% 500px auto;
+    grid-template-columns: auto 500px 12% 500px auto;
     -ms-grid-rows: auto;
     grid-template-rows: auto;
     display: -ms-grid;
     display: grid;
     text-align: left;
+    justify-content: center;
+    justify-items: center;
 }
 
 
@@ -730,6 +733,14 @@ p.photo-left {
     grid-column-end: 3;
     -ms-grid-row: 3;
     grid-row-start: 3;
+}
+
+@media screen and (max-width: 1250px) {
+    #photos {
+        -ms-grid-columns: auto 300px 12% 300px auto;
+        grid-template-columns: auto 300px 12% 300px auto
+    }
+
 }
 
 @media screen and (max-width: 900px) {
