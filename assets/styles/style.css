@@ -1183,7 +1183,7 @@ svg {
     transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
-.fade #about-link {
+.fade .left-link {
     -webkit-transform: translateX(105px);
     -ms-transform: translateX(105px);
     transform: translateX(105px);
@@ -1197,7 +1197,7 @@ svg {
     transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
-#about-link {
+.left-link {
     -webkit-transition: -webkit-transform 0.5s ease;
     transition: -webkit-transform 0.5s ease;
     -o-transition: transform 0.5s ease;
@@ -1205,7 +1205,7 @@ svg {
     transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
-.fade #contact-link {
+.fade .right-link {
     -webkit-transform: translateX(-100px);
     -ms-transform: translateX(-100px);
     transform: translateX(-100px);
@@ -1219,12 +1219,20 @@ svg {
     transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
-#contact-link {
+.right-link {
     -webkit-transition: -webkit-transform 0.5s ease;
     transition: -webkit-transform 0.5s ease;
     -o-transition: transform 0.5s ease;
     transition: transform 0.5s ease;
     transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+#pri-link {
+    margin-left: 0;
+}
+
+#about-link {
+    margin-right: 0;
 }
 
 svg {
@@ -1476,25 +1484,25 @@ a.cont-cta {
 
 @media screen and (max-width: 520px) {
 
-    .fade #contact-link {
+    .fade .right-link {
         -webkit-transform: translateX(-45px);
         -ms-transform: translateX(-45px);
         transform: translateX(-45px);
     }
 
-    #contact-link {
+    .right-link {
         -webkit-transform: translateX(-45px);
         -ms-transform: translateX(-45px);
         transform: translateX(-45px);
     }
 
-    .fade #about-link {
+    .fade .left-link {
         -webkit-transform: translateX(48px);
         -ms-transform: translateX(48px);
         transform: translateX(48px);
     }
 
-    #about-link {
+    .left-link {
         -webkit-transform: translateX(48px);
         -ms-transform: translateX(48px);
         transform: translateX(48px);
