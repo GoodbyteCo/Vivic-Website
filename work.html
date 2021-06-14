@@ -6,12 +6,12 @@ layout: main
     <h2>Our Work</h2>
     <div id="work-content">
 
-        {% assign works = site.works | sort: "work" | | reverse %}
+        {% assign works = site.works | sort: "work" | reverse %}
         {% for work in works %}
         <div class="work-card">
             <h3>{{ work.title }}</h3>
             {{ work.content }}
-            {% if work.title == "Non-Police Mental health Crisis Response for the City of Ottawa" %}
+            {% if work.work == 6 %}
             <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
                 <a class="read-more our-work" id="bh" href="/assets/PDFS/{{ work.pdf }}" target="_blank">
                     Read More</a>
