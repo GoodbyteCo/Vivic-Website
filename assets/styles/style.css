@@ -249,7 +249,7 @@ h1 {
 }
 
 #our-work {
-    max-width: 800px;
+    max-width: 900px;
     width: 95%;
     height: 300px;
     margin: 10px auto 0px auto;
@@ -1635,13 +1635,13 @@ a.cont-cta {
 
 @media screen and (max-width: 800px) {
     #our-work {
-        height: 350px;
+        height: 450px;
     }
 }
 
 @media screen and (max-width: 620px) {
     #our-work {
-        height: 400px;
+        height: 500px;
     }
 }
 
@@ -1651,7 +1651,7 @@ a.cont-cta {
     }
 
     #our-work {
-        height: 500px;
+        height: 600px;
     }
 
 }
@@ -1680,7 +1680,7 @@ a.cont-cta {
     }
 
     #our-work {
-        height: 600px;
+        height: 700px;
     }
 
 
