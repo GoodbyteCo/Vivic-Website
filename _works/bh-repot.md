@@ -1,5 +1,5 @@
 ---
-title: Non-Police Mental health Crisis Response for the City of Ottawa
+title: Non-Police Mental Health Crisis Response for the City of Ottawa
 pdf: BH-Final-Executive-Summary.pdf
 work: 6
 ---
