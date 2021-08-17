@@ -13,7 +13,7 @@ layout: main
             {{ work.content }}
             {% if work.work == 6 %}
             <div style="display: flex; justify-content: space-evenly; margin-top: 33px;">
-                <a class="read-more our-work" id="bh" href="/assets/PDFS/{{ work.pdf }}" target="_blank">
+                <a class="read-more our-work" id="bh" href="{{ work.pdf }}" target="_blank">
                     Read More</a>
                 <a class="read-more our-work" id="bh" href="/assets/PDFS/BH-Final-Report.pdf" target="_blank">
                     Report</a>
@@ -21,7 +21,7 @@ layout: main
                     Strategy</a>
             </div>
             {% else %}
-            <a class="read-more our-work" href="/assets/PDFS/{{ work.pdf }}" target="_blank">
+            <a class="read-more our-work" href="{{ work.pdf }}" target="_blank">
                 Read More</a>
             {% endif %}
         </div>

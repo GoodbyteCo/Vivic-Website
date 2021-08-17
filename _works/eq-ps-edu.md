@@ -1,6 +1,6 @@
 ---
 title: Towards Equitable Post-secondary Education in Canada
-pdf: "CFS Literature Review January 18 REVISED - with funding section.pdf"
+pdf: "/assets/PDFS/CFS Literature Review January 18 REVISED - with funding section.pdf"
 work: 2
 ---
 In work done for the Canadian Federation of Students, Vivic Research presented a series of

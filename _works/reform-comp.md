@@ -1,6 +1,6 @@
 ---
 title: Reforming the Competition Act
-pdf: "INDU-Committee-Submission-April-29-2021.pdf"
+pdf: "/assets/PDFS/INDU-Committee-Submission-April-29-2021.pdf"
 work: 3
 ---
 Vivic’s Robin Shaban testified to the Standing Committee on Industry, Science, and Technology on
