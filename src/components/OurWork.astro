@@ -1,0 +1,217 @@
+---
+import CtaButtom from './CtaButton.astro'
+const data = Astro.fetchContent('../work/*.md')
+
+---
+<h2 id="work-title"><a class="link" href="/work">Our Work</a></h2>
+<div id="button-continer">
+    <div id="our-work">
+        {data.sort((a, b) => a.work - b.work).map((post) => {
+            const worknum = post.work - 1
+            if (post.work == 1) {
+                return ( 
+                    <div id={`work-${worknum}`} class="work work-selected">
+                        <h3>
+                            {post.title}
+                        </h3>
+                        <p>
+                            {post.astro.source}
+                            <a class="read-more" href={`${post.pdf}`} target="_blank">Read More</a>
+                        </p>
+                    </div>
+                )
+            } else {
+                return (
+                    <div id={`work-${worknum}`} class="work work-unselected">
+                        <h3>
+                            {post.title}
+                        </h3>
+                        <p>
+                            {post.astro.source}
+                            <a class="read-more" href={`${post.pdf}`} target="_blank">Read More</a>
+                        </p>
+                    </div>
+                )
+            }
+        }
+    )}
+    </div>
+</div>
+
+<CtaButtom link="/work" idName="bottom-cta" > See All Our Work </CtaButtom>
+
+
+<script>
+        let current = 0;
+        let total = document.getElementsByClassName("work").length;
+
+        function changeWork(change = 1) {
+            let cur = document.getElementById(`work-${current}`);
+            cur.classList.remove("work-selected")
+            cur.classList.add("work-unselected");
+            current = (current + change) % total;
+            let next = document.getElementById(`work-${current}`);
+            next.classList.remove("work-unselected")
+            next.classList.add("work-selected")
+        }
+
+        function moveFoward() {
+            changeWork()
+        }
+
+        setInterval(moveFoward, 7000);
+</script>   
+
+<style>
+
+@keyframes quote-in {
+    0% {
+        color: var(--tertiary);
+        opacity: 0;
+        -webkit-transform: translateX(40px);
+        transform: translateX(40px);
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
+    }
+}
+
+@keyframes quote-out {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
+    }
+
+    90% {
+        color: var(--secondary);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translateX(-40px);
+        transform: translateX(-40px);
+    }
+}
+
+h2 {
+    font-size: 30pt;
+}
+#work-title {
+    margin-top: 130px;
+}
+#work-title a {
+    text-align: center;
+    width: 20%;
+    margin: 0 auto;
+    display: block;
+    text-decoration: unset;
+    color: var(--white);
+}
+
+a:hover::after {
+    opacity: 1;
+    width: 100%;
+}
+
+.link::after {
+    content: '';
+    margin-top: 0.3rem;
+    display: block;
+    width: 0;
+    opacity: 0.7;
+    height: 2px;
+    background: var(--white);
+    transition: width 0.3s;
+}
+#our-work {
+    max-width: 900px;
+    width: 95%;
+    height: 300px;
+    margin: 10px auto 0px auto;
+    position: relative;
+    overflow: hidden;
+}
+@media screen and (max-width: 800px) {
+    #our-work {
+        height: 450px;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    #our-work {
+        height: 500px;
+    }
+}
+@media screen and (max-width: 320px) {
+    #our-work {
+        height: 700px;
+    }
+}
+#button-continer {
+    position: relative;
+}
+
+.work {
+    position: absolute;
+    top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+.work h3 {
+    text-align: center;
+    font-size: 22pt;
+}
+
+.work p {
+    line-height: 27px;
+}
+
+.read-more {
+    display: inline-block;
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+.read-more::after {
+    content: '';
+    margin-top: -2.5px;
+    display: block;
+    width: 100%;
+    opacity: 1;
+    height: 2px;
+    background: var(--secondary);
+}
+
+.work-unselected {
+    animation-name: quote-out;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0.48, -0.04, 0.31, 0.99);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.work-selected {
+    animation-name: quote-in;
+    animation-duration: 2.5s;
+    animation-timing-function: cubic-bezier(0.48, -0.04, 0.31, 0.99);
+}
+
+:global(#bottom-cta) {
+    margin-bottom: 6em;
+}
+
+
+
+</style>

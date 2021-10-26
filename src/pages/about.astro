@@ -1,0 +1,50 @@
+---
+import MainCentered from '../layouts/MainCentered.astro'
+---
+
+<MainCentered>
+    <p class='big-text'>
+        Vivic Research is an economic consulting firm dedicated to empowering peers working toward social justice with data-driven research
+    </p>
+    <div id="about-section">
+        <section style="padding-left: 0;">
+            <h3>
+                Our Vision
+            </h3>
+            <p>
+                Vivic Research envisions a just society, where everyone has access to housing, food, safety, health and community.
+            </p>
+        </section>
+        <section>
+            <h3> 
+                Our Mission 
+            </h3>
+            <p> 
+                Vivic Research’s mission is provide alternatives to traditional economic consulting. We work towards our collective liberation by actively challenging standard assumptions and existing systems.
+            </p>
+        </section>
+    </div> 
+</MainCentered>
+
+<style>
+  .big-text {
+    width: 75%;
+    font-size: 40pt;
+    font-weight: bold;
+    }
+  #about-section {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    row-gap: 12px;
+  }
+  section {
+      padding: 0 10px;
+  }
+  section h3 {
+      font-size: 20pt;
+  }
+  section p {
+      line-height: 25px;
+  }
+</style>
