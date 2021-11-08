@@ -6,35 +6,38 @@ const data = Astro.fetchContent('../work/*.md')
 <h2 id="work-title"><a class="link" href="/work">Our Work</a></h2>
 <div id="button-continer">
     <div id="our-work">
-        {data.sort((a, b) => a.work - b.work).map((post) => {
-            const worknum = post.work - 1
-            if (post.work == 1) {
-                return ( 
-                    <div id={`work-${worknum}`} class="work work-selected">
-                        <h3>
-                            {post.title}
-                        </h3>
-                        <p>
-                            {post.astro.source}
-                            <a class="read-more" href={`${post.pdf}`} target="_blank">Read More</a>
-                        </p>
-                    </div>
-                )
-            } else {
-                return (
-                    <div id={`work-${worknum}`} class="work work-unselected">
-                        <h3>
-                            {post.title}
-                        </h3>
-                        <p>
-                            {post.astro.source}
-                            <a class="read-more" href={`${post.pdf}`} target="_blank">Read More</a>
-                        </p>
-                    </div>
-                )
-            }
-        }
-    )}
+        {
+            data
+                .sort((a, b) => a.work - b.work)
+                .map((post) => {
+                    const worknum = post.work - 1
+                    if (post.work == 1) {
+                        return ( 
+                            <div id={`work-${worknum}`} class="work work-selected">
+                                <h3>
+                                    {post.title}
+                                </h3>
+                                <p>
+                                    {post.astro.source}
+                                    <a class="read-more" href={`${post.pdf}`} target="_blank">Read More</a>
+                                </p>
+                            </div>
+                        )
+                    } else {
+                        return (
+                            <div id={`work-${worknum}`} class="work work-unselected">
+                                <h3>
+                                    {post.title}
+                                </h3>
+                                <p>
+                                    {post.astro.source}
+                                    <a class="read-more" href={`${post.pdf}`} target="_blank">Read More</a>
+                                </p>
+                            </div>
+                        )
+                    }
+                }   
+        )}
     </div>
 </div>
 

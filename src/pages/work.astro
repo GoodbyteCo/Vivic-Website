@@ -1,0 +1,14 @@
+---
+import MainCentered from '../layouts/MainCentered.astro'
+import Work from '../components/Work.vue'
+const data = Astro.fetchContent('../work/*.md')
+---
+
+
+<MainCentered>
+    <Work works={data} client:load />
+</MainCentered>
+
+<style>
+
+</style>

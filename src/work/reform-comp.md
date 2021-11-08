@@ -2,6 +2,7 @@
 title: Reforming the Competition Act
 pdf: "/PDFS/INDU-Committee-Submission-April-29-2021.pdf"
 work: 3
+topic: "Competition policy"
 ---
 Vivic’s Robin Shaban testified to the Standing Committee on Industry, Science, and Technology on
 April 6th and 20th, 2021. She highlighted the need for reform to Canada’s Competition Policy to

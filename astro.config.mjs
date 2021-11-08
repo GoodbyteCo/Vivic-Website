@@ -10,5 +10,5 @@
 export default /** @type {import('astro').AstroUserConfig} */ ({
   // Set "renderers" to "[]" to disable all default, builtin component support.
   // renderers: [],
-  renderers: ['@astrojs/renderer-vue', '@astrojs/renderer-react'],
+  renderers: ['@astrojs/renderer-vue'],
 });
