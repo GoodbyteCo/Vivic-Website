@@ -1,5 +1,6 @@
 ---
 import MainCentered from '../layouts/MainCentered.astro'
+import CtaButtom from "../components/InlineCtaButton.astro"
 ---
 
 <MainCentered>
@@ -35,7 +36,8 @@ import MainCentered from '../layouts/MainCentered.astro'
         research on income supports in Canada. Inez also applies a climate justice lens to her work, infused by her work
         experience in environmental education at the Montreal Biosphere. Inez is currently pursuing an MA in Economics
         at Simon Fraser University and holds a BA in Applied Economics from Queen’s University.
-        <a class="cta desc-cta" href="/contact">Get in Touch</a>
+        <CtaButtom className="about-button" link="/contact">Get in Touch</CtaButtom>
+
     </p>
     <img class="photo-center" src="/images/robin.jpg" alt="robin">
     <h3 class="photo-center">Robin Shaban</h3>
@@ -51,7 +53,7 @@ import MainCentered from '../layouts/MainCentered.astro'
         office of the EI Commissioner for Workers, the Broadbent Institute, and others. Prior to that, she was the
         Andrew Jackson fellow at the Canadian Centre for Policy Alternatives and an officer at Canada’s Competition
         Bureau. Robin’s holds a MA in economics from Queen’s University.
-        <a class="cta desc-cta" href="/contact">Get in Touch</a>
+        <CtaButtom className="about-button" link="/contact">Get in Touch</CtaButtom>
     </p>
     <img class="photo-right" src="/images/robin.jpg" alt="robin">
     <h3 class="photo-right">Robin Shaban</h3>
@@ -67,12 +69,17 @@ import MainCentered from '../layouts/MainCentered.astro'
         office of the EI Commissioner for Workers, the Broadbent Institute, and others. Prior to that, she was the
         Andrew Jackson fellow at the Canadian Centre for Policy Alternatives and an officer at Canada’s Competition
         Bureau. Robin’s holds a MA in economics from Queen’s University.
-        <a class="cta desc-cta" href="/contact">Get in Touch</a>
+        <CtaButtom className="about-button" link="/contact">Get in Touch</CtaButtom>
     </p>
 </div>
 </MainCentered>
 
 <style>
+
+    .about-link {
+        color: rgba(246, 90, 138, 1.00);
+    }
+    
   .big-text {
     width: 75%;
     font-size: 40pt;

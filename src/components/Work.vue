@@ -12,11 +12,11 @@
   </div>
     <div>
         <template v-for="work in works" :key="work.title">
-            <template v-if="work.topic === selected || selected === 'All Work'">
+            <template v-if="work.topic.toLowerCase() === selected.toLowerCase() || selected === 'All Work'">
                 <div class="card">
                     <div class="title">
                         <h2>{{work.title}}</h2>
-
+                        
                         <p>{{work.topic}}</p>
                     </div>
                     <p>{{work.astro.source}}</p>

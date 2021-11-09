@@ -1,6 +1,7 @@
 --- 
 import BasicMeta from '../components/BasicMeta.astro'
 import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
 const {title} = Astro.props;
 ---
 <!DOCTYPE html>
@@ -14,6 +15,7 @@ const {title} = Astro.props;
     <main>
         <slot />
     </main>
+    <Footer />
     <script data-goatcounter="https://vivic.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
@@ -26,10 +28,13 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-color: var(--dark);
+    margin: 0;
 }
 
 main {
     font-family: main;
+    min-width: 100vh;
+    margin: 8
 }
 
 </style>
