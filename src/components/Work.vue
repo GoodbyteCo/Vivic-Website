@@ -1,17 +1,20 @@
 <template>
-    <h2> Our Work </h2>
-    <div class="select">
-    <select v-model="selected">
-        <option value="All Work" selected >All Work</option>
-        <template v-for="option in options" :value="option.value">
-            <option >
-            {{ option.label }}
-            </option>
-        </template>
-    </select>
+    <div id="work-header">
+        <h2> Our Work </h2>
+        <div class="select">
+            <select v-model="selected">
+                <option value="All Work" selected >All Work</option>
+                <template v-for="option in options" :value="option.value">
+                    <option >
+                    {{ option.label }}
+                    </option>
+                </template>
+            </select>
+            <span class="focus"></span>
+        </div>
   </div>
     <div>
-        <template v-for="work in works" :key="work.title">
+        <template v-for="work in workSorted" :key="work.title">
             <template v-if="work.topic.toLowerCase() === selected.toLowerCase() || selected === 'All Work'">
                 <div class="card">
                     <div class="title">
@@ -20,7 +23,7 @@
                         <p>{{work.topic}}</p>
                     </div>
                     <p>{{work.astro.source}}</p>
-                    <a :href="work.pdf">More</a>
+                    <a class="more-link" :href="work.pdf">More</a>
                     
                 </div>
             </template>
@@ -56,6 +59,7 @@ export default defineComponent({
     },
     setup(props) {
         const selected: Ref<string> = ref("All Work")
+        const workSorted = props.works.sort((a, b) => a.work - b.work) 
         const options = 
         props.works
             .map(work => 
@@ -71,6 +75,7 @@ export default defineComponent({
         return {
             selected,
             options,
+            workSorted
             }
     }
 })
@@ -99,6 +104,12 @@ export default defineComponent({
     font-size: 12pt;
 }
 
+#work-header {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
 select,
 select::before,
 select::after {
@@ -124,9 +135,14 @@ select::-ms-expand {
 }
 
 .select {
-  width: 100%;
-  min-width: 15ch;
-  max-width: 30ch;
+  display: grid;
+  grid-template-areas: "select";
+  align-items: center;
+  justify-self: end;
+  position: relative;
+  min-width: 11ch;
+  max-width: 19ch;
+  max-height: 22px;
   border: 1px solid #777;
   border-radius: 0.25em;
   padding: 0.25em 0.5em;
@@ -135,5 +151,40 @@ select::-ms-expand {
   line-height: 1.1;
   background-color: #fff;
   background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+  margin-block-start: 0.83em;
+    margin-block-end: 0.83em
+
+}
+
+.select::after {
+  content: "";
+  justify-self: end;
+  width: 0.8em;
+  height: 0.5em;
+  background-color: #777;
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+}
+
+.select select, .select::after {
+  grid-area: select;
+}
+
+
+
+select:focus + .focus {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  border: 2px solid var(--secondary);
+  border-radius: inherit;
+}
+
+.more-link {
+    display: block;
+    width: 100%;
+    text-align: right;
+    color: var(--secondary);
 }
 </style>

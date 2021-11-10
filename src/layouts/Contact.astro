@@ -13,7 +13,11 @@ const {title} = Astro.props;
 <body>
     <Header />
     <main>
-        <slot />
+        <div role="presentation" id="loading-container">
+            <div id="loading"></div>
+        </div>
+
+        <slot/>
     </main>
     <Footer />
     <script data-goatcounter="https://vivic.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
@@ -32,12 +36,75 @@ body {
 }
 
 main {
-    width: 80%;
-    margin: auto;
-    margin: 8;
-    margin-top: 250px;
     font-family: main;
-    min-height: 100vh;
+    min-height: calc(100vh - 340px);
+    margin: 8
+}
+
+main {
+        margin-right: 100px;
+        margin-top: 150px;
+    }
+
+    
+
+
+#loading {
+    width: 50px;
+    height: 50px;
+    background: var(--white);
+    margin: auto;
+
+    -webkit-box-shadow: 0px 0px 0 0px var(--secondary), 0px 0px 0 0px var(--tertiary);
+
+    box-shadow: 0px 0px 0 0px var(--secondary), 0px 0px 0 0px var(--tertiary);
+    -webkit-animation: loading-animation 0.5s ease infinite;
+    animation: loading-animation 0.5s ease infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+
+#loading-container {
+    position: absolute;
+    top: 400px;
+    width: 100%;
+    z-index: -99;
+    -webkit-animation: flip 2s steps(2) infinite;
+    animation: flip 2s steps(2) infinite;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+
+@-webkit-keyframes loading-animation {
+    to {
+        -webkit-box-shadow: 20px -20px 0 20px var(--secondary), -20px 20px 0 20px var(--tertiary);
+        box-shadow: 20px -20px 0 20px var(--secondary), -20px 20px 0 20px var(--tertiary);
+        -webkit-transform: scale(0.7);
+        transform: scale(0.7);
+    }
+}
+
+@keyframes loading-animation {
+    to {
+        -webkit-box-shadow: 20px -20px 0 20px var(--secondary), -20px 20px 0 20px var(--tertiary);
+        box-shadow: 20px -20px 0 20px var(--secondary), -20px 20px 0 20px var(--tertiary);
+        -webkit-transform: scale(0.7);
+        transform: scale(0.7);
+    }
+}
+
+@-webkit-keyframes flip {
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes flip {
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }
 
 </style>
@@ -92,4 +159,7 @@ main {
     font-style: normal;
 }
 </style>
+
+
+
 
