@@ -74,7 +74,7 @@ layout: main
                         </h3>
                         <p>
                             {{ work.content | remove: '<p>' | remove: '</p>' }}<a class="read-more"
-                                href="/assets/PDFS/{{ work.pdf }}" target="_blank">
+                                href="{{ work.pdf }}" target="_blank">
                                 Read More</a>
                         </p>
                     </div>
