@@ -4,8 +4,11 @@ description: Site for Vivic Research
 
 url: "https://vivicresearch.ca"
 
-exclude: 
+exclude:
   - contact-temp.html
 
 collections:
   - works
+
+include:
+  - netlify.toml
