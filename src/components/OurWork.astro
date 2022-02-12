@@ -1,6 +1,6 @@
 ---
 import CtaButtom from './CtaButton.astro'
-const data = Astro.fetchContent('../work/*.md')
+const data = Astro.fetchContent('../pages/work/*.md')
 
 ---
 <h2 id="work-title"><a class="link" href="/work">Our Work</a></h2>
@@ -22,7 +22,7 @@ const data = Astro.fetchContent('../work/*.md')
                                     {post.astro.source}
                                     <a 
                                         class="read-more"
-                                        href={`${post.pdf}`}
+                                        href={`${post.url}`}
                                         target="_blank"
                                     >
                                         Read More

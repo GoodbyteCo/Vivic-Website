@@ -15,7 +15,7 @@
     <div>
         <template v-for="work in workSorted" :key="work.title">
             <template v-if="work.topic.toLowerCase() === selected.toLowerCase() || selected === 'All Work'">
-                <a class="card" :href="work.pdf">
+                <a class="card" :href="work.url">
                     <div class="title">
                         <h2>{{work.title}}&nbsp;&nbsp;<span class="topic">{{work.topic}}</span></h2>
                     </div>
@@ -28,7 +28,7 @@
 
 <script lang="ts">
 
-import { defineComponent, PropType, ref, Ref } from 'vue'
+import { defineComponent, PropType, ref, Ref, onMounted, watch } from 'vue'
 import { toTitleCase } from '../utils/stringUtils'
 
 type WorkData = {
@@ -49,8 +49,8 @@ export default defineComponent({
         }
     },
     setup(props) {
-        const selected: Ref<string> = ref("All Work")
-        const workSorted = props.works.sort((a, b) => a.work - b.work) 
+        const selected: Ref<string> = ref("")
+        const workSorted = props.works.sort((a, b) => a.work - b.work).reverse() 
         const options = 
         props.works
             .map(work => 
@@ -62,6 +62,21 @@ export default defineComponent({
             .filter((option, index, self) => 
                 self.findIndex(t => t.value === option.value) === index
             )
+        onMounted(() => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const selectedFromUrl = urlParams.get("topic") ?? ""
+            selected.value = toTitleCase(selectedFromUrl) || "All Work"
+            
+        })
+
+        watch(selected, (currentSelected) => {
+            if(currentSelected != "All Work") {
+                window.history.replaceState(null,null,`/work?topic=${currentSelected.toLowerCase()}`)
+            } else {
+                window.history.replaceState(null,null,`/work`)
+            }
+
+        })
             
         return {
             selected,

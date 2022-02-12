@@ -2,12 +2,14 @@
 import BasicMeta from '../components/BasicMeta.astro'
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
+import Global from '../components/Global.astro'
 const {title} = Astro.props;
 ---
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <BasicMeta title={title} />
+    <Global />
 </head>
 
 <body>
@@ -41,54 +43,5 @@ main {
 
 </style>
 
-<style global>
-:root {
-    --main: #262260;
-    --secondary: #f55a8a;
-    --tertiary: #7de5e5;
-    --dark: #1a1229;
-    --white: #ffffff;
-}
 
-::selection {
-    color: var(--white);
-    background: var(--secondary);
-}
-
-@font-face {
-    font-family: "main";
-    src: url('/fonts/Font-Medium.woff2') format('woff2'),
-        url('/fonts/Font-Medium.woff') format('woff'),
-        url('/fonts/Font-Medium.otf') format('opentype');
-    font-weight: 200;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "main";
-    src: url('/fonts/Font-Bold.woff2') format('woff2'),
-        url('/fonts/Font-Bold.woff') format('woff'),
-        url('/fonts/Font-Bold.otf') format('opentype');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "main";
-    src: url('/fonts/Font-Light.woff2') format('woff2'),
-        url('/fonts/Font-Light.woff') format('woff'),
-        url('/fonts/Font-Light.otf') format('opentype');
-    font-weight: 100;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "main";
-    src: url('/fonts/Font-Book.woff2') format('woff2'),
-        url('/fonts/Font-Book.woff') format('woff'),
-        url('/fonts/Font-Book.otf') format('opentype');
-    font-weight: 400;
-    font-style: normal;
-}
-</style>
 
