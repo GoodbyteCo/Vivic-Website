@@ -2,11 +2,12 @@
 import MainCentered from '../layouts/MainCentered.astro'
 import Work from '../components/Work.vue'
 const data = Astro.fetchContent('../work/*.md')
----
+const work = data.map((post) => { return { title: post.title, pdf: post.pdf, work: post.work, topic: post.topic, source: post.astro.source, url: post.url }})
+--- 
 
 
 <MainCentered>
-    <Work works={data} client:load />
+    <Work works={work} client:load />
 </MainCentered>
 
 <style>

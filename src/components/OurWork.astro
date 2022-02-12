@@ -9,35 +9,28 @@ const data = Astro.fetchContent('../work/*.md')
         {
             data
                 .sort((a, b) => a.work - b.work)
-                .map((post) => {
-                    const worknum = post.work - 1
-                    if (post.work == 1) {
-                        return ( 
-                            <div id={`work-${worknum}`} class="work work-selected">
+                .map((post) => { return {...post, work: post.work-1 } } )
+                .map((post) => 
+                            <div 
+                                id={`work-${post.work}`} 
+                                class={`work work-${(post.work == 0) ? 'selected': 'unselected'}`}
+                            >
                                 <h3>
                                     {post.title}
                                 </h3>
                                 <p>
                                     {post.astro.source}
-                                    <a class="read-more" href={`${post.pdf}`} target="_blank">Read More</a>
+                                    <a 
+                                        class="read-more"
+                                        href={`${post.pdf}`}
+                                        target="_blank"
+                                    >
+                                        Read More
+                                    </a>
                                 </p>
-                            </div>
-                        )
-                    } else {
-                        return (
-                            <div id={`work-${worknum}`} class="work work-unselected">
-                                <h3>
-                                    {post.title}
-                                </h3>
-                                <p>
-                                    {post.astro.source}
-                                    <a class="read-more" href={`${post.pdf}`} target="_blank">Read More</a>
-                                </p>
-                            </div>
-                        )
-                    }
-                }   
-        )}
+                            </div> 
+                )   
+        }
     </div>
 </div>
 
@@ -58,11 +51,7 @@ const data = Astro.fetchContent('../work/*.md')
             next.classList.add("work-selected")
         }
 
-        function moveFoward() {
-            changeWork()
-        }
-
-        setInterval(moveFoward, 7000);
+        setInterval(changeWork, 7000);
 </script>   
 
 <style>

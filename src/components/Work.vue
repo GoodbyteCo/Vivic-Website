@@ -10,22 +10,17 @@
                     </option>
                 </template>
             </select>
-            <span class="focus"></span>
         </div>
   </div>
     <div>
         <template v-for="work in workSorted" :key="work.title">
             <template v-if="work.topic.toLowerCase() === selected.toLowerCase() || selected === 'All Work'">
-                <div class="card">
+                <a class="card" :href="work.pdf">
                     <div class="title">
-                        <h2>{{work.title}}</h2>
-                        
-                        <p>{{work.topic}}</p>
+                        <h2>{{work.title}}&nbsp;&nbsp;<span class="topic">{{work.topic}}</span></h2>
                     </div>
-                    <p>{{work.astro.source}}</p>
-                    <a class="more-link" :href="work.pdf">More</a>
-                    
-                </div>
+                    <p>{{work.source}}</p>
+                </a>
             </template>
         </template>
     </div>
@@ -42,11 +37,7 @@ type WorkData = {
     work: number
     topic: string
     date: string,
-    astro: {
-        headers: string[], 
-        source: string,   
-        html: string      
-      },
+    source: string,     
     url: string
 }
 
@@ -84,13 +75,40 @@ export default defineComponent({
 
 <style scoped>
 .card {
+    display: block;
     border: 10px solid;
     border-image-slice: 1;
-    border-width: 5px;
+    border-width: 8px;
     border-image-source: linear-gradient(to right, #fcd5e1, #fff, #def8f8);
     margin: 50px 0;
     padding: 10px 30px;
+    color: var(--white);
+    text-decoration: none;
+}
 
+.card p {
+    line-height: 1.6;
+    margin-bottom: 23px;
+}
+
+
+
+h2 {
+    font-size: 30px;
+}
+
+.topic {
+    display: inline-block;
+    font-size: 0.5em;
+    background: linear-gradient(to right, #fcd5e1, #fff, #def8f8);
+    color: var(--dark);
+    line-height: 1;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding: 0.3em 1ch 0.25em;
+    border-radius: 100px;
+    /* margin: 0 2ch; */
+    transform: translateY(-3px);
 }
 
 .title{
@@ -100,9 +118,6 @@ export default defineComponent({
     row-gap: 15px;
 }
 
-.title p{
-    font-size: 12pt;
-}
 
 #work-header {
     display: flex;
@@ -128,6 +143,8 @@ select {
   cursor: inherit;
   line-height: inherit;
   outline: none;
+  color: #fff;
+  transform: translateY(2px);
 }
 
 select::-ms-expand {
@@ -142,18 +159,16 @@ select::-ms-expand {
   position: relative;
   min-width: 11ch;
   max-width: 19ch;
-  max-height: 22px;
-  border: 1px solid #777;
-  border-radius: 0.25em;
+  max-height: 25px;
+  border-radius: 2px;
   padding: 0.25em 0.5em;
   font-size: 1.25rem;
   cursor: pointer;
   line-height: 1.1;
-  background-color: #fff;
-  background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+  background-color: rgba(255, 255, 255, 0.2);
+  /* background-image: linear-gradient(to top, #f9f9f9, #fff 33%); */
   margin-block-start: 0.83em;
-    margin-block-end: 0.83em
-
+  margin-block-end: 0.83em
 }
 
 .select::after {
@@ -161,7 +176,7 @@ select::-ms-expand {
   justify-self: end;
   width: 0.8em;
   height: 0.5em;
-  background-color: #777;
+  background-color: var(--secondary);
   clip-path: polygon(100% 0%, 0 0%, 50% 100%);
 }
 
@@ -171,20 +186,18 @@ select::-ms-expand {
 
 
 
-select:focus + .focus {
-  position: absolute;
-  top: -1px;
-  left: -1px;
-  right: -1px;
-  bottom: -1px;
-  border: 2px solid var(--secondary);
-  border-radius: inherit;
+.select:focus-within {
+  box-shadow: 0 0 0 4px var(--secondary);
 }
 
-.more-link {
-    display: block;
-    width: 100%;
-    text-align: right;
+.card:hover, .card:focus {
     color: var(--secondary);
+    border: 8px solid var(--secondary);
+
+}
+
+.card:hover .topic, .card:focus .topic{
+    background: var(--secondary);
+
 }
 </style>
