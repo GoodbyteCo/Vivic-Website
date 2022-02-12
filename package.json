@@ -10,7 +10,8 @@
   },
   "devDependencies": {
     "@astrojs/renderer-vue": "^0.2",
-    "astro": "^0.22.20"
+    "astro": "^0.22.20",
+		"eslint-config-goodbyte-styleguide": "^0.0.7"
   },
   "dependencies": {
   }

@@ -2,6 +2,7 @@
 _site/
 .jekyll-cache/
 Gemfile.lock
+.vscode/
 
 # build output
 dist
