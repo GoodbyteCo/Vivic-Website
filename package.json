@@ -9,13 +9,9 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "@astrojs/renderer-vue": "^0.1.9",
-    "@types/vue-select": "^3.16.0",
-    "astro": "^0.20.12"
+    "@astrojs/renderer-vue": "^0.2",
+    "astro": "^0.22.20"
   },
   "dependencies": {
-    "@vueform/multiselect": "^2.2.0",
-    "vue-multiselect": "^2.1.6",
-    "vue-select": "^4.0.0-beta.1"
   }
 }
