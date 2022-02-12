@@ -192,12 +192,11 @@ select::-ms-expand {
 
 .card:hover, .card:focus {
     color: var(--secondary);
+    border-image-source: unset;
     border: 8px solid var(--secondary);
-
 }
 
 .card:hover .topic, .card:focus .topic{
     background: var(--secondary);
-
 }
 </style>

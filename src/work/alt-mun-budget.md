@@ -2,7 +2,7 @@
 title: Alternative Municipal Budget for the City of Ottawa
 pdf: "/PDFS/Alternative_Budget_Report_FINAL_NOV_02_2020.pdf"
 work: 7
-topic: "Alternative budget"
+topic: "Municipal"
 ---
 In work done for the Ottawa Coalition for a People’s Budget, Vivic Research created the
 Alternative Budget which presents a progressive and ambitious vision for the City of Ottawa and
