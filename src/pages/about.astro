@@ -31,48 +31,40 @@ import CtaButtom from "../components/InlineCtaButton.astro"
     </div> 
     <h2> Our Team </h2>
     <div id="photos">
-    <img class="photo-left" src="/images/inez.jpg" alt="inez">
-    <h3 class="photo-left">Inez Hillel</h3>
-    <p class="photo-left"> Inez Hillel is co-founder and economist of Vivic Research. Inez is passionate about
-        intersectional economics that prioritize community building and collective wellbeing. She understands the
-        importance of centering frontline voices and using economic analysis as a tool for progressive policy
-        development. Having previously worked at the Centre for the Study of Living Standards, she has conducted
-        research on income supports in Canada. Inez also applies a climate justice lens to her work, infused by her work
-        experience in environmental education at the Montreal Biosphere. Inez is currently pursuing an MA in Economics
-        at Simon Fraser University and holds a BA in Applied Economics from Queen’s University.
-        <CtaButtom className="about-button" link="/contact">Get in Touch</CtaButtom>
-
-    </p>
-    <img class="photo-center" src="/images/robin.jpg" alt="robin">
-    <h3 class="photo-center">Robin Shaban</h3>
-    <p class="photo-center">Robin Shaban is co-founder and senior economist of Vivic Research. She is also a PhD
-        candidate at Carleton’s School of Public Policy and Administration, studying competition policy in Canada and
-        around the globe. This year she was also a winner of the <a class="about-link"
-            href="https://www.theglobeandmail.com/business/rob-magazine/article-changemakers-canada-faces-serious-challenges-but-these-leaders-show/">Globe
-            and Mail’s Report on Business 2021 Changemakers award.</a>
-        Robin uses modern data science tools and methods to empower advocates and others with data. She believes
-        that economic policy should be human-centered, and that the economy should work for people, not the other way
-        around. Since 2017 she has worked as a freelance consultant serving several think tank and advocacy
-        organizations such as the Ontario Living Wage Network, the University of Calgary’s School of Public Policy, the
-        office of the EI Commissioner for Workers, the Broadbent Institute, and others. Prior to that, she was the
-        Andrew Jackson fellow at the Canadian Centre for Policy Alternatives and an officer at Canada’s Competition
-        Bureau. Robin’s holds a MA in economics from Queen’s University.
+    <picture class="photo-left">
+        <source type="image/avif" srcset="/images/inez.avif"/>
+		<source type="image/webp" srcset="/images/inez.webp"/>
+        <img src="/images/inez.jpg" alt="inez">
+    </picture>
+    <section class="photo-left header">
+        <h3>Inez Hillel <span class="pronouns">(she/her)</span></h3>
+        <h4>Economist and Co-founder</h4>
+    </section>
+    <p class="photo-left">Inez Hillel is co-founder and economist of Vivic Research. She currently works on the traditional territory of the Huron-Wendat, the Seneca and the Mississaugas of the Credit. Inez is passionate about intersectional economics that center frontline voices and qualitative data as foundational for progressive policy development. Her focus at Vivic is projects that require ongoing community engagement and that allow her to connect with grassroots activists and organizations. Having previously worked at the Centre for the Study of Living Standards, she has conducted research on income supports in Canada.  Inez holds an MA in Economics from Simon Fraser University and a BA in Applied Economics from Queen’s University. In 2020, Inez was the recipient of the British Columbia Graduate Scholarship and the Provost Prize of Distinction Scholarship from Simon Fraser University. 
         <CtaButtom className="about-button" link="/contact">Get in Touch</CtaButtom>
     </p>
-    <img class="photo-right" src="/images/robin.jpg" alt="robin">
-    <h3 class="photo-right">Robin Shaban</h3>
-    <p class="photo-right">Robin Shaban is co-founder and senior economist of Vivic Research. She is also a PhD
-        candidate at Carleton’s School of Public Policy and Administration, studying competition policy in Canada and
-        around the globe. This year she was also a winner of the <a class="about-link"
-            href="https://www.theglobeandmail.com/business/rob-magazine/article-changemakers-canada-faces-serious-challenges-but-these-leaders-show/">Globe
-            and Mail’s Report on Business 2021 Changemakers award.</a>
-        Robin uses modern data science tools and methods to empower advocates and others with data. She believes
-        that economic policy should be human-centered, and that the economy should work for people, not the other way
-        around. Since 2017 she has worked as a freelance consultant serving several think tank and advocacy
-        organizations such as the Ontario Living Wage Network, the University of Calgary’s School of Public Policy, the
-        office of the EI Commissioner for Workers, the Broadbent Institute, and others. Prior to that, she was the
-        Andrew Jackson fellow at the Canadian Centre for Policy Alternatives and an officer at Canada’s Competition
-        Bureau. Robin’s holds a MA in economics from Queen’s University.
+    <picture class="photo-center">
+        <source type="image/avif" srcset="/images/robin.avif"/>
+		<source type="image/webp" srcset="/images/robin.webp"/>
+        <img src="/images/robin.jpg" alt="robin">
+    </picture>
+    <section class="photo-center header">
+        <h3>Robin Shaban <span class="pronouns">(they/them)</span></h3>
+        <h4>Senior Economist and Co-founder</h4>
+    </section>
+    <p class="photo-center">Robin Shaban is co-founder and senior economist of Vivic Research, and currently works on the traditional and unceded Territory of the Anishinabe Algonquin Nation. They bring an interest in quantitative analysis, policy microsimulation, and competition policy to Vivic’s work. Beginning in 2017 Robin has worked as a freelance consultant serving several think tank and advocacy organizations. Prior to that, they were the Andrew Jackson fellow at the Canadian Centre for Policy Alternatives and an officer at Canada’s Competition Bureau. This year Robin was a winner of the Globe and Mail’s Report on Business 2021 Changemakers award. They hold a MA in economics from Queen’s University and is also a PhD candidate at Carleton’s School of Public Policy and Administration, studying competition policy in Canada and around the globe. Robin is also a research associate with the Canadian Centre for Policy Alternatives.
+        <CtaButtom className="about-button" link="/contact">Get in Touch</CtaButtom>
+    </p>
+    <picture class="photo-right">
+        <source type="image/avif" srcset="/images/saamia.avif"/>
+		<source type="image/webp" srcset="/images/saamia.webp"/>
+        <img src="/images/saamia.jpg" alt="saamia">
+    </picture>
+    <section class="photo-right header">
+        <h3>Saamia Ahmad <span class="pronouns">(she/her)</span></h3>
+        <h4>Economist</h4>
+    </section>
+    <p class="photo-right">Saamia Ahmad is an economist at Vivic Research. Saamia respectfully acknowledges that she lives and works on the traditional territory of the Mississaugas of the Credit, the Anishnabeg, Haudenosaunee Confederacy, and the Wendat Nations. Saamia has a keen interest in public policy, with a particular emphasis on how policy can be used to improve the wellbeing of all Canadians. Saamia’s interests within economics are income inequality, shared prosperity, and advancing human welfare through progressive economics. In her previous role as a media analyst, she managed media campaigns by conducting data analyses and executing programmatic strategies to streamline the overall customer journey. In her role as economist at Vivic Research, Saamia develops economic models and designs advanced analysis projects with the intention of meaningful involvement in her projects. Saamia is a graduate of Queen’s University’s Economics department. 
         <CtaButtom className="about-button" link="/contact">Get in Touch</CtaButtom>
     </p>
 </div>
@@ -145,13 +137,13 @@ h2 {
     font-size: 1.8rem;
 }
 
-img.photo-left {
+picture.photo-left {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
     clip-path: polygon(0 7%, 100% 0, 100% 93%, 0 100%);
 }
-h3.photo-left {
+.header.photo-left {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 2;
@@ -162,14 +154,14 @@ p.photo-left {
     grid-column-end: 3;
     grid-row-start: 3;
 }
-img.photo-center {
+picture.photo-center {
     grid-column-start: 4;
     grid-column-end: 5;
     grid-row-start: 1;
     clip-path: polygon(0 7%, 100% 0, 100% 93%, 0 100%);
 }
 
-h3.photo-center {
+.header.photo-center {
     grid-column-start: 4;
     grid-column-end: 5;
     grid-row-start: 2;
@@ -181,14 +173,14 @@ p.photo-center {
     grid-row-start: 3;
 }
 
-img.photo-right {
+picture.photo-right {
     grid-column-start: 6;
     grid-column-end: 7;
     grid-row-start: 1;
     clip-path: polygon(0 7%, 100% 0, 100% 93%, 0 100%);
 }
 
-h3.photo-right {
+.header.photo-right {
     grid-column-start: 6;
     grid-column-end: 7;
     grid-row-start: 2;
@@ -200,107 +192,112 @@ p.photo-right {
     grid-row-start: 3;
 }
 
+.pronouns {
+    font-weight: normal;
+    font-size: .75em;
+    letter-spacing: 0.03em;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+}
+
+.header h3,h4{
+    text-align: center;
+}
+
+.header h3 {
+    margin: 30px 0 20px ;
+}
+
+.header h4 {
+    margin: 0 0 20px 0 ;
+}
 
 
-/* @media screen and (max-width: 1250px) {
+@media screen and (max-width: 1620px) {
     #photos {
-        -ms-grid-columns: auto 300px 12% 300px auto;
-        grid-template-columns: auto 300px 12% 300px auto
+        grid-template-columns: auto 300px 12% 300px 12% 300px auto
     }
 
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1250px) {
     #photos {
-        -ms-grid-columns: auto 250px 40px 250px auto;
-        grid-template-columns: auto 250px 40px 250px auto;
-        -ms-grid-rows: auto;
-        grid-template-rows: auto;
+        grid-template-columns: auto 250px 8% 250px 8% 250px auto
     }
 
-    #photos>*:nth-child(1) {
-        -ms-grid-row: 1;
-        -ms-grid-column: 1;
+}
+
+@media screen and (max-width: 870px) {
+    #photos {
+        grid-template-columns: auto 200px 3% 200px 3% 200px auto
     }
 
-    #photos>*:nth-child(2) {
-        -ms-grid-row: 1;
-        -ms-grid-column: 2;
-    }
+    .big-text {
+            font-size: 18pt;
+        }
 
-    #photos>*:nth-child(3) {
-        -ms-grid-row: 1;
-        -ms-grid-column: 3;
-    }
-
-    #photos>*:nth-child(4) {
-        -ms-grid-row: 1;
-        -ms-grid-column: 4;
-    }
-
-    #photos>*:nth-child(5) {
-        -ms-grid-row: 1;
-        -ms-grid-column: 5;
+    section h3 {
+        font-size: 15pt;
     }
 }
 
 
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 545px) {
     #photos {
-        -ms-grid-columns: 1fr 5fr 1fr;
         grid-template-columns: 1fr 5fr 1fr;
-        -ms-grid-rows: auto;
         grid-template-rows: auto;
     }
 
-    #photos>*:nth-child(1) {
-        -ms-grid-row: 1;
-        -ms-grid-column: 1;
-    }
-
-    #photos>*:nth-child(2) {
-        -ms-grid-row: 1;
-        -ms-grid-column: 2;
-    }
-
-    #photos>*:nth-child(3) {
-        -ms-grid-row: 1;
-        -ms-grid-column: 3;
-    }
-
-    img.photo-center {
+    picture.photo-center {
         padding-top: 50px;
-        -ms-grid-column: 2;
         grid-column-start: 2;
-        -ms-grid-column-span: 1;
         grid-column-end: 3;
-        -ms-grid-row: 7;
         grid-row-start: 7;
-        -ms-grid-row-span: 1;
         grid-row-end: 8;
     }
 
-    h3.photo-center {
-        -ms-grid-column: 2;
+    .header.photo-center {
         grid-column-start: 2;
-        -ms-grid-column-span: 1;
         grid-column-end: 3;
-        -ms-grid-row: 8;
         grid-row-start: 8;
-        -ms-grid-row-span: 1;
         grid-row-end: 9;
     }
 
     p.photo-center {
-        -ms-grid-column: 2;
         grid-column-start: 2;
-        -ms-grid-column-span: 1;
         grid-column-end: 3;
-        -ms-grid-row: 9;
         grid-row-start: 9;
-        -ms-grid-row-span: 1;
         grid-row-end: 10;
     }
-} */
+    picture.photo-right {
+        padding-top: 50px;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 11;
+        grid-row-end: 12;
+    }
+
+    .header.photo-right {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 13;
+        grid-row-end: 14;
+    }
+
+    p.photo-right {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 15;
+        grid-row-end: 16;
+    }
+
+    .big-text {
+            font-size: 16pt;
+        }
+    
+} 
 </style>

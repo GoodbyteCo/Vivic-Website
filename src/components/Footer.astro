@@ -1,5 +1,5 @@
 <footer>
-    <div id="footer-logo">
+    <section id="footer-logo">
         <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 120">
             <defs>
                 <style>
@@ -42,7 +42,7 @@
             />
             <path class="cls-1" d="M303.23,99.42V79.8c0-6.69-3.76-11.09-10.33-11.09-6.37,0-11.28,4.84-11.28,11.6V99.42h-3.13V52.58h3.13V72.66a12.74,12.74,0,0,1,11.73-6.82c8.22,0,13,5.61,13,13.39V99.42Z" />
         </svg>
-    </div>
+    </section>
     <section id="land-ack-address">
      <address>
             Vivic Research<br/>
@@ -244,5 +244,27 @@
     #socials {
         display: flex;
         flex-direction: column;
+    }
+
+    @media screen and (max-width: 755px) {
+        footer {
+            gap: 40px;
+
+        }
+    }
+
+    @media screen and (max-width: 635px) {
+        footer {
+            gap: 20px;
+
+        }
+    }
+
+    @media screen and (max-width: 545px) {
+        footer {
+            flex-direction: column;
+
+        }
+        
     }
 </style>
