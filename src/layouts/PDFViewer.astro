@@ -19,7 +19,9 @@ const { content } = Astro.props
     <main>
         <h1>{content.title}</h1>
         <a class=topic href={`/work?topic=${content.topic.toLowerCase()}`}>{content.topic}</a>
-        <iframe src={content.pdf}></iframe>
+        <div id=pdf>
+            <iframe src={content.pdf}></iframe>
+        </div>
         <CtaButton link={content.pdf}> Download </CtaButton>
     </main>
     <Footer />
@@ -48,10 +50,18 @@ main {
     min-height: 100vh;
 }
 
-iframe {
+#pdf {
     height: 85vh;
+    width: 85%;
+    margin: auto;
+    margin-bottom: 80px;
+}
+
+iframe {
+    height: 100%;
     width: 100%;
 }
+
 
 h1 {
     width: 70%;

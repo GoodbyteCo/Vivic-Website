@@ -15,12 +15,22 @@
     <div>
         <template v-for="work in workSorted" :key="work.title">
             <template v-if="work.topic.toLowerCase() === selected.toLowerCase() || selected === 'All Work'">
-                <a class="card" :href="work.url">
-                    <div class="title">
-                        <h2>{{work.title}}&nbsp;&nbsp;<span class="topic">{{work.topic}}</span></h2>
-                    </div>
-                    <p>{{work.source}}</p>
-                </a>
+                <template v-if="work.externalLink">
+                    <a class="card" :href="work.pdf">
+                        <div class="title">
+                            <h2>{{work.title}}&nbsp;&nbsp;<span class="topic">{{work.topic}}</span></h2>
+                        </div>
+                        <p>{{work.source}}</p>
+                    </a>
+                </template>
+                <template v-else>
+                    <a class="card" :href="work.url">
+                        <div class="title">
+                            <h2>{{work.title}}&nbsp;&nbsp;<span class="topic">{{work.topic}}</span></h2>
+                        </div>
+                        <p>{{work.source}}</p>
+                    </a>
+                </template>
             </template>
         </template>
     </div>
@@ -39,6 +49,7 @@ type WorkData = {
     date: string,
     source: string,     
     url: string
+    externalLink: boolean
 }
 
 export default defineComponent({
@@ -75,7 +86,6 @@ export default defineComponent({
             } else {
                 window.history.replaceState(null,null,`/work`)
             }
-
         })
             
         return {
@@ -106,8 +116,6 @@ export default defineComponent({
     margin-bottom: 23px;
 }
 
-
-
 h2 {
     font-size: 30px;
 }
@@ -122,7 +130,6 @@ h2 {
     text-transform: uppercase;
     padding: 0.3em 1ch 0.25em;
     border-radius: 100px;
-    /* margin: 0 2ch; */
     transform: translateY(-3px);
 }
 
@@ -181,7 +188,6 @@ select::-ms-expand {
   cursor: pointer;
   line-height: 1.1;
   background-color: rgba(255, 255, 255, 0.2);
-  /* background-image: linear-gradient(to top, #f9f9f9, #fff 33%); */
   margin-block-start: 0.83em;
   margin-block-end: 0.83em
 }
@@ -199,8 +205,6 @@ select::-ms-expand {
   grid-area: select;
 }
 
-
-
 .select:focus-within {
   box-shadow: 0 0 0 4px var(--secondary);
 }
@@ -213,5 +217,12 @@ select::-ms-expand {
 
 .card:hover .topic, .card:focus .topic{
     background: var(--secondary);
+}
+
+@media screen and (max-width: 485px) {
+    #work-header {
+        flex-direction: column;
+    }
+    
 }
 </style>
