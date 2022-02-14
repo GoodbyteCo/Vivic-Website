@@ -154,6 +154,7 @@ select::after {
 }
 
 select {
+  -webkit-appearance: none;
   appearance: none;
   background-color: transparent;
   border: none;
