@@ -1,0 +1,96 @@
+---
+import BasicMeta from '../components/BasicMeta.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import Global from '../components/Global.astro'
+import CtaButton from '../components/CtaButton.astro'
+const { content } = Astro.props
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <BasicMeta title={`Vivic Research | ${content.title}`} />
+    <Global />
+</head>
+
+<body>
+    <Header />
+    <main>
+        <h1>{content.title}</h1>
+        <a class=topic href={`/work?topic=${content.topic.toLowerCase()}`}>{content.topic}</a>
+        <div id=pdf>
+            <iframe src={content.pdf}></iframe>
+        </div>
+        <CtaButton link={content.pdf}> Download </CtaButton>
+    </main>
+    <Footer />
+    <script data-goatcounter="https://vivic.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
+
+
+
+<style>
+body {
+    color: var(--white);
+    min-height: 100vh;
+    background-image: radial-gradient(88% 140% at 120% -5%, #482979, #40256b, #38215e, #301d51, #291943, #211536, var(--dark) 80%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--dark);
+    margin: 0;
+}
+
+main {
+    width: 80%;
+    margin: auto;
+    margin-top: 250px;
+    font-family: main;
+    min-height: 100vh;
+}
+
+#pdf {
+    height: 85vh;
+    width: 85%;
+    margin: auto;
+    margin-bottom: 80px;
+}
+
+iframe {
+    height: 100%;
+    width: 100%;
+}
+
+
+h1 {
+    width: 70%;
+    text-align: center;
+    margin: 0 auto 20px auto;
+    font-size: 2.5em;
+}
+
+.topic {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #fcd5e1, #fff, #def8f8);
+    color: var(--dark);
+    line-height: 1;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding: 0.3em 1ch 0.25em;
+    border-radius: 100px;
+    transform: translateY(-3px);
+    width: 10ch;
+    width: max-content;
+    text-align: center;
+    margin: 0 auto 40px auto;
+    text-decoration: none;
+}
+
+.topic:hover, .topic:focus {
+    background: var(--secondary);
+}
+
+</style>

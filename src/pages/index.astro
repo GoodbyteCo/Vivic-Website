@@ -1,0 +1,194 @@
+---
+import Main from '../layouts/Main.astro'
+import OurWork from '../components/OurWork.astro'
+---
+<Main title='Vivic Research'>
+    <div id="maincontent">
+        <div id="hero">
+            <h1>
+                today. tomorrow. together.
+            </h1>
+            <p>
+            Vivic Research is an economic consulting firm dedicated to empowering peers working toward social justice with data-driven research
+            </p>
+        </div>
+        <div class="maincenter" id="about">
+        </div>
+        <div class="maincenter" id="services">
+            <h2 class="center-title">Our Services</h2>
+            <div id="pillars">
+                <div class="pillar" id="pillar1">
+                    <div class="pillar-box" id="pink">
+                        Economic Research
+                    </div>
+                    <p>
+                        We develop boutique research studies focusing on targeted issues related to the intersection of
+                        policy, economics, and social justice. This includes but is not limited to literature reviews,
+                        policy recommendations, community consultation and cost/benefit analysis. Our past work has included
+                        costing an alternative municipal budget for the city of Ottawa with an emphasis on racial and gender
+                        equity, research on Employment Insurance and best practices for post-secondary education fees and
+                        debt cancellation.
+                    </p>
+                </div>
+                <div class="pillar" id="pillar2">
+                    <div class="pillar-box" id="white">
+                        Training
+                    </div>
+                    <p>
+                        We provide personalized training on quantitative research methods for teams, helping them build
+                        confidence and do their work more efficiently. Vivic offers SPSD/M training for beginners and more
+                        experienced users. Our introductory training "Getting Started: Policy Analysis Using SPSD/M" gets
+                        researchers quickly up-and-running with SPSD/M, saving time and frustration.
+                    </p>
+                </div>
+                <div class="pillar" id="pillar3">
+                    <div class="pillar-box" id="blue">
+                        Data Science
+                    </div>
+                    <p>
+                        We develop processes for procuring, organizing, and analyzing information effectively and
+                        efficiently. We also provide our clients with analysis they can easily replicate such as annual
+                        factsheets or reports.
+                    </p>
+                </div>
+            </div>
+            <OurWork />
+        </div>
+    </div>
+</Main>
+
+<style>
+
+#maincontent {
+    font-family: main;
+    margin: 325px 0 0;
+}
+
+#services {
+    max-width: 1500px;
+    margin: 0 auto 75px auto;
+}
+
+#hero {
+    margin: 80px 8% 155px 8%;
+    font-family: main;
+    width: 65%;
+}
+
+h1 {
+    font-family: main;
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 50px;
+    letter-spacing: 4px;
+}
+#hero p {
+    width: 75%;
+    font-weight: 100;
+    font-size: 14pt;
+}
+
+.center-title {
+    text-align: center;
+}
+
+h2 {
+    font-size: 30pt
+}
+
+.center-title {
+    text-align: center;
+}
+
+#pillars {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 5rem;
+    z-index: -9;
+    -webkit-transform: translateZ(-1);
+    transform: translateZ(-1);
+}
+
+.pillar-box {
+    font-size: 18pt;
+    margin-top: 50px;
+    text-align: center;
+    padding: 10px 20px;
+    color: black;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+.pillar {
+    flex-basis: 100%;
+    margin: 0 25px;
+    max-width: 400px;
+    clip-path: polygon(0 7%, 100% 0, 100% 93%, 0 100%);
+    padding: 2.5rem 2.8rem;
+    min-height: 400px;
+}
+
+#pillar1 {
+    background: linear-gradient(to right, #f783a7, #fcd5e1);
+}
+
+#pillar2 {
+    background: linear-gradient(to right, #fcd5e1, #fff, #def8f8);
+    margin-top: 50px;
+}
+#pillar3 {
+    background: linear-gradient(to right, #def8f8, #9eecec);
+    margin-top: 100px;
+}
+
+.pillar p {
+    padding: .5em 0;
+    text-align: left;
+    color: black;
+    font-size: 13pt;
+    line-height: 27px;
+}
+
+#work-title {
+    margin-top: 130px;
+}
+
+#button-continer {
+    position: relative;
+}
+
+@media screen and (max-width: 1290px) {
+    .pillar {
+        margin: 0 12px;
+    }
+
+}
+
+@media screen and (max-width: 1050px) {
+    .pillar {
+        max-width: unset;
+        margin: 50px 0;
+        padding: 2.5rem 1.2rem;
+        margin-bottom: 50px;
+    }
+
+    #pillars {
+        display: unset;
+    }
+
+}
+
+@media screen and (max-width: 1050px) {
+    #pillars {
+        display: unset;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    h1 {
+        font-size: 45px;
+    }
+
+} 
+
+</style>
