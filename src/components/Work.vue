@@ -161,7 +161,7 @@ select {
   padding: 0 1em 0 0;
   margin: 0;
   width: 100%;
-  font-family: main;
+  font-family: var(--mainfont);
   font-size: inherit;
   cursor: inherit;
   line-height: inherit;
