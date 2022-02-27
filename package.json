@@ -1,5 +1,5 @@
 {
-  "name": "@goodbyteco/vivicReseachSite",
+  "name": "@goodbyteco/vivic",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -9,8 +9,8 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "@astrojs/renderer-vue": "^0.2",
-    "astro": "^0.22.20",
+    "@astrojs/renderer-vue": "^0.4.0",
+    "astro": "^0.23.2",
     "autoprefixer": "^10.4.2",
     "eslint-config-goodbyte-styleguide": "^0.0.7"
   }
