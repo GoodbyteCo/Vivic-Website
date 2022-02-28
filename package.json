@@ -1,17 +1,19 @@
 {
-  "name": "@goodbyteco/vivicReseachSite",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview"
-  },
-  "devDependencies": {
-    "@astrojs/renderer-vue": "^0.2",
-    "astro": "^0.22.20",
-    "autoprefixer": "^10.4.2",
-    "eslint-config-goodbyte-styleguide": "^0.0.7"
-  }
+	"name": "@goodbyteco/vivic",
+	"version": "1.0.0",
+	"private": true,
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"lint": "eslint ."
+	},
+	"dependencies": {
+		"@astrojs/renderer-vue": "^0.4.0"
+	},
+	"devDependencies": {
+		"astro": "^0.23",
+		"autoprefixer": "^10.4.2",
+		"eslint-config-goodbyte-styleguide": "^0.0.7"
+	}
 }

@@ -1,6 +1,6 @@
 # Vivic Research
 
-Vivic Research site built in [Astro](https://astro.build)
+Vivic Research website built in [Astro](https://astro.build).
 
 ## Operational Notes
 
@@ -12,10 +12,13 @@ Install dependencies:
 npm install
 ```
 
-| COMMAND       | DESCRIPTION                             |
-|:--------------|:----------------------------------------|
-| `npm run dev` | Run the site locally                    |
+| COMMAND        | DESCRIPTION                             |
+|:---------------|:----------------------------------------|
+| `npm run dev`  | Run the site locally                    |
+| `npm run lint` | Check for formatting errors             |
 
 ### Deployment
+
+Deploys automatically via Netlify.
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/90e6b80d-a19a-45b4-81c1-b07bf464cf10/deploy-status)](https://app.netlify.com/sites/vivicresearch/deploys)
