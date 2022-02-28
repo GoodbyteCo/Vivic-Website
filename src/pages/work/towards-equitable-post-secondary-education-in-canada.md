@@ -6,8 +6,9 @@ topic: "Provincial"
 externalLink: False
 layout: ../../layouts/PDFViewer.astro
 ---
-In work done for the Canadian Federation of Students, Vivic Research presented a series of
-policy recommendations aimed at easing the burden of student debt and tuition prices. The
-recommendations we put forward prioritized the needs of low-income and otherwise marginalized
-students, in doing so, advocating for progressive change in Canada’s approach to education
-funding.
+
+In work done for the Canadian Federation of Students, Vivic Research presented a series
+of policy recommendations aimed at easing the burden of student debt and tuition prices.
+The recommendations we put forward prioritized the needs of low-income and otherwise
+marginalized students, in doing so, advocating for progressive change in Canada’s
+approach to education funding.

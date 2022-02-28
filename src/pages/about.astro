@@ -4,300 +4,219 @@ import CtaButtom from "../components/InlineCtaButton.astro"
 ---
 
 <MainCentered>
-    <p class='big-text'>
-    At Vivic Research, we support agents working toward social justice with economic and data-driven research.
-                We serve advocates, think tanks, governments, labour unions,
-                and other agents engaged in the development of public policy. We empower our clients with economic knowledge
-                through our practice areas: economic research, data science, and training.
-        
-    </p>
-    <div id="about-section">
-        <section style="padding-left: 0;">
-            <h3>
-                Our Vision
-            </h3>
-            <p>
-                Vivic Research envisions a just society, where everyone has access to housing, food, safety, health and community.
-            </p>
-        </section>
-        <section>
-            <h3> 
-                Our Mission 
-            </h3>
-            <p> 
-                Vivic Research’s mission is provide alternatives to traditional economic consulting. We work towards our collective liberation by actively challenging standard assumptions and existing systems.
-            </p>
-        </section>
-    </div> 
-    <h2> Our Team </h2>
-    <div id="photos">
-    <picture class="photo-left">
-        <source type="image/avif" srcset="/images/inez.avif"/>
-		<source type="image/webp" srcset="/images/inez.webp"/>
-        <img src="/images/inez.jpg" alt="inez">
-    </picture>
-    <section class="photo-left header">
-        <h3>Inez Hillel <span class="pronouns">(she/her)</span></h3>
-        <h4>Economist and Co-founder</h4>
-    </section>
-    <p class="photo-left">Inez Hillel is co-founder and economist of Vivic Research. She currently works on the traditional territory of the Huron-Wendat, the Seneca and the Mississaugas of the Credit. Inez is passionate about intersectional economics that center frontline voices and qualitative data as foundational for progressive policy development. Her focus at Vivic is projects that require ongoing community engagement and that allow her to connect with grassroots activists and organizations. Having previously worked at the Centre for the Study of Living Standards, she has conducted research on income supports in Canada.  Inez holds an MA in Economics from Simon Fraser University and a BA in Applied Economics from Queen’s University. In 2020, Inez was the recipient of the British Columbia Graduate Scholarship and the Provost Prize of Distinction Scholarship from Simon Fraser University. 
-        <CtaButtom className="about-button" link="/contact">Get in Touch</CtaButtom>
-    </p>
-    <picture class="photo-center">
-        <source type="image/avif" srcset="/images/robin.avif"/>
-		<source type="image/webp" srcset="/images/robin.webp"/>
-        <img src="/images/robin.jpg" alt="robin">
-    </picture>
-    <section class="photo-center header">
-        <h3>Robin Shaban <span class="pronouns">(they/them)</span></h3>
-        <h4>Senior Economist and Co-founder</h4>
-    </section>
-    <p class="photo-center">Robin Shaban is co-founder and senior economist of Vivic Research, and currently works on the traditional and unceded Territory of the Anishinabe Algonquin Nation. They bring an interest in quantitative analysis, policy microsimulation, and competition policy to Vivic’s work. Beginning in 2017 Robin has worked as a freelance consultant serving several think tank and advocacy organizations. Prior to that, they were the Andrew Jackson fellow at the Canadian Centre for Policy Alternatives and an officer at Canada’s Competition Bureau. This year Robin was a winner of the Globe and Mail’s Report on Business 2021 Changemakers award. They hold a MA in economics from Queen’s University and is also a PhD candidate at Carleton’s School of Public Policy and Administration, studying competition policy in Canada and around the globe. Robin is also a research associate with the Canadian Centre for Policy Alternatives.
-        <CtaButtom className="about-button" link="/contact">Get in Touch</CtaButtom>
-    </p>
-    <picture class="photo-right">
-        <source type="image/avif" srcset="/images/saamia.avif"/>
-		<source type="image/webp" srcset="/images/saamia.webp"/>
-        <img src="/images/saamia.jpg" alt="saamia">
-    </picture>
-    <section class="photo-right header">
-        <h3>Saamia Ahmad <span class="pronouns">(she/her)</span></h3>
-        <h4>Economist</h4>
-    </section>
-    <p class="photo-right">Saamia Ahmad is an economist at Vivic Research. Saamia respectfully acknowledges that she lives and works on the traditional territory of the Mississaugas of the Credit, the Anishnabeg, Haudenosaunee Confederacy, and the Wendat Nations. Saamia has a keen interest in public policy, with a particular emphasis on how policy can be used to improve the wellbeing of all Canadians. Saamia’s interests within economics are income inequality, shared prosperity, and advancing human welfare through progressive economics. In her previous role as a media analyst, she managed media campaigns by conducting data analyses and executing programmatic strategies to streamline the overall customer journey. In her role as economist at Vivic Research, Saamia develops economic models and designs advanced analysis projects with the intention of meaningful involvement in her projects. Saamia is a graduate of Queen’s University’s Economics department. 
-        <CtaButtom className="about-button" link="/contact">Get in Touch</CtaButtom>
-    </p>
-</div>
+	<p class='big-text'>
+		At Vivic Research, we support agents working toward social justice with economic
+		and data-driven research. We serve advocates, think tanks, governments, labour
+		unions, and other agents engaged in the development of public policy. We empower
+		our clients with economic knowledge through our practice areas: economic research,
+		data science, and training.
+	</p>
+	<div id="about-section">
+		<section>
+			<h3>
+				Our Vision
+			</h3>
+			<p>
+				Vivic Research envisions a just society, where everyone has access
+				to housing, food, safety, health and community.
+			</p>
+		</section>
+		<section>
+			<h3> 
+				Our Mission 
+			</h3>
+			<p> 
+				Vivic Research’s mission is provide alternatives to traditional economic
+				consulting. We work towards our collective liberation by actively
+				challenging standard assumptions and existing systems.
+			</p>
+		</section>
+	</div>
+
+	<h2>Our Team</h2>
+	<div class="team">
+		<section>
+			<picture>
+				<source type="image/avif" srcset="/images/inez.avif"/>
+				<source type="image/webp" srcset="/images/inez.webp"/>
+				<img src="/images/inez.jpg" alt="inez">
+			</picture>
+			<h3>
+				Inez Hillel <span class="pronouns">(she/her)</span>
+			</h3>
+			<h4>
+				Economist and Co-founder
+			</h4>
+			<p>
+				Inez Hillel is co-founder and economist of Vivic Research. She currently
+				works on the traditional territory of the Huron-Wendat, the Seneca
+				and the Mississaugas of the Credit. Inez is passionate about intersectional
+				economics that center frontline voices and qualitative data as foundational
+				for progressive policy development. Her focus at Vivic is projects
+				that require ongoing community engagement and that allow her to connect
+				with grassroots activists and organizations. Having previously worked
+				at the Centre for the Study of Living Standards, she has conducted
+				research on income supports in Canada.  Inez holds an MA in Economics
+				from Simon Fraser University and a BA in Applied Economics from Queen’s
+				University. In 2020, Inez was the recipient of the British Columbia
+				Graduate Scholarship and the Provost Prize of Distinction Scholarship
+				from Simon Fraser University. 
+			</p>
+			<CtaButtom className="about-button" link="/contact">
+				Get in Touch
+			</CtaButtom>
+		</section>
+
+		<section>
+			<picture>
+				<source type="image/avif" srcset="/images/robin.avif"/>
+				<source type="image/webp" srcset="/images/robin.webp"/>
+				<img src="/images/robin.jpg" alt="robin">
+			</picture>
+			<h3>
+				Robin Shaban <span class="pronouns">(they/them)</span>
+			</h3>
+			<h4>
+				Senior Economist and Co-founder
+			</h4>
+			<p>
+				Robin Shaban is co-founder and senior economist of Vivic Research,
+				and currently works on the traditional and unceded Territory of the
+				Anishinabe Algonquin Nation. They bring an interest in quantitative
+				analysis, policy microsimulation, and competition policy to Vivic’s
+				work. Beginning in 2017 Robin has worked as a freelance consultant
+				serving several think tank and advocacy organizations. Prior to that,
+				they were the Andrew Jackson fellow at the Canadian Centre for Policy
+				Alternatives and an officer at Canada’s Competition Bureau. This year
+				Robin was a winner of the Globe and Mail’s Report on Business 2021
+				Changemakers award. They hold a MA in economics from Queen’s University
+				and is also a PhD candidate at Carleton’s School of Public Policy and
+				Administration, studying competition policy in Canada and around the
+				globe. Robin is also a research associate with the Canadian Centre
+				for Policy Alternatives.
+			</p>
+			<CtaButtom className="about-button" link="/contact">
+				Get in Touch
+			</CtaButtom>
+		</section>
+
+		<section>
+			<picture>
+				<source type="image/avif" srcset="/images/saamia.avif"/>
+				<source type="image/webp" srcset="/images/saamia.webp"/>
+				<img src="/images/saamia.jpg" alt="saamia">
+			</picture>
+			<h3>
+				Saamia Ahmad <span class="pronouns">(she/her)</span>
+			</h3>
+			<h4>
+				Economist
+			</h4>
+			<p>
+				Saamia Ahmad is an economist at Vivic Research. Saamia respectfully acknowledges
+				that she lives and works on the traditional territory of the Mississaugas
+				of the Credit, the Anishnabeg, Haudenosaunee Confederacy, and the Wendat
+				Nations. Saamia has a keen interest in public policy, with a particular
+				emphasis on how policy can be used to improve the wellbeing of all Canadians.
+				Saamia’s interests within economics are income inequality, shared prosperity,
+				and advancing human welfare through progressive economics. In her previous
+				role as a media analyst, she managed media campaigns by conducting data
+				analyses and executing programmatic strategies to streamline the overall
+				customer journey. In her role as economist at Vivic Research, Saamia develops
+				economic models and designs advanced analysis projects with the intention
+				of meaningful involvement in her projects. Saamia is a graduate of Queen’s
+				University’s Economics department.
+			</p>
+			<CtaButtom className="about-button" link="/contact">
+				Get in Touch
+			</CtaButtom>
+		</section>
+	</div>
 </MainCentered>
 
 <style>
+.big-text {
+	width: 75%;
+	font-size: 2rem;
+	font-weight: bold;
+}
 
-    .about-link {
-        color: rgba(246, 90, 138, 1.00);
-    }
-    
-  .big-text {
-    width: 75%;
-    font-size: 24pt;
-    font-weight: bold;
-    }
-  #about-section {
-    width: 60%;
-    display: flex;
-    flex-direction: row;
-    row-gap: 12px;
-  }
-  section {
-      padding: 0 10px;
-  }
-  section h3 {
-      font-size: 20pt;
-  }
-  section p {
-      line-height: 25px;
-  }
+#about-section {
+	width: 60%;
+	display: flex;
+	flex-direction: row;
+	gap: 40px;
+}
 
+#about-section h3 {
+	font-size: 1.6rem;
+}
 
-  #photos {
-    grid-template-columns: auto 500px 5% 500px 5% 500px auto;
-    grid-template-rows: auto;
-    display: grid;
-    text-align: left;
-    justify-content: center;
-    justify-items: center;
+#about-section p {
+	line-height: 25px;
 }
 
 h2 {
-        text-align: center;
-        text-transform: unset;
-        margin-bottom: 64px;
-        font-weight: 200;
-    font-size: 32px;
-    }
-
-
-#photos p {
-    font-size: 13pt;
-    line-height: 25px;
+	text-align: center;
+	margin-top: 120px;
+	font-weight: 200;
+	font-size: 2rem;
 }
 
-
-#photos p {
-    font-weight: 100;
+.team {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto;
+	gap: 5%;
+	padding: 5%;
 }
 
-#photos img {
-    width: 100%;
-    max-width: 300px;
-    z-index: -99;
+.team img {
+	display: block;
+	width: 100%;
+	max-width: 300px;
+	margin: auto;
 
+	clip-path: polygon(0 7%, 100% 0, 100% 93%, 0 100%);
 }
 
-#photos h3 {
-    font-size: 1.8rem;
+.team h3 {
+	font-size: 1.8rem;
+	margin: 30px 0 20px ;
+	text-align: center;
 }
 
-picture.photo-left {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    clip-path: polygon(0 7%, 100% 0, 100% 93%, 0 100%);
-}
-.header.photo-left {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
+.team .pronouns {
+	font-weight: normal;
+	font-size: .75em;
+	letter-spacing: 0.03em;
 }
 
-p.photo-left {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 3;
-}
-picture.photo-center {
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 1;
-    clip-path: polygon(0 7%, 100% 0, 100% 93%, 0 100%);
+.team h4 {
+	margin-bottom: 20px;
+	text-align: center;
 }
 
-.header.photo-center {
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 2;
-}
-
-p.photo-center {
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 3;
-}
-
-picture.photo-right {
-    grid-column-start: 6;
-    grid-column-end: 7;
-    grid-row-start: 1;
-    clip-path: polygon(0 7%, 100% 0, 100% 93%, 0 100%);
-}
-
-.header.photo-right {
-    grid-column-start: 6;
-    grid-column-end: 7;
-    grid-row-start: 2;
-}
-
-p.photo-right {
-    grid-column-start: 6;
-    grid-column-end: 7;
-    grid-row-start: 3;
-}
-
-.pronouns {
-    font-weight: normal;
-    font-size: .75em;
-    letter-spacing: 0.03em;
-}
-
-.header {
-    display: flex;
-    flex-direction: column;
-}
-
-.header h3,h4{
-    text-align: center;
-}
-
-.header h3 {
-    margin: 30px 0 20px ;
-}
-
-.header h4 {
-    margin: 0 0 20px 0 ;
-}
-
-
-@media screen and (max-width: 1620px) {
-    #photos {
-        grid-template-columns: auto 300px 12% 300px 12% 300px auto
-    }
-
-}
-
-@media screen and (max-width: 1250px) {
-    #photos {
-        grid-template-columns: auto 250px 8% 250px 8% 250px auto
-    }
-
+.team p {
+	line-height: 1.8;
+	font-weight: 100;
 }
 
 @media screen and (max-width: 870px) {
-    #photos {
-        grid-template-columns: auto 200px 3% 200px 3% 200px auto
-    }
+	.big-text {
+		font-size: 1.3rem;
+	}
 
-    .big-text {
-            font-size: 18pt;
-        }
+	#about-section h3 {
+		font-size: 1.1rem;
+	}
 
-    section h3 {
-        font-size: 15pt;
-    }
+	.team {
+		display: block;
+	}
+
+	.team section {
+		margin-bottom: 120px;
+	}
 }
-
-
-
-@media screen and (max-width: 580px) {
-    #photos {
-        grid-template-columns: 1fr 5fr 1fr;
-        grid-template-rows: auto;
-    }
-
-    picture.photo-center {
-        padding-top: 50px;
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 7;
-        grid-row-end: 8;
-    }
-
-    .header.photo-center {
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 8;
-        grid-row-end: 9;
-    }
-
-    p.photo-center {
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 9;
-        grid-row-end: 10;
-    }
-    picture.photo-right {
-        padding-top: 50px;
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 11;
-        grid-row-end: 12;
-    }
-
-    .header.photo-right {
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 13;
-        grid-row-end: 14;
-    }
-
-    p.photo-right {
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 15;
-        grid-row-end: 16;
-    }
-
-    .big-text {
-            font-size: 16pt;
-        }
-    
-} 
 </style>
