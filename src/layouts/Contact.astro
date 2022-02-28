@@ -1,112 +1,52 @@
---- 
-import BasicMeta from '../components/BasicMeta.astro'
-import Header from '../components/Header.astro'
-import Footer from '../components/Footer.astro'
-import Global from '../components/Global.astro'
-const {title} = Astro.props;
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <Global />
-    <BasicMeta title={title} />
-</head>
-
-<body>
-    <Header />
-    <main>
-        <div role="presentation" id="loading-container">
-            <div id="loading"></div>
-        </div>
-
-        <slot/>
-    </main>
-    <Footer />
-    <script data-goatcounter="https://vivic.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-</body>
-</html>
+import MainLayout from './Main.astro'
+const { title } = Astro.props;
+---
+<MainLayout title={title}>
+	<div role="presentation" class="loading-container">
+		<div class="loading"/>
+	</div>
+	<slot/>
+</MainLayout>
 
 <style>
-body {
-    color: var(--white);
-    min-height: 100vh;
-    background-image: radial-gradient(88% 140% at 120% -5%, #482979, #40256b, #38215e, #301d51, #291943, #211536, var(--dark) 80%);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: var(--dark);
-    margin: 0;
+:global(main) {
+	min-height: calc(100vh - 340px);
+	margin-top: 150px 100px 8px 8px;
 }
 
-main {
-    font-family: var(--mainfont);
-    min-height: calc(100vh - 340px);
-    margin: 8px;
+.loading {
+	width: 50px;
+	height: 50px;
+	background: var(--white);
+	margin: auto;
+
+	box-shadow: 0px 0px 0 0px var(--secondary),
+	            0px 0px 0 0px var(--tertiary);
+	animation: loading-animation 0.5s ease infinite;
+	animation-direction: alternate;
 }
 
-main {
-        margin-right: 100px;
-        margin-top: 150px;
-    }
-
-    
-
-
-#loading {
-    width: 50px;
-    height: 50px;
-    background: var(--white);
-    margin: auto;
-
-    -webkit-box-shadow: 0px 0px 0 0px var(--secondary), 0px 0px 0 0px var(--tertiary);
-
-    box-shadow: 0px 0px 0 0px var(--secondary), 0px 0px 0 0px var(--tertiary);
-    -webkit-animation: loading-animation 0.5s ease infinite;
-    animation: loading-animation 0.5s ease infinite;
-    -webkit-animation-direction: alternate;
-    animation-direction: alternate;
-}
-
-#loading-container {
-    position: absolute;
-    top: 400px;
-    width: 100%;
-    z-index: -99;
-    -webkit-animation: flip 2s steps(2) infinite;
-    animation: flip 2s steps(2) infinite;
-    -webkit-animation-delay: 2s;
-    animation-delay: 2s;
-}
-
-@-webkit-keyframes loading-animation {
-    to {
-        -webkit-box-shadow: 20px -20px 0 20px var(--secondary), -20px 20px 0 20px var(--tertiary);
-        box-shadow: 20px -20px 0 20px var(--secondary), -20px 20px 0 20px var(--tertiary);
-        -webkit-transform: scale(0.7);
-        transform: scale(0.7);
-    }
+.loading-container {
+	position: absolute;
+	top: 400px;
+	width: 100%;
+	z-index: -99;
+	animation: flip 2s steps(2) infinite;
+	animation-delay: 2s;
 }
 
 @keyframes loading-animation {
-    to {
-        -webkit-box-shadow: 20px -20px 0 20px var(--secondary), -20px 20px 0 20px var(--tertiary);
-        box-shadow: 20px -20px 0 20px var(--secondary), -20px 20px 0 20px var(--tertiary);
-        -webkit-transform: scale(0.7);
-        transform: scale(0.7);
-    }
-}
-
-@-webkit-keyframes flip {
-    to {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
+	to {
+		box-shadow: 20px -20px 0 20px var(--secondary),
+		           -20px 20px 0 20px var(--tertiary);
+		transform: scale(0.7);
+	}
 }
 
 @keyframes flip {
-    to {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
+	to {
+		transform: rotate(360deg);
+	}
 }
-
 </style>
