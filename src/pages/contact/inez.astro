@@ -2,17 +2,17 @@
 import Contact from "../../layouts/Contact.astro"
 ---
 <Contact>
-<!-- Calendly inline widget begin -->
-<div class="calendly-inline-widget" data-url="https://calendly.com/inez-hillel/30min"
-    style="min-width:320px;height:630px;"></div>
-<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
-<!-- Calendly inline widget end -->
+	<div
+		class="calendly-inline-widget"
+		data-url="https://calendly.com/inez-hillel/30min"
+	/>
+	<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
 </Contact>
 
-
 <style>
-
-.calendly-inline-widget {
-        margin-left: 85px;
-    }
+	.calendly-inline-widget {
+		margin-left: 85px;
+		min-width: 320px;
+		height: 630px;
+	}
 </style>

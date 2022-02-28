@@ -6,4 +6,10 @@ topic: "Federal"
 externalLink: False
 layout: ../../layouts/PDFViewer.astro
 ---
-This report, produced by Vivic Research and Campaign2000, examines child poverty through a human rights and social determinants of health framework. The report includes over 60 recommendations for all levels of government to take action that would eradicate child poverty. The polices recommended are meant to address higher poverty rates in marginalized communities and therefore need to be developed with the communities they target and incorporate trauma-informed principles to policymaking.
+
+This report, produced by Vivic Research and Campaign2000, examines child poverty through
+a human rights and social determinants of health framework. The report includes over
+60 recommendations for all levels of government to take action that would eradicate
+child poverty. The polices recommended are meant to address higher poverty rates in
+marginalized communities and therefore need to be developed with the communities they
+target and incorporate trauma-informed principles to policymaking.

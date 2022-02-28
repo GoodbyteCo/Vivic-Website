@@ -6,4 +6,8 @@ topic: "Federal"
 externalLink: True
 layout: ../../layouts/PDFViewer.astro
 ---
-The Vivic team along with co-author Ana Qarri outline how the Competition Act could be doing more to protect workers, and where it falls short. It also provides a guide for advocates and labour unions on how to engage with the Competition Bureau during the course of merger investigations.
+
+The Vivic team along with co-author Ana Qarri outline how the Competition Act could
+be doing more to protect workers, and where it falls short. It also provides a guide
+for advocates and labour unions on how to engage with the Competition Bureau during
+the course of merger investigations.
