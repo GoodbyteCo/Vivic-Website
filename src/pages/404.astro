@@ -3,31 +3,33 @@ import Main from '../layouts/MainCentered.astro'
 ---
 
 <Main>
-<section>
-<h1> <span class="pink">4</span><span class="white">0</span><span class="blue">4</span></h1>
-<p> Oh No The page you where looking for was not found</p>
-</section>
+	<section>
+		<h1>
+			<span class="pink">4</span>
+			<span class="white">0</span>
+			<span class="blue">4</span>
+		</h1>
+		<p> Oh no! The page you where looking for was not found.</p>
+	</section>
 </Main>
 
 <style>
-    h1 {
-        font-size: 5em;
-    }
-    p {
-        font-size: 1.5em;
-    }
-    .pink {
-        color: var(--secondary);
-    }
-    .white {
-        color: var(--white);
-    }
-    .blue {
-        color: var(--tertiary);
-    }
-    section {
-        font-family: var(--mainfont);
-        padding-top: 150px;
-        text-align: center;
-    }
+	section {
+		padding-top: 60px;
+		text-align: center;
+	}
+
+	h1 {
+		font-size: 8rem;
+		word-spacing: -0.4ch;
+		margin: 0;
+	}
+
+	.pink  { color: var(--secondary) }
+	.white { color: var(--white)     }
+	.blue  { color: var(--tertiary)  }
+	
+	p {
+		font-size: 1.5rem;
+	}
 </style>
