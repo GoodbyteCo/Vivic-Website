@@ -1,12 +1,18 @@
 ---
 import MainLayout from './Main.astro'
-const { title } = Astro.props;
+const { content } = Astro.props;
 ---
-<MainLayout title={title}>
+<MainLayout title={content.title}>
 	<div role="presentation" class="loading-container">
 		<div class="loading"/>
 	</div>
-	<slot/>
+	<div
+		class="calendly-inline-widget"
+		data-url={content.calendlyUrl}/>
+	<script
+		type="text/javascript"
+		src="https://assets.calendly.com/assets/external/widget.js"
+	></script>
 </MainLayout>
 
 <style>
@@ -34,6 +40,12 @@ const { title } = Astro.props;
 	z-index: -99;
 	animation: flip 2s steps(2) infinite;
 	animation-delay: 2s;
+}
+
+.calendly-inline-widget {
+	margin-top: 120px;
+	min-width: 320px;
+	height: 630px;
 }
 
 @keyframes loading-animation {
