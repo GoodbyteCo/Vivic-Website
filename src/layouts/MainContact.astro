@@ -6,8 +6,8 @@ const { title } = Astro.props;
 	<slot/>
 </MainLayout>
 
-<style>
-	:global(main) {
+<style global>
+	main {
 		padding-top: 150px;
 		min-height: calc(100vh - 340px);
 	}
