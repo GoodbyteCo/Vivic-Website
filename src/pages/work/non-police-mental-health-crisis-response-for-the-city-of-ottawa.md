@@ -1,10 +1,10 @@
 ---
 title: Non-Police Mental Health Crisis Response for the City of Ottawa
-pdf: "/PDFS/BH-Final-Executive-Summary.pdf"
+pdfs: [{title: "Executive Summary", link: "/PDFS/BH-Final-Executive-Summary.pdf"},{title: "Report", link: "/PDFS/BH-Final-Report.pdf"}, {title: "Strategy", link: "/PDFS/BH-Final-Strategy.pdf"}]
 work: 2
 topic: "Municipal"
 externalLink: False
-layout: ../../layouts/PDFViewer.astro
+layout: ../../layouts/MultiPDFViewer.astro
 ---
 
 Vivic, sponsored by 613-819 Black Hub, undertook community consultations to explore
