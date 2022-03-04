@@ -21,8 +21,9 @@ const { content } = Astro.props
         <a class=topic href={`/work?topic=${content.topic.toLowerCase()}`}>{content.topic}</a>
         { 
             content.pdfs.map((pdf) => {
+                const idName = pdf.title.toLowerCase().replaceAll(' ', '-') 
                 return (
-                    <h3>{pdf.title}</h3>
+                    <h3 id={idName}>{pdf.title}</h3>
                     <div class='pdf'>
                         <iframe src={pdf.link}></iframe>
                     </div>
