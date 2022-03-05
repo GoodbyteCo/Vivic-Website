@@ -1,7 +1,10 @@
 [build]
-	command = "npm run build"
+	command = "npx pnpm@6 install --shamefully-hoist --store-dir=.pnpm --frozen-lockfile && npx pnpm@6 build"
 	publish = "dist"
 
+[build.environment]
+	NODE_VERSION = "16"
+	NPM_FLAGS = "--version" # stop npm auto install
 
 # Redirects
 [[redirects]]

@@ -1,0 +1,22 @@
+{
+	name: '@goodbyteco/vivic',
+	version: '1.0.0',
+	private: true,
+	engines: {
+		node: '>=16',
+		pnpm: '>=6',
+	},
+	scripts: {
+		dev: 'astro dev',
+		build: 'astro build',
+		lint: 'eslint .',
+	},
+	dependencies: {
+		'@astrojs/renderer-vue': '^0.4.0',
+	},
+	devDependencies: {
+		'astro': '^0.23', // pin until out of beta
+		'autoprefixer': '^10.4.2',
+		'eslint-config-goodbyte-styleguide': '^0.0.7',
+	}
+}
