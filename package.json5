@@ -12,11 +12,17 @@
 		lint: 'eslint .',
 	},
 	dependencies: {
-		'@astrojs/renderer-vue': '^0.4.0',
+		'@astrojs/vue': '^0.0.2',
+		vue: '^3.2.31',
+		vite: '^2.5.10'
+		
 	},
 	devDependencies: {
-		'astro': '^0.23', // pin until out of beta
-		'autoprefixer': '^10.4.2',
+		astro: '0.25.4',
+		autoprefixer: '^10.4.2',
+		postcss: '^8.1.0',
 		'eslint-config-goodbyte-styleguide': '^0.0.7',
-	}
+		'vue-eslint-parser': '^7.1.0',
+		eslint: '^8.12.0'
+	},
 }
