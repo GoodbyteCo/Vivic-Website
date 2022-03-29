@@ -3,7 +3,7 @@ _site/
 .jekyll-cache/
 Gemfile.lock
 .vscode/
-
+.pnpm/
 # build output
 dist
 
