@@ -1,5 +1,5 @@
 ---
-title: Western Law Labour Markets and the Competition Act April 7 2022
+title: Labour Markets and the Competition Act
 pdf: "/PDFS/Western-Law-Labour-Markets-and-the-Competition-Act-April-7-2022.pdf"
 work: 12
 topic: "Federal"
