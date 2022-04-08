@@ -20,3 +20,7 @@ Deploys automatically via Netlify.
 #### Current build status
 
 ![Status](https://api.netlify.com/api/v1/badges/90e6b80d-a19a-45b4-81c1-b07bf464cf10/deploy-status)
+
+##### Notes
+
+Current Max Work: 12
