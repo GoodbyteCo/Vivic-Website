@@ -24,7 +24,7 @@ const services: {title: string}[] = data.map((service) => {
 	</section>
 	<section id="services">
 		<h2>
-			Our Services
+			<a href="/services">Our Services</a>
 		</h2>
 		<div class="pillars">
 			{
@@ -44,6 +44,8 @@ const services: {title: string}[] = data.map((service) => {
 	max-width: 1500px;
 	margin: 0 auto 75px auto;
 }
+
+
 
 #hero {
 	margin: 325px 8% 155px 8%;
@@ -66,6 +68,32 @@ h1 {
 h2 {
 	font-size: 2.3rem;
 	text-align: center;
+}
+
+h2 a {
+	display: block;
+	text-decoration: none;
+	color: var(--white);
+	max-width: 8ch;
+	max-width: max-content;
+	margin: auto;
+	text-align: center;
+}
+
+h2 a::after {
+	content: '';
+	margin-top: 0.3rem;
+	display: block;
+	width: 0;
+	opacity: 0.7;
+	height: 2px;
+	background: var(--white);
+	transition: width 0.3s;
+}
+
+h2 a:hover::after {
+	opacity: 1;
+	width: 100%;
 }
 
 .pillars {
@@ -123,9 +151,44 @@ h2 {
 	.pillars section {
 		max-width: unset;
 		min-height: unset;
+		width: unset;
+		height: unset;
 		margin-top: 5px !important;
 		padding: 2.5rem 1.2rem 3rem;
 	}
+
+	.pillars section:nth-child(1) {
+		background: linear-gradient(to bottom, #f783a7, #F9A2BD);
+	}
+
+	.pillars section:nth-child(2) {
+		background: linear-gradient(to bottom, #F9A2BD, #FBC1D3);
+	}
+
+	.pillars section:nth-child(3) {
+		background: linear-gradient(to bottom, #FBC1D3, #FDE0E9);
+	}
+
+	.pillars section:nth-child(4) {
+		background: linear-gradient(to bottom, #FDE0E9, #FFFFFF);
+	}
+
+	.pillars section:nth-child(5) {
+		background: linear-gradient(to bottom, #FFFFFF, #E7FAFA);
+	}
+
+	.pillars section:nth-child(6) {
+		background: linear-gradient(to bottom, #E7FAFA, #CFF6F6);
+	}
+
+	.pillars section:nth-child(7) {
+		background: linear-gradient(to bottom, #CFF6F6, #B6F1F1);
+	}
+
+	.pillars section:nth-child(8) {
+		background: linear-gradient(to bottom, #B6F1F1, #9EECEC);
+	}
+	
 }
 
 @media screen and (max-width: 420px) {
