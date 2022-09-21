@@ -1,6 +1,16 @@
 ---
 import Main from '../layouts/Main.astro'
 import OurWork from '../components/OurWork.astro'
+
+const data = await Astro.glob('../servicesList/*.md')
+
+
+
+const services: {title: string}[] = data.map((service) => {
+    return {
+        title: service.frontmatter.title,
+    }
+})
 ---
 <Main title='Vivic Research'>
 	<section id="hero">
@@ -17,45 +27,13 @@ import OurWork from '../components/OurWork.astro'
 			Our Services
 		</h2>
 		<div class="pillars">
-			<section>
-				<h3>
-					Economic Research
-				</h3>
-				<p>
-					We develop boutique research studies focusing on targeted issues
-					related to the intersection of policy, economics, and social justice.
-					This includes but is not limited to literature reviews, policy
-					recommendations, community consultation and cost/benefit analysis.
-					Our past work has included costing an alternative municipal budget
-					for the city of Ottawa with an emphasis on racial and gender equity,
-					research on Employment Insurance and best practices for post-secondary
-					education fees and debt cancellation.
-				</p>
-			</section>
-			<section>
-				<h3>
-					Training
-				</h3>
-				<p>
-					We provide personalized training on quantitative research methods
-					for teams, helping them build confidence and do their work more
-					efficiently. Vivic offers SPSD/M training for beginners and more
-					experienced users. Our introductory training "Getting Started:
-					Policy Analysis Using SPSD/M" gets researchers quickly up-and-running
-					with SPSD/M, saving time and frustration.
-				</p>
-			</section>
-			<section>
-				<h3>
-					Data Science
-				</h3>
-				<p>
-					We develop processes for procuring, organizing, and analyzing
-					information effectively and efficiently. We also provide our
-					clients with analysis they can easily replicate such as annual
-					factsheets or reports.
-				</p>
-			</section>
+			{
+				services.map((service) => (
+					<section>
+						<h3>{service.title}</h3>
+					</section>
+				)) 
+			}
 		</div>
 		<OurWork/>
 	</section>
@@ -91,39 +69,44 @@ h2 {
 }
 
 .pillars {
-	display: flex;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
 	gap: 25px;
 	padding: 25px;
-	justify-content: space-evenly;
 	margin-bottom: 5rem;
-	z-index: -9;
+	align-items: center;
+	justify-content: stretch; 
 	transform: translateZ(-1);
 }
 
 .pillars section
 {
-	max-width: 400px;
 	clip-path: polygon(0 7%, 100% 0, 100% 93%, 0 100%);
 	padding: 3rem 2.8rem;
-	min-height: 400px;
 	color: var(--black);
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+	width: 150px;
+	height: 150px;
 }
 
-.pillars section:nth-child(1) {
+.pillars section:nth-child(4n + 1) {
 	background: linear-gradient(to right, #f783a7, #fcd5e1);
 }
 
-.pillars section:nth-child(2) {
-	background: linear-gradient(to right, #fcd5e1, #fff, #def8f8);
-	margin-top: 50px;
+.pillars section:nth-child(4n + 2) {
+	background: linear-gradient(to right, #fcd5e1, #fff);
 }
-.pillars section:nth-child(3){
+.pillars section:nth-child(4n + 3){
+	background: linear-gradient(to right, #fff, #def8f8);
+}
+.pillars section:nth-child(4n + 4){
 	background: linear-gradient(to right, #def8f8, #9eecec);
-	margin-top: 100px;
 }
 
 .pillars h3 {
-	font-size: 1.3rem;
+	font-size: 1.2rem;
 	text-align: center;
 	margin: 2rem 0;
 }

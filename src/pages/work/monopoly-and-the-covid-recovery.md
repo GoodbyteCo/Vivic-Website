@@ -1,7 +1,7 @@
 ---
 title: "Monopoly and the Covid Recovery"
 pdf: "/PDFS/CEA-Presentation-June-7-2021.pdf"
-work: 3
+date: "2021-06"
 topic: "Federal"
 externalLink: False
 layout: ../../layouts/PDFViewer.astro

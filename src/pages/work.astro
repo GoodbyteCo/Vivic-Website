@@ -1,17 +1,20 @@
 ---
 import MainCentered from '../layouts/MainCentered.astro'
 import Work from '../components/Work.vue'
+import { toDate } from '../utils/dateUtils'
 
-const data = Astro.fetchContent('./work/*.md')
+const data = await Astro.glob('./work/*.md')
+
+
 const work = data.map((post) => {
 	return {
-		title: post.title,
-		pdf: post.pdf,
-		work: post.work,
-		topic: post.topic,
-		source: post.astro.source,
+		title: post.frontmatter.title,
+		pdf: post.frontmatter.pdf,
+		date: toDate(post.frontmatter.date),
+		topic: post.frontmatter.topic,
+		source: post.rawContent(),
 		url: post.url,
-		externalLink: post.externalLink,
+		externalLink: post.frontmatter.externalLink,
 	}
 })
 --- 

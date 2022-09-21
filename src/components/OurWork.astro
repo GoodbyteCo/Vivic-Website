@@ -1,6 +1,24 @@
 ---
 import CtaButtom from './CtaButton.astro'
-const data = Astro.fetchContent('../pages/work/*.md')
+import {toDate} from '../utils/dateUtils'
+const data = await Astro.glob('../pages/work/*.md')
+
+const work = data.map((post) => {
+	return {
+		title: post.frontmatter.title,
+		pdf: post.frontmatter.pdf,
+		date: toDate(post.frontmatter.date),
+		topic: post.frontmatter.topic,
+		content: post.rawContent(),
+		url: post.url,
+		externalLink: post.frontmatter.externalLink,
+	}
+}).sort((a,b) => a.date.getTime() - b.date.getTime())
+  .reduce<{title: string, content: string, url: string, work: number}[]>((finalArr,post,index) => {
+	return [...finalArr, {title: post.title, content: post.content, url: post.url, work: index}]
+  },[])
+
+
 ---
 <h2>
 	<a href="/work">
@@ -9,9 +27,7 @@ const data = Astro.fetchContent('../pages/work/*.md')
 </h2>
 <div class="our-work">
 	{
-		data.sort((a, b) => a.work - b.work)
-			.map((post) => { return {...post, work: post.work-1 } })
-			.map((post) => (
+		work.map((post) => (
 				<div 
 					id={`work-${post.work}`} 
 					class={`work work-${(post.work == 0) ? 'selected': 'unselected'}`}
@@ -20,7 +36,7 @@ const data = Astro.fetchContent('../pages/work/*.md')
 						{post.title}
 					</h3>
 					<p>
-						{post.astro.source}
+						{post.content}
 						<a 
 							class="read-more"
 							href={`${post.url}`}

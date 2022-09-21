@@ -35,9 +35,8 @@
 	type WorkData = {
 		title: string
 		pdf: string
-		work: number
 		topic: string
-		date: string,
+		date: Date,
 		source: string,     
 		url: string
 		externalLink: boolean
@@ -53,7 +52,7 @@
 		setup(props) {
 			const selected: Ref<string> = ref("")
 			const workSorted = props.works
-				.sort((a, b) => a.work - b.work)
+				.sort((a, b) => a.date.getTime() - b.date.getTime())
 				.reverse()
 
 			const options = props.works
@@ -74,11 +73,16 @@
 					window.history.replaceState(null ,null, `/work`)
 				}
 			})
+
+			const toDateFormat = (date: Date) => {
+				return date.toLocaleString('en-US', {year: 'numeric', month: "short"})
+			}
 				
 			return {
 				selected,
 				options,
-				workSorted
+				workSorted,
+				toDateFormat
 			}
 		}
 	})
@@ -117,6 +121,15 @@
 		padding: 0.3em 1ch 0.25em;
 		border-radius: 100px;
 		transform: translateY(-3px);
+	}
+
+	.date {
+		display: inline-block;
+		font-size: 0.5em;
+		color: #6f6187;
+		font-weight: normal;
+		padding: 0 1ch 0.25em;
+
 	}
 
 	.title {
@@ -198,6 +211,10 @@
 		color: var(--secondary);
 		border-image-source: unset;
 		border: 8px solid var(--secondary);
+	}
+
+	.card:hover .date, .card:focus .date {
+		color: var(--secondary)
 	}
 
 	.card:hover .topic, .card:focus .topic{
