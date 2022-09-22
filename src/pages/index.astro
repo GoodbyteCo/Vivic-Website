@@ -103,7 +103,7 @@ h2 a:hover::after {
 	padding: 25px;
 	margin-bottom: 5rem;
 	align-items: center;
-	justify-content: stretch; 
+	justify-items: stretch; 
 	transform: translateZ(-1);
 }
 
@@ -141,6 +141,25 @@ h2 a:hover::after {
 
 .pillars p {
 	line-height: 1.8;
+}
+
+@media screen and (max-width: 1200px) {
+	.pillars {
+		grid-template-columns: repeat(2, 1fr);	
+		justify-items: center;
+	}
+
+	.pillars section {
+		width: 250px;
+	}
+
+	.pillars section:nth-child(odd) {
+		background: linear-gradient(to right, #f783a7, #FFFFFF);
+	}
+
+	.pillars section:nth-child(even) {
+		background: linear-gradient(to right, #FFFFFF, #9EECEC);
+	}
 }
 
 @media screen and (max-width: 1050px) {
