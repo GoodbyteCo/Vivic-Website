@@ -1,6 +1,14 @@
 ---
 import CtaButtom from './CtaButton.astro'
-import {toDate} from '../utils/dateUtils'
+import { toDate } from '../utils/dateUtils'
+
+type WorkWithNum = {
+	title: string,
+	content: string,
+	url: string,
+	work: number
+}
+
 const data = await Astro.glob('../pages/work/*.md')
 
 const work = data.map((post) => {
@@ -14,9 +22,10 @@ const work = data.map((post) => {
 		externalLink: post.frontmatter.externalLink,
 	}
 }).sort((a,b) => a.date.getTime() - b.date.getTime())
-  .reduce<{title: string, content: string, url: string, work: number}[]>((finalArr,post,index) => {
-	return [...finalArr, {title: post.title, content: post.content, url: post.url, work: index}]
-  },[])
+  .reduce<WorkWithNum[]>(
+	(finalArr, post, index) => 
+		[...finalArr, {title: post.title, content: post.content, url: post.url, work: index}]
+  ,[])
 
 
 ---

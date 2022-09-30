@@ -18,6 +18,7 @@
 						<h2>
 							{{work.title}}&nbsp;&nbsp;<span class="topic">{{work.topic}}</span>
 						</h2>
+						<h3><span class="date">{{toDateFormat(work.date)}}</span></h3>
 					</div>
 					<p>
 						{{work.source}}
@@ -29,7 +30,7 @@
 </template>
 
 <script lang="ts">
-	import { defineComponent, PropType, ref, Ref, onMounted, watch } from 'vue'
+	import { defineComponent, PropType, ref, Ref, onMounted, watch, computed } from 'vue'
 	import { toTitleCase } from '../utils/stringUtils'
 
 	type WorkData = {
@@ -75,8 +76,9 @@
 			})
 
 			const toDateFormat = (date: Date) => {
-				return date.toLocaleString('en-US', {year: 'numeric', month: "short"})
+				return date.toLocaleString('en-US', {year: 'numeric', month: "long"})
 			}
+
 				
 			return {
 				selected,
@@ -124,19 +126,23 @@
 	}
 
 	.date {
-		display: inline-block;
-		font-size: 0.5em;
-		color: #6f6187;
 		font-weight: normal;
-		padding: 0 1ch 0.25em;
 
 	}
 
 	.title {
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		justify-content: space-between;
 		row-gap: 15px;
+	}
+
+	.title h2 {
+		margin-bottom: 0;
+	}
+
+	.title h3 {
+		margin-top: 0;
 	}
 
 	.work-header {

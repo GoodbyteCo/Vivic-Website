@@ -6,7 +6,7 @@ const { frontmatter } = Astro.props
 ---
 <MainLayout title={`Vivic Research | ${frontmatter.title}`}>
 	<h1>{frontmatter.title}</h1>
-	<div id="date">{toDate(frontmatter.date).toLocaleDateString('en-US',{year: 'numeric', month: 'short'})}</div>
+	<div id="date">{toDate(frontmatter.date).toLocaleDateString('en-US',{year: 'numeric', month: 'long'})}</div>
 	<a
 		class="topic" 
 		href={`/work?topic=${frontmatter.topic.toLowerCase()}`}
