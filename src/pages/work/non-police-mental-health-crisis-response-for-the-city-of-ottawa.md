@@ -1,7 +1,7 @@
 ---
 title: Non-Police Mental Health Crisis Response for the City of Ottawa
 pdfs: [{title: "Executive Summary", link: "/PDFS/BH-Final-Executive-Summary.pdf"},{title: "Report", link: "/PDFS/BH-Final-Report.pdf"}, {title: "Strategy", link: "/PDFS/BH-Final-Strategy.pdf"}]
-work: 2
+date: "2021-06"
 topic: "Municipal"
 externalLink: False
 layout: ../../layouts/MultiPDFViewer.astro

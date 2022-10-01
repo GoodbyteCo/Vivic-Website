@@ -1,6 +1,16 @@
 ---
 import Main from '../layouts/Main.astro'
 import OurWork from '../components/OurWork.astro'
+
+const data = await Astro.glob('../servicesList/*.md')
+
+
+
+const services: {title: string}[] = data.map((service) => {
+    return {
+        title: service.frontmatter.title,
+    }
+})
 ---
 <Main title='Vivic Research'>
 	<section id="hero">
@@ -14,48 +24,16 @@ import OurWork from '../components/OurWork.astro'
 	</section>
 	<section id="services">
 		<h2>
-			Our Services
+			<a href="/services">Our Services</a>
 		</h2>
 		<div class="pillars">
-			<section>
-				<h3>
-					Economic Research
-				</h3>
-				<p>
-					We develop boutique research studies focusing on targeted issues
-					related to the intersection of policy, economics, and social justice.
-					This includes but is not limited to literature reviews, policy
-					recommendations, community consultation and cost/benefit analysis.
-					Our past work has included costing an alternative municipal budget
-					for the city of Ottawa with an emphasis on racial and gender equity,
-					research on Employment Insurance and best practices for post-secondary
-					education fees and debt cancellation.
-				</p>
-			</section>
-			<section>
-				<h3>
-					Training
-				</h3>
-				<p>
-					We provide personalized training on quantitative research methods
-					for teams, helping them build confidence and do their work more
-					efficiently. Vivic offers SPSD/M training for beginners and more
-					experienced users. Our introductory training "Getting Started:
-					Policy Analysis Using SPSD/M" gets researchers quickly up-and-running
-					with SPSD/M, saving time and frustration.
-				</p>
-			</section>
-			<section>
-				<h3>
-					Data Science
-				</h3>
-				<p>
-					We develop processes for procuring, organizing, and analyzing
-					information effectively and efficiently. We also provide our
-					clients with analysis they can easily replicate such as annual
-					factsheets or reports.
-				</p>
-			</section>
+			{
+				services.map((service) => (
+					<section>
+						<h3>{service.title}</h3>
+					</section>
+				)) 
+			}
 		</div>
 		<OurWork/>
 	</section>
@@ -66,6 +44,8 @@ import OurWork from '../components/OurWork.astro'
 	max-width: 1500px;
 	margin: 0 auto 75px auto;
 }
+
+
 
 #hero {
 	margin: 325px 8% 155px 8%;
@@ -90,46 +70,96 @@ h2 {
 	text-align: center;
 }
 
+h2 a {
+	display: block;
+	text-decoration: none;
+	color: var(--white);
+	max-width: 8ch;
+	max-width: max-content;
+	margin: auto;
+	text-align: center;
+}
+
+h2 a::after {
+	content: '';
+	margin-top: 0.3rem;
+	display: block;
+	width: 0;
+	opacity: 0.7;
+	height: 2px;
+	background: var(--white);
+	transition: width 0.3s;
+}
+
+h2 a:hover::after {
+	opacity: 1;
+	width: 100%;
+}
+
 .pillars {
-	display: flex;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
 	gap: 25px;
 	padding: 25px;
-	justify-content: space-evenly;
 	margin-bottom: 5rem;
-	z-index: -9;
+	align-items: center;
+	justify-items: stretch; 
 	transform: translateZ(-1);
 }
 
 .pillars section
 {
-	max-width: 400px;
 	clip-path: polygon(0 7%, 100% 0, 100% 93%, 0 100%);
 	padding: 3rem 2.8rem;
-	min-height: 400px;
 	color: var(--black);
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+	width: 150px;
+	height: 150px;
 }
 
-.pillars section:nth-child(1) {
+.pillars section:nth-child(4n + 1) {
 	background: linear-gradient(to right, #f783a7, #fcd5e1);
 }
 
-.pillars section:nth-child(2) {
-	background: linear-gradient(to right, #fcd5e1, #fff, #def8f8);
-	margin-top: 50px;
+.pillars section:nth-child(4n + 2) {
+	background: linear-gradient(to right, #fcd5e1, #fff);
 }
-.pillars section:nth-child(3){
+.pillars section:nth-child(4n + 3){
+	background: linear-gradient(to right, #fff, #def8f8);
+}
+.pillars section:nth-child(4n + 4){
 	background: linear-gradient(to right, #def8f8, #9eecec);
-	margin-top: 100px;
 }
 
 .pillars h3 {
-	font-size: 1.3rem;
+	font-size: 1.2rem;
 	text-align: center;
 	margin: 2rem 0;
 }
 
 .pillars p {
 	line-height: 1.8;
+}
+
+@media screen and (max-width: 1250px) {
+	.pillars {
+		grid-template-columns: repeat(2, 1fr);	
+		justify-items: center;
+	}
+
+	.pillars section {
+		width: 250px;
+	}
+
+	.pillars section:nth-child(odd) {
+		background: linear-gradient(to right, #f783a7, #FFFFFF);
+	}
+
+	.pillars section:nth-child(even) {
+		background: linear-gradient(to right, #FFFFFF, #9EECEC);
+	}
 }
 
 @media screen and (max-width: 1050px) {
@@ -140,14 +170,55 @@ h2 {
 	.pillars section {
 		max-width: unset;
 		min-height: unset;
+		width: unset;
+		height: unset;
 		margin-top: 5px !important;
 		padding: 2.5rem 1.2rem 3rem;
 	}
+
+	.pillars section:nth-child(1) {
+		background: linear-gradient(to bottom, #f783a7, #F9A2BD);
+	}
+
+	.pillars section:nth-child(2) {
+		background: linear-gradient(to bottom, #F9A2BD, #FBC1D3);
+	}
+
+	.pillars section:nth-child(3) {
+		background: linear-gradient(to bottom, #FBC1D3, #FDE0E9);
+	}
+
+	.pillars section:nth-child(4) {
+		background: linear-gradient(to bottom, #FDE0E9, #FFFFFF);
+	}
+
+	.pillars section:nth-child(5) {
+		background: linear-gradient(to bottom, #FFFFFF, #E7FAFA);
+	}
+
+	.pillars section:nth-child(6) {
+		background: linear-gradient(to bottom, #E7FAFA, #CFF6F6);
+	}
+
+	.pillars section:nth-child(7) {
+		background: linear-gradient(to bottom, #CFF6F6, #B6F1F1);
+	}
+
+	.pillars section:nth-child(8) {
+		background: linear-gradient(to bottom, #B6F1F1, #9EECEC);
+	}
+	
 }
 
 @media screen and (max-width: 420px) {
 	h1 {
 		font-size: 2.8rem;
+	}
+} 
+
+@media screen and (max-width: 350px) {
+	h1 {
+		font-size: 2.3rem;
 	}
 } 
 </style>

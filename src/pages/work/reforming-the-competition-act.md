@@ -1,7 +1,7 @@
 ---
 title: Reforming the Competition Act
 pdf: "/PDFS/INDU-Committee-Submission-April-29-2021.pdf"
-work: 4
+date: "2021-04"
 topic: "Federal"
 externalLink: False
 layout: ../../layouts/PDFViewer.astro

@@ -1,7 +1,7 @@
 ---
 title: "Check and balance: The case for improving Canada’s Competition Act to protect workers"
 pdf: "https://www.policyalternatives.ca/publications/reports/check-and-balance"
-work: 1
+date: "2021-08"
 topic: "Federal"
 externalLink: True
 layout: ../../layouts/PDFViewer.astro

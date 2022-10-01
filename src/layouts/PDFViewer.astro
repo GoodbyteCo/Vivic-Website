@@ -1,20 +1,22 @@
 ---
 import MainLayout from './MainCentered.astro'
 import CtaButton from '../components/CtaButton.astro'
-const { content } = Astro.props
+import { toDate } from '../utils/dateUtils'
+const { frontmatter } = Astro.props
 ---
-<MainLayout title={`Vivic Research | ${content.title}`}>
-	<h1>{content.title}</h1>
+<MainLayout title={`Vivic Research | ${frontmatter.title}`}>
+	<h1>{frontmatter.title}</h1>
+	<div id="date">{toDate(frontmatter.date).toLocaleDateString('en-US',{year: 'numeric', month: 'long'})}</div>
 	<a
 		class="topic" 
-		href={`/work?topic=${content.topic.toLowerCase()}`}
+		href={`/work?topic=${frontmatter.topic.toLowerCase()}`}
 	>
-		{content.topic}
+		{frontmatter.topic}
 	</a>
 	<div id="pdf">
-		<iframe src={content.pdf}/>
+		<iframe src={frontmatter.pdf}/>
 	</div>
-	<CtaButton link={content.pdf}>Download</CtaButton>
+	<CtaButton link={frontmatter.pdf}>Download</CtaButton>
 </MainLayout>
 
 <style>
@@ -24,7 +26,13 @@ h1 {
 	margin: 0 auto 20px auto;
 	font-size: 2.5em;
 }
-
+ 
+#date {
+	width: 70%;
+	text-align: center;
+	margin: 0 auto 20px auto;
+	font-size: 1.2em;
+}
 .topic {
 	display: block;
 	font-size: 1.3rem;

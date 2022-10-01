@@ -1,7 +1,7 @@
 ---
 title: "Employment Insurance in Canada: A Literature Review of Current Internal Government Studies"
 pdf: "/PDFS/EI-Literature-Review.pdf"
-work: 8
+date: "2021-01"
 topic: "Federal"
 externalLink: False
 layout: ../../layouts/PDFViewer.astro
