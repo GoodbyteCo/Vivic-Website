@@ -1,7 +1,7 @@
 ---
 title: Alternative Municipal Budget for the City of Ottawa 2022
 pdf: "/PDFS/Ottawa+Alt+Budget+2022_FINAL.pdf"
-work: 9
+date: "2021-12"
 topic: "Municipal"
 externalLink: False
 layout: ../../layouts/PDFViewer.astro

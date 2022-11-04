@@ -1,7 +1,7 @@
 ---
 title: "Key Performance Indicator Roadmap: A Path Forward for Measuring Fort Calgary's Impact"
 pdf: "/PDFS/KPI-Roadmap-March-2-2021.pdf"
-work: 6
+date: "2021-01"
 topic: "Municipal"
 externalLink: False
 layout: ../../layouts/PDFViewer.astro

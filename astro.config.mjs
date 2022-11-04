@@ -1,9 +1,9 @@
+import { defineConfig } from 'astro/config'
+import sitemap from '@astrojs/sitemap'
 import vue from '@astrojs/vue'
-// @ts-check
-export default /** @type {import('astro').AstroUserConfig} */ ({
-	integrations: [vue(),],
-	buildOptions: {
-		site: 'https://vivicresearch.ca',
-		sitemap: true,
-	},
-});
+
+
+export default defineConfig({
+	integrations: [ vue(), sitemap() ],
+	site: 'https://vivicresearch.ca',
+})

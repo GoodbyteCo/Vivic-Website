@@ -1,5 +1,10 @@
 ---
-const { link, idName, className } = Astro.props;
+interface CtaProps {
+	link: string,
+	idName?: string,
+	className?: string
+}
+const { link, idName, className } = Astro.props as CtaProps;
 ---
 
 <a href={link} id={idName} class={className}>

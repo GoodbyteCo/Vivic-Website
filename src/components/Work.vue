@@ -18,6 +18,7 @@
 						<h2>
 							{{work.title}}&nbsp;&nbsp;<span class="topic">{{work.topic}}</span>
 						</h2>
+						<h3><span class="date">{{toDateFormat(work.date)}}</span></h3>
 					</div>
 					<p>
 						{{work.source}}
@@ -29,15 +30,14 @@
 </template>
 
 <script lang="ts">
-	import { defineComponent, PropType, ref, Ref, onMounted, watch } from 'vue'
+	import { defineComponent, PropType, ref, Ref, onMounted, watch, computed } from 'vue'
 	import { toTitleCase } from '../utils/stringUtils'
 
 	type WorkData = {
 		title: string
 		pdf: string
-		work: number
 		topic: string
-		date: string,
+		date: Date,
 		source: string,     
 		url: string
 		externalLink: boolean
@@ -53,7 +53,7 @@
 		setup(props) {
 			const selected: Ref<string> = ref("")
 			const workSorted = props.works
-				.sort((a, b) => a.work - b.work)
+				.sort((a, b) => a.date.getTime() - b.date.getTime())
 				.reverse()
 
 			const options = props.works
@@ -74,11 +74,17 @@
 					window.history.replaceState(null ,null, `/work`)
 				}
 			})
+
+			const toDateFormat = (date: Date) => {
+				return date.toLocaleString('en-US', {year: 'numeric', month: "long"})
+			}
+
 				
 			return {
 				selected,
 				options,
-				workSorted
+				workSorted,
+				toDateFormat
 			}
 		}
 	})
@@ -119,11 +125,24 @@
 		transform: translateY(-3px);
 	}
 
+	.date {
+		font-weight: normal;
+
+	}
+
 	.title {
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		justify-content: space-between;
 		row-gap: 15px;
+	}
+
+	.title h2 {
+		margin-bottom: 0;
+	}
+
+	.title h3 {
+		margin-top: 0;
 	}
 
 	.work-header {
@@ -198,6 +217,10 @@
 		color: var(--secondary);
 		border-image-source: unset;
 		border: 8px solid var(--secondary);
+	}
+
+	.card:hover .date, .card:focus .date {
+		color: var(--secondary)
 	}
 
 	.card:hover .topic, .card:focus .topic{

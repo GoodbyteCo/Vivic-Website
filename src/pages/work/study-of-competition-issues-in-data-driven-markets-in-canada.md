@@ -1,7 +1,7 @@
 ---
 title: "Study of Competition Issues in Data-Driven Markets in Canada"
 pdf: "/PDFS/Competition-Data-Driven-Markets-Final-Report-2022.pdf"
-work: 11
+date: "2022-01"
 topic: "Federal"
 externalLink: False
 layout: ../../layouts/PDFViewer.astro

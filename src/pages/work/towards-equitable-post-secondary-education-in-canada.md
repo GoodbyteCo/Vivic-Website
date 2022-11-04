@@ -1,8 +1,8 @@
 ---
 title: Towards Equitable Post-secondary Education in Canada
 pdf: "/PDFS/CFS Literature Review January 18 REVISED - with funding section.pdf"
-work: 5
-topic: "Provincial"
+date: "2021-01"
+topic: "Federal"
 externalLink: False
 layout: ../../layouts/PDFViewer.astro
 ---

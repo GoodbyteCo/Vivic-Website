@@ -1,0 +1,90 @@
+---
+import MainCentered from '../../layouts/MainCentered.astro'
+import CtaButton from '../../components/InlineCtaButton.astro';
+
+const data = await Astro.glob('../../servicesList/*.md')
+
+
+
+const services: {title: string, content: string}[] = data.map((service) => {
+    return {
+        title: service.frontmatter.title,
+        content: service.rawContent()
+    }
+})
+---
+
+<MainCentered>
+    <h2>Our Services</h2>
+    <ul id="services">
+        {
+            services.map((service) => (
+                <li>
+                    <h3>{service.title}</h3>
+                    <p>{service.content}</p>
+                </li>
+            ))
+        }
+    </ul>
+    
+    <div id="ctas">
+        <CtaButton link={'/work'}>
+            See Our Work
+        </CtaButton>
+        <CtaButton link={'/contact/inez-and-robin'}>
+            Get In Touch
+        </CtaButton>
+    </div>
+</MainCentered>
+
+<style>
+    ul {
+        list-style-type: none;
+    }
+    #services, #toolkit {
+        padding-bottom: 1.2em;
+    }
+    #ctas {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-bottom: 1em;
+    }
+
+    h2 {
+		font-size: 1.9em;
+	}
+    #toolkit {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin: 0;
+        padding-left: 0;
+    }
+    #services p {
+        line-height: 1.8;
+        margin-left: 2em;
+        margin-right: 2.5em;
+    }
+
+    #services li {
+		padding: 10px 30px;
+    }
+
+    #services li h3{
+        font-size: 1.5rem;
+        
+    }
+
+    #toolkit li {
+        padding: 10px 30px;
+    }
+
+    #toolkit h3 {
+        font-size: 1.5rem;
+    }
+
+   
+
+</style>
