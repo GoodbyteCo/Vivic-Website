@@ -18,6 +18,24 @@
 	to = "/404.html"
 	status = 404
 
+[[redirects]]
+	from = "/contact"
+	to = "/contact/inez"
+	status = 302
+	force = true
+
+[[redirects]]
+	from = "/contact/robin"
+	to = "/contact/inez"
+	status = 302
+	force = true
+
+[[redirects]]
+	from = "/contact/robin-and-inez"
+	to = "/contact/inez"
+	status = 302
+	force = true
+
 # Build Post Processing
 [build.processing]
 	skip_processing = false
