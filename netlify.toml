@@ -14,11 +14,6 @@
 	force = true
 
 [[redirects]]
-	from = "/*"
-	to = "/404.html"
-	status = 404
-
-[[redirects]]
 	from = "/contact"
 	to = "/contact/inez"
 	status = 302
@@ -35,6 +30,11 @@
 	to = "/contact/inez"
 	status = 302
 	force = true
+
+[[redirects]]
+	from = "/*"
+	to = "/404.html"
+	status = 404
 
 # Build Post Processing
 [build.processing]
