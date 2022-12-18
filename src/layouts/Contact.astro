@@ -8,11 +8,13 @@ const { content } = Astro.props;
 	</div>
 	<div
 		class="calendly-inline-widget"
-		data-url={content.calendlyUrl}/>
-	<script
+		>
+		<iframe  src="https://outlook.office365.com/owa/calendar/VivicResearch1@vivicresearch.ca/bookings/"></iframe>
+	</div>
+	<!-- <script
 		type="text/javascript"
 		src="https://assets.calendly.com/assets/external/widget.js"
-	></script>
+	></script> -->
 </MainLayout>
 
 <style>
@@ -21,6 +23,13 @@ const { content } = Astro.props;
 	margin-top: 150px 100px 8px 8px;
 }
 
+iframe {
+	width: 88%;
+	margin-top: 120px;
+	height: 630px;
+	margin-left: auto;
+	margin-right: auto;
+}
 .loading {
 	width: 50px;
 	height: 50px;
@@ -44,8 +53,8 @@ const { content } = Astro.props;
 
 .calendly-inline-widget {
 	margin-top: 120px;
-	min-width: 320px;
-	height: 630px;
+	display: flex;
+	justify-content: center;
 }
 
 @keyframes loading-animation {
