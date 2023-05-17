@@ -1,5 +1,5 @@
 [build]
-	command = "npx pnpm@6 install --shamefully-hoist --store-dir=.pnpm --frozen-lockfile && npx pnpm@6 build"
+	command = "npm build"
 	publish = "dist"
 
 [build.environment]
