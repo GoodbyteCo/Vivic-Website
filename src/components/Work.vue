@@ -13,7 +13,7 @@
 	<div>
 		<template v-for="work in workSorted" :key="work.title">
 			<template v-if="(work.topic.toLowerCase() === selected.toLowerCase()) || (selected === 'All Work')">
-				<a class="card" :href="(work.externalLink) ? work.pdf : work.url">
+				<a class="card" :href="(work.externalLink) ? work.pdf : work.url" target="_blank">
 					<div class="title">
 						<h2>
 							{{work.title}}&nbsp;&nbsp;<span class="topic">{{work.topic}}</span>
