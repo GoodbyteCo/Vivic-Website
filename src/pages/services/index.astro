@@ -6,10 +6,11 @@ const data = await Astro.glob('../../servicesList/*.md')
 
 
 
-const services: {title: string, content: string}[] = data.map((service) => {
+const services: {title: string, content: string, order: number}[] = data.map((service) => {
     return {
         title: service.frontmatter.title,
-        content: service.rawContent()
+        content: service.rawContent(),
+        order: service.frontmatter.order
     }
 })
 ---
@@ -18,7 +19,7 @@ const services: {title: string, content: string}[] = data.map((service) => {
     <h2>Our Services</h2>
     <ul id="services">
         {
-            services.map((service) => (
+            services.sort((a,b) => a.order - b.order).map((service) => (
                 <li>
                     <h3>{service.title}</h3>
                     <p>{service.content}</p>

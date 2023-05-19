@@ -1,7 +1,7 @@
 ---
-title: "Employment Insurance in Canada: A Literature Review of Current Internal Government Studies"
+title: "Seven reasons why privatization of public services is the wrong answer"
 pdf: "https://monitormag.ca/articles/seven-reasons-why-privatization-of-public-services-is-the-wrong-answer/"
-date: "2022-02"
+date: "2022-02-01"
 topic: "Provincial"
 externalLink: True
 ---
