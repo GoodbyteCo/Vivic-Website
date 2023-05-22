@@ -4,7 +4,6 @@ pdf: "/PDFS/CEA-Presentation-June-7-2021.pdf"
 date: "2021-06"
 topic: "Federal"
 externalLink: False
-layout: ../../layouts/PDFViewer.astro
 ---
 
 At the 2021 Canadian Economics Association conference, Vivic's Robin Shaban presented

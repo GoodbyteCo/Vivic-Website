@@ -5,24 +5,25 @@ import Footer from '../components/Footer.astro'
 import Global from '../components/Global.astro'
 import CtaButton from '../components/CtaButton.astro'
 import { toDate } from '../utils/dateUtils'
-const { content } = Astro.props
+const { frontmatter } = Astro.props
+console.log(frontmatter)
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <BasicMeta title={`Vivic Research | ${content.title}`} />
+    <BasicMeta title={`Vivic Research | ${frontmatter.title}`} />
     <Global />
 </head>
 
 <body>
     <Header />
     <main>
-        <h1>{content.title}</h1>
-        <div id="date">{toDate(content.date).toLocaleDateString('en-US',{year: 'numeric', month: 'long'})}</div>
-        <a class="topic" href={`/work?topic=${content.topic.toLowerCase()}`}>{content.topic}</a>
+        <h1>{frontmatter.title}</h1>
+        <div id="date">{frontmatter.date.toLocaleDateString('en-US',{year: 'numeric', month: 'long'})}</div>
+        <a class="topic" href={`/work?topic=${frontmatter.topic.toLowerCase()}`}>{frontmatter.topic}</a>
         { 
-            content.pdfs.map((pdf) => {
+            frontmatter.pdf.map((pdf) => {
                 const idName = pdf.title.toLowerCase().replaceAll(' ', '-') 
                 return (
                     <h3 id={idName}>{pdf.title}</h3>
@@ -105,7 +106,7 @@ h3 {
     border-radius: 100px;
     transform: translateY(-3px);
     width: 10ch;
-    width: max-content;
+    width: max-frontmatter;
     text-align: center;
     margin: 0 auto 40px auto;
     text-decoration: none;

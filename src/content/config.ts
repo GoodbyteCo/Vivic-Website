@@ -1,4 +1,5 @@
 import { z, defineCollection } from 'astro:content'
+import { toDate } from '../utils/dateUtils'
 
 const workCollection = defineCollection({
 	type: 'content',
@@ -7,9 +8,11 @@ const workCollection = defineCollection({
 		topic: z.enum([
 			'Municipal', 'Provincial', 'Federal',
 		]),
-		date: z.string().transform((str) => new Date(str)),
+		date: z.union([ z.date(), z.string().transform((str) => toDate(str)) ]),
 		externalLink: z.boolean(),
-		pdf: z.union([ z.string().endsWith('.pdf'), z.string().url() ]),
+		pdf: z.union([
+			z.string().endsWith('.pdf'), z.string().url(), z.array(z.object({ title: z.string(), link: z.string().endsWith('.pdf') })), 
+		]),
 	}),
 })
 

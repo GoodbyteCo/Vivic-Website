@@ -4,7 +4,6 @@ pdf: "https://www.policyalternatives.ca/publications/reports/check-and-balance"
 date: 2021-08-01
 topic: "Federal"
 externalLink: True
-layout: ../../layouts/PDFViewer.astro
 ---
 
 The Vivic team along with co-author Ana Qarri outline how the Competition Act could

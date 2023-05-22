@@ -188,158 +188,159 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		"services": {
-"econmic-reasearch.md": {
-	id: "econmic-reasearch.md";
-  slug: "econmic-reasearch";
-  body: string;
-  collection: "services";
-  data: any
-} & { render(): Render[".md"] };
-"policy-design.md": {
-	id: "policy-design.md";
-  slug: "policy-design";
-  body: string;
-  collection: "services";
-  data: any
-} & { render(): Render[".md"] };
-};
-"work": {
+		"work": {
 "alternative-municipal-budget-for-the-city-of-ottawa-2021.md": {
 	id: "alternative-municipal-budget-for-the-city-of-ottawa-2021.md";
   slug: "alternative-municipal-budget-for-the-city-of-ottawa-2021";
   body: string;
   collection: "work";
-  data: any
+  data: InferEntrySchema<"work">
 } & { render(): Render[".md"] };
 "alternative-municipal-budget-for-the-city-of-ottawa-2022.md": {
 	id: "alternative-municipal-budget-for-the-city-of-ottawa-2022.md";
   slug: "alternative-municipal-budget-for-the-city-of-ottawa-2022";
   body: string;
   collection: "work";
-  data: any
+  data: InferEntrySchema<"work">
 } & { render(): Render[".md"] };
 "check-and-balance.md": {
 	id: "check-and-balance.md";
   slug: "check-and-balance";
   body: string;
   collection: "work";
-  data: any
+  data: InferEntrySchema<"work">
 } & { render(): Render[".md"] };
 "employment-impacts-of-spending-what-it-takes.md": {
 	id: "employment-impacts-of-spending-what-it-takes.md";
   slug: "employment-impacts-of-spending-what-it-takes";
   body: string;
   collection: "work";
-  data: any
+  data: InferEntrySchema<"work">
 } & { render(): Render[".md"] };
 "employment-insurance-in-canada.md": {
 	id: "employment-insurance-in-canada.md";
   slug: "employment-insurance-in-canada";
   body: string;
   collection: "work";
-  data: any
+  data: InferEntrySchema<"work">
 } & { render(): Render[".md"] };
 "how-to-reduce-the-depth-of-single-adult-povertyin-canada.md": {
 	id: "how-to-reduce-the-depth-of-single-adult-povertyin-canada.md";
   slug: "how-to-reduce-the-depth-of-single-adult-povertyin-canada";
   body: string;
   collection: "work";
-  data: any
+  data: InferEntrySchema<"work">
 } & { render(): Render[".md"] };
 "key-performance-indicator-roadmap.md": {
 	id: "key-performance-indicator-roadmap.md";
   slug: "key-performance-indicator-roadmap";
   body: string;
   collection: "work";
-  data: any
+  data: InferEntrySchema<"work">
 } & { render(): Render[".md"] };
 "labour-markets-and-the-competition-act.md": {
 	id: "labour-markets-and-the-competition-act.md";
   slug: "labour-markets-and-the-competition-act";
   body: string;
   collection: "work";
-  data: any
+  data: InferEntrySchema<"work">
 } & { render(): Render[".md"] };
 "labour-shortages-monopsony-power-and-their-role-in-our-current-labour-markets.md": {
 	id: "labour-shortages-monopsony-power-and-their-role-in-our-current-labour-markets.md";
   slug: "labour-shortages-monopsony-power-and-their-role-in-our-current-labour-markets";
   body: string;
   collection: "work";
-  data: any
+  data: InferEntrySchema<"work">
 } & { render(): Render[".md"] };
 "making-ontario-a-safer-place-to-work.md": {
 	id: "making-ontario-a-safer-place-to-work.md";
   slug: "making-ontario-a-safer-place-to-work";
   body: string;
   collection: "work";
-  data: any
+  data: InferEntrySchema<"work">
 } & { render(): Render[".md"] };
 "monopoly-and-the-covid-recovery.md": {
 	id: "monopoly-and-the-covid-recovery.md";
   slug: "monopoly-and-the-covid-recovery";
   body: string;
   collection: "work";
-  data: any
+  data: InferEntrySchema<"work">
 } & { render(): Render[".md"] };
 "no-one-left-behind.md": {
 	id: "no-one-left-behind.md";
   slug: "no-one-left-behind";
   body: string;
   collection: "work";
-  data: any
+  data: InferEntrySchema<"work">
 } & { render(): Render[".md"] };
 "non-police-mental-health-crisis-response-for-the-city-of-ottawa.md": {
 	id: "non-police-mental-health-crisis-response-for-the-city-of-ottawa.md";
   slug: "non-police-mental-health-crisis-response-for-the-city-of-ottawa";
   body: string;
   collection: "work";
-  data: any
+  data: InferEntrySchema<"work">
 } & { render(): Render[".md"] };
 "playing-the-long-game-keeping-newfoundland-and-labradors-economy-diverse-and-sustainable.md": {
 	id: "playing-the-long-game-keeping-newfoundland-and-labradors-economy-diverse-and-sustainable.md";
   slug: "playing-the-long-game-keeping-newfoundland-and-labradors-economy-diverse-and-sustainable";
   body: string;
   collection: "work";
-  data: any
+  data: InferEntrySchema<"work">
 } & { render(): Render[".md"] };
 "reforming-the-competition-act.md": {
 	id: "reforming-the-competition-act.md";
   slug: "reforming-the-competition-act";
   body: string;
   collection: "work";
-  data: any
+  data: InferEntrySchema<"work">
 } & { render(): Render[".md"] };
 "seven-reasons-why-privatization-of-public-services-is-the-wrong-answer.md": {
 	id: "seven-reasons-why-privatization-of-public-services-is-the-wrong-answer.md";
   slug: "seven-reasons-why-privatization-of-public-services-is-the-wrong-answer";
   body: string;
   collection: "work";
-  data: any
+  data: InferEntrySchema<"work">
 } & { render(): Render[".md"] };
 "study-of-competition-issues-in-data-driven-markets-in-canada.md": {
 	id: "study-of-competition-issues-in-data-driven-markets-in-canada.md";
   slug: "study-of-competition-issues-in-data-driven-markets-in-canada";
   body: string;
   collection: "work";
-  data: any
+  data: InferEntrySchema<"work">
 } & { render(): Render[".md"] };
 "towards-equitable-post-secondary-education-in-canada.md": {
 	id: "towards-equitable-post-secondary-education-in-canada.md";
   slug: "towards-equitable-post-secondary-education-in-canada";
   body: string;
   collection: "work";
-  data: any
+  data: InferEntrySchema<"work">
 } & { render(): Render[".md"] };
 };
 
 	};
 
 	type DataEntryMap = {
-		
+		"services": {
+"adcovacy": {
+	id: "adcovacy";
+  collection: "services";
+  data: InferEntrySchema<"services">
+};
+"econmic-reasearch": {
+	id: "econmic-reasearch";
+  collection: "services";
+  data: InferEntrySchema<"services">
+};
+"policy-design": {
+	id: "policy-design";
+  collection: "services";
+  data: InferEntrySchema<"services">
+};
+};
+
 	};
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	type ContentConfig = never;
+	type ContentConfig = typeof import("../src/content/config");
 }

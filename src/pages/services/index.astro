@@ -1,16 +1,17 @@
 ---
 import MainCentered from '../../layouts/MainCentered.astro'
+import { getCollection } from 'astro:content';
 import CtaButton from '../../components/InlineCtaButton.astro';
 
-const data = await Astro.glob('../../servicesList/*.md')
+const data = await getCollection('services') 
 
 
 
 const services: {title: string, content: string, order: number}[] = data.map((service) => {
     return {
-        title: service.frontmatter.title,
-        content: service.rawContent(),
-        order: service.frontmatter.order
+        title: service.data.title,
+        content: service.data.description,
+        order: service.data.order
     }
 })
 ---

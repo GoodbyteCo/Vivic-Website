@@ -4,7 +4,6 @@ pdf: "/PDFS/KPI-Roadmap-March-2-2021.pdf"
 date: 2021-01-01
 topic: "Municipal"
 externalLink: False
-layout: ../../layouts/PDFViewer.astro
 ---
 
 Vivic worked with the Fort Calgary Society to develop key performance indicators to
