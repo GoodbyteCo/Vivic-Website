@@ -17,6 +17,9 @@ const services: {title: string, content: string, order: number}[] = data.map((se
 
 <MainCentered>
     <h2>Our Services</h2>
+    <p>
+        Vivic Research offers community-focused economic and public policy research that puts people first. We provide our clients with the tools and support to meet their advocacy goals by producing comprehensive deliverables suited to mixed audiences. 
+    </p>
     <ul id="services">
         {
             services.sort((a,b) => a.order - b.order).map((service) => (
