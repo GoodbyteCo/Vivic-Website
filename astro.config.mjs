@@ -6,4 +6,5 @@ import vue from '@astrojs/vue'
 export default defineConfig({
 	integrations: [ vue(), sitemap() ],
 	site: 'https://vivicresearch.ca',
+	experimental: { inlineStylesheets: 'auto' },
 })

@@ -1,4 +1,4 @@
-export function toDate(dateString) {
+export function toDate(dateString: str) {
 	const dates = dateString.split('-')
 	const year = Number(dates[0])
 	const month = Number(dates[1]) - 1
