@@ -4,7 +4,6 @@ pdf: "/PDFS/INDU-Committee-Submission-April-29-2021.pdf"
 date: "2021-04"
 topic: "Federal"
 externalLink: False
-layout: ../../layouts/PDFViewer.astro
 ---
 
 Vivic’s Robin Shaban testified to the Standing Committee on Industry, Science, and

@@ -1,10 +1,9 @@
 ---
 title: "Employment Insurance in Canada: A Literature Review of Current Internal Government Studies"
 pdf: "/PDFS/EI-Literature-Review.pdf"
-date: "2021-01"
+date: 2021-01-01
 topic: "Federal"
 externalLink: False
-layout: ../../layouts/PDFViewer.astro
 ---
 
 The Vivic team summarizes relevant findings from 13 studies developed by Employment

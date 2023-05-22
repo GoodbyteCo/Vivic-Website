@@ -1,0 +1,35 @@
+---
+import {
+    InferGetStaticParamsType,
+    InferGetStaticPropsType,
+    GetStaticPaths,
+} from "astro";
+
+import MultiPDFViewer from "../../layouts/MultiPDFViewer.astro";
+import PDFViewer from "../../layouts/PDFViewer.astro";
+
+import { getCollection } from "astro:content";
+export const getStaticPaths = (async () => {
+    const workEntries = await getCollection("work");
+    return workEntries.map((entry) => ({
+        params: { slug: entry.slug },
+        props: { entry },
+    }));
+}) satisfies GetStaticPaths;
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+{
+    typeof entry.data.pdf != "object" ? (
+        <PDFViewer frontmatter={entry.data}>
+            <Content />
+        </PDFViewer>
+    ) : (
+        <MultiPDFViewer frontmatter={entry.data}>
+            <Content />
+        </MultiPDFViewer>
+    )
+}

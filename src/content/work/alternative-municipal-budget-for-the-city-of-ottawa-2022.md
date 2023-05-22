@@ -1,10 +1,9 @@
 ---
 title: Alternative Municipal Budget for the City of Ottawa 2022
 pdf: "/PDFS/Ottawa+Alt+Budget+2022_FINAL.pdf"
-date: "2021-12"
+date: 2021-12-01
 topic: "Municipal"
 externalLink: False
-layout: ../../layouts/PDFViewer.astro
 ---
 
 For the second consecutive year, the Ottawa Coalition for a People’s Budget and Vivic

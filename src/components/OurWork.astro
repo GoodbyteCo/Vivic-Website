@@ -1,68 +1,68 @@
 ---
-import CtaButtom from './CtaButton.astro'
-import { toDate } from '../utils/dateUtils'
+import CtaButtom from "./CtaButton.astro";
+import { getCollection } from "astro:content";
 
 type WorkWithNum = {
-	title: string,
-	content: string,
-	url: string,
-	work: number
-}
+	title: string;
+	content: string;
+	url: string;
+	work: number;
+};
 
-const data = await Astro.glob('../pages/work/*.md')
+const data = await getCollection("work");
 
-const work = data.map((post) => {
-	return {
-		title: post.frontmatter.title,
-		pdf: post.frontmatter.pdf,
-		date: toDate(post.frontmatter.date),
-		topic: post.frontmatter.topic,
-		content: post.rawContent(),
-		url: post.url,
-		externalLink: post.frontmatter.externalLink,
-	}
-}).sort((a,b) => a.date.getTime() - b.date.getTime())
-  .reduce<WorkWithNum[]>(
-	(finalArr, post, index) => 
-		[...finalArr, {title: post.title, content: post.content, url: post.url, work: index}]
-  ,[])
-
-
+const work = data
+	.map((post) => {
+		return {
+			title: post.data.title,
+			pdf: post.data.pdf,
+			date: post.data.date,
+			topic: post.data.topic,
+			content: post.body,
+			url: `/work/${post.slug}`,
+			externalLink: post.data.externalLink,
+		};
+	})
+	.sort((a, b) => a.date.getTime() - b.date.getTime())
+	.reduce<WorkWithNum[]>(
+		(finalArr, post, index) => [
+			...finalArr,
+			{
+				title: post.title,
+				content: post.content,
+				url: post.url,
+				work: index,
+			},
+		],
+		[]
+	);
 ---
+
 <h2>
-	<a href="/work">
-		Our Work
-	</a>
+	<a href="/work"> Our Work</a>
 </h2>
 <div class="our-work">
 	{
 		work.map((post) => (
-				<div 
-					id={`work-${post.work}`} 
-					class={`work work-${(post.work == 0) ? 'selected': 'unselected'}`}
-				>
-					<h3>
-						{post.title}
-					</h3>
-					<p>
-						{post.content}
-						<a 
-							class="read-more"
-							href={`${post.url}`}
-							target="_blank"
-						>
-							Read More
-						</a>
-					</p>
-				</div> 
-			))
+			<div
+				id={`work-${post.work}`}
+				class={`work work-${
+					post.work == 0 ? "selected" : "unselected"
+				}`}
+			>
+				<h3>{post.title}</h3>
+				<p>
+					{post.content}
+					<a class="read-more" href={`${post.url}`} target="_blank">
+						Read More
+					</a>
+				</p>
+			</div>
+		))
 	}
 </div>
 
-<CtaButtom link="/work" idName="bottom-cta" >
-	See All Our Work
-</CtaButtom>
-
+<CtaButtom link="/work" idName="bottom-cta">See All Our Work</CtaButtom>
 
 <script>
 	let current = 0;
@@ -70,157 +70,157 @@ const work = data.map((post) => {
 
 	function changeWork(change = 1) {
 		let cur = document.getElementById(`work-${current}`);
-		cur.classList.remove("work-selected")
+		cur.classList.remove("work-selected");
 		cur.classList.add("work-unselected");
 		current = (current + change) % total;
 		let next = document.getElementById(`work-${current}`);
-		next.classList.remove("work-unselected")
-		next.classList.add("work-selected")
+		next.classList.remove("work-unselected");
+		next.classList.add("work-selected");
 	}
 
 	setInterval(changeWork, 7000);
-</script>   
+</script>
 
 <style>
-@keyframes quote-in {
-	0% {
-		color: var(--tertiary);
-		opacity: 0;
-		transform: translateX(40px);
+	@keyframes quote-in {
+		0% {
+			color: var(--tertiary);
+			opacity: 0;
+			transform: translateX(40px);
+		}
+
+		90% {
+			opacity: 1;
+		}
+
+		100% {
+			opacity: 1;
+			transform: translateX(0px);
+		}
 	}
 
-	90% {
+	@keyframes quote-out {
+		0% {
+			opacity: 1;
+			transform: translateX(0px);
+		}
+
+		90% {
+			color: var(--secondary);
+			opacity: 0;
+		}
+
+		100% {
+			opacity: 0;
+			transform: translateX(-40px);
+		}
+	}
+
+	h2 {
+		font-size: 2.5rem;
+		margin-top: 130px;
+	}
+
+	h2 a {
+		display: block;
+		text-decoration: none;
+		color: var(--white);
+
+		max-width: 8ch;
+		max-width: max-content;
+		margin: auto;
+		text-align: center;
+	}
+
+	h2 a::after {
+		content: "";
+		margin-top: 0.3rem;
+		display: block;
+		width: 0;
+		opacity: 0.7;
+		height: 2px;
+		background: var(--white);
+		transition: width 0.3s;
+	}
+
+	h2 a:hover::after {
 		opacity: 1;
+		width: 100%;
 	}
 
-	100% {
-		opacity: 1;
-		transform: translateX(0px);
-	}
-}
-
-@keyframes quote-out {
-	0% {
-		opacity: 1;
-		transform: translateX(0px);
+	.our-work {
+		max-width: 900px;
+		width: 95%;
+		height: 300px;
+		margin: 10px auto 18px auto;
+		position: relative;
+		overflow: hidden;
 	}
 
-	90% {
+	@media screen and (max-width: 800px) {
+		.our-work {
+			height: 450px;
+		}
+	}
+
+	@media screen and (max-width: 620px) {
+		.our-work {
+			height: 500px;
+		}
+	}
+	@media screen and (max-width: 320px) {
+		.our-work {
+			height: 700px;
+		}
+	}
+
+	.work {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+	}
+
+	.work h3 {
+		text-align: center;
+		font-size: 1.6rem;
+	}
+
+	.work p {
+		line-height: 1.8;
+	}
+
+	a.read-more {
+		display: inline-block;
 		color: var(--secondary);
+		text-decoration: none;
+	}
+
+	a.read-more::after {
+		content: "";
+		margin-top: -2.5px;
+		display: block;
+		width: 100%;
+		opacity: 1;
+		height: 2px;
+		background: var(--secondary);
+	}
+
+	.work-unselected {
+		animation-name: quote-out;
+		animation-duration: 2s;
+		animation-timing-function: cubic-bezier(0.48, -0.04, 0.31, 0.99);
 		opacity: 0;
+		pointer-events: none;
 	}
 
-	100% {
-		opacity: 0;
-		transform: translateX(-40px);
+	.work-selected {
+		animation-name: quote-in;
+		animation-duration: 2.5s;
+		animation-timing-function: cubic-bezier(0.48, -0.04, 0.31, 0.99);
 	}
-}
 
-h2 {
-	font-size: 2.5rem;
-	margin-top: 130px;
-}
-
-h2 a {
-	display: block;
-	text-decoration: none;
-	color: var(--white);
-
-	max-width: 8ch;
-	max-width: max-content;
-	margin: auto;
-	text-align: center;
-}
-
-h2 a::after {
-	content: '';
-	margin-top: 0.3rem;
-	display: block;
-	width: 0;
-	opacity: 0.7;
-	height: 2px;
-	background: var(--white);
-	transition: width 0.3s;
-}
-
-h2 a:hover::after {
-	opacity: 1;
-	width: 100%;
-}
-
-.our-work {
-	max-width: 900px;
-	width: 95%;
-	height: 300px;
-	margin: 10px auto 18px auto;
-	position: relative;
-	overflow: hidden;
-}
-
-@media screen and (max-width: 800px) {
-	.our-work {
-		height: 450px;
+	:global(#bottom-cta) {
+		margin-bottom: 6em;
 	}
-}
-
-@media screen and (max-width: 620px) {
-	.our-work {
-		height: 500px;
-	}
-}
-@media screen and (max-width: 320px) {
-	.our-work {
-		height: 700px;
-	}
-}
-
-.work {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-}
-
-.work h3 {
-	text-align: center;
-	font-size: 1.6rem;
-}
-
-.work p {
-	line-height: 1.8;
-}
-
-a.read-more {
-	display: inline-block;
-	color: var(--secondary);
-	text-decoration: none;
-}
-
-a.read-more::after {
-	content: '';
-	margin-top: -2.5px;
-	display: block;
-	width: 100%;
-	opacity: 1;
-	height: 2px;
-	background: var(--secondary);
-}
-
-.work-unselected {
-	animation-name: quote-out;
-	animation-duration: 2s;
-	animation-timing-function: cubic-bezier(0.48, -0.04, 0.31, 0.99);
-	opacity: 0;
-	pointer-events: none;
-}
-
-.work-selected {
-	animation-name: quote-in;
-	animation-duration: 2.5s;
-	animation-timing-function: cubic-bezier(0.48, -0.04, 0.31, 0.99);
-}
-
-:global(#bottom-cta) {
-	margin-bottom: 6em;
-}
 </style>

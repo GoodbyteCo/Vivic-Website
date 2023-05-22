@@ -1,7 +1,7 @@
 ---
 title: "Seven reasons why privatization of public services is the wrong answer"
 pdf: "https://monitormag.ca/articles/seven-reasons-why-privatization-of-public-services-is-the-wrong-answer/"
-date: "2022-02-01"
+date: "2022-02"
 topic: "Provincial"
 externalLink: True
 ---

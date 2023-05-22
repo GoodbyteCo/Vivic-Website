@@ -1,10 +1,9 @@
 ---
 title: "No One Left Behind: Strategies for an Inclusive Recovery"
 pdf: "https://campaign2000.ca/wp-content/uploads/2021/11/C2000-2021-National-Report-Card-No-One-Left-Behind-Strategies-for-an-Inclusive-Recovery-AMENDED.pdf"
-date: "2021-11"
+date: 2021-11-01
 topic: "Federal"
 externalLink: False
-layout: ../../layouts/PDFViewer.astro
 ---
 
 This report, produced by Vivic Research and Campaign2000, examines child poverty through

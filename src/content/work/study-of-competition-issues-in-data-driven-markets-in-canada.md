@@ -4,7 +4,6 @@ pdf: "/PDFS/Competition-Data-Driven-Markets-Final-Report-2022.pdf"
 date: "2022-01"
 topic: "Federal"
 externalLink: False
-layout: ../../layouts/PDFViewer.astro
 ---
 
 The Ministry of Innovation, Science, and Economic Development Canada commissioned

@@ -1,12 +1,12 @@
 ---
 import MainLayout from './MainCentered.astro'
 import CtaButton from '../components/CtaButton.astro'
-import { toDate } from '../utils/dateUtils'
 const { frontmatter } = Astro.props
+console.log(frontmatter)
 ---
 <MainLayout title={`Vivic Research | ${frontmatter.title}`}>
 	<h1>{frontmatter.title}</h1>
-	<div id="date">{toDate(frontmatter.date).toLocaleDateString('en-US',{year: 'numeric', month: 'long'})}</div>
+	<div id="date">{frontmatter.date.toLocaleDateString('en-US',{year: 'numeric', month: 'long'})}</div>
 	<a
 		class="topic" 
 		href={`/work?topic=${frontmatter.topic.toLowerCase()}`}

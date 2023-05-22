@@ -1,7 +1,7 @@
 ---
 title: "Research support for report: How to Reduce the Depth of Single Adult Poverty in Canada"
 pdf: "https://maytree.com/publications/canada-working-age-supplement/"
-date: "2022-09"
+date: 2022-09-01
 topic: "Federal"
 externalLink: True
 ---

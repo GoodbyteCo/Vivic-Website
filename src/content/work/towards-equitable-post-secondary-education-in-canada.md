@@ -4,7 +4,6 @@ pdf: "/PDFS/CFS Literature Review January 18 REVISED - with funding section.pdf"
 date: "2021-01"
 topic: "Federal"
 externalLink: False
-layout: ../../layouts/PDFViewer.astro
 ---
 
 In work done for the Canadian Federation of Students, Vivic Research presented a series
