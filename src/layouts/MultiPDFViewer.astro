@@ -21,6 +21,9 @@ const { content } = Astro.props
         <h1>{content.title}</h1>
         <div id="date">{toDate(content.date).toLocaleDateString('en-US',{year: 'numeric', month: 'long'})}</div>
         <a class="topic" href={`/work?topic=${content.topic.toLowerCase()}`}>{content.topic}</a>
+        { content.type ?
+            <div class='topic type'>{content.type}</div> : undefined
+        }
         { 
             content.pdfs.map((pdf) => {
                 const idName = pdf.title.toLowerCase().replaceAll(' ', '-') 
@@ -113,6 +116,10 @@ h3 {
 
 .topic:hover, .topic:focus {
     background: var(--secondary);
+}
+
+.type:hover, .type:focus {
+	background: linear-gradient(to right, #fcd5e1, #fff, #def8f8);
 }
 
 .multiPDF {

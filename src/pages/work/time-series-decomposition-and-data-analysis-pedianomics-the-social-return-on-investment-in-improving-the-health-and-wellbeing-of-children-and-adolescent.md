@@ -1,8 +1,9 @@
 ---
-title: "Time-Series Decomposition and Data Analysis: Pedianomics: The Social Return on Investment in Improving the Health and Wellbeing of Children and Adolescent"
+title: "Pedianomics: The Social Return on Investment in Improving the Health and Wellbeing of Children and Adolescent"
 pdf: "https://childrenfirstcanada.org/wp-content/uploads/2023/05/Pedianomics-Raising-Canada-2023-Children-First-Canada.pdf"
 date: "2023-05"
 topic: "Provincial"
+type: "Time-Series Decomposition and Data Analysis"
 externalLink: True
 layout: ../../layouts/PDFViewer.astro
 ---

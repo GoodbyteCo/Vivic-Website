@@ -16,7 +16,7 @@
 				<a class="card" :href="(work.externalLink) ? work.pdf : work.url" target="_blank">
 					<div class="title">
 						<h2>
-							{{work.title}}&nbsp;&nbsp;<span class="topic">{{work.topic}}</span>
+							{{work.title}}&nbsp;&nbsp;<span class="topic">{{work.topic}}</span><template v-if="work.type != undefined">&nbsp;&nbsp;<span class="topic">{{ work.type }}</span></template>
 						</h2>
 						<h3><span class="date">{{toDateFormat(work.date)}}</span></h3>
 					</div>
@@ -37,6 +37,7 @@
 		title: string
 		pdf: string
 		topic: string
+		type?: string,
 		date: Date,
 		source: string,     
 		url: string

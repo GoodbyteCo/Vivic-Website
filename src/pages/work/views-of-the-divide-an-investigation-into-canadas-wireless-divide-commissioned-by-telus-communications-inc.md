@@ -1,8 +1,9 @@
 ---
-title: "Data Analysis and Literature Review - Views of the Divide: An Investigation into Canada’s Wireless Divide, Commissioned by TELUS Communications Inc."
+title: "Views of the Divide: An Investigation into Canada’s Wireless Divide, Commissioned by TELUS Communications Inc."
 pdf: "/PDFS/TELUS Views of the Divide Report.pdf"
 date: "2023-05"
 topic: "Federal"
+type: "Data Analysis and Literature Review"
 externalLink: False
 layout: ../../layouts/PDFViewer.astro
 ---

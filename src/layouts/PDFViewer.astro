@@ -13,6 +13,9 @@ const { frontmatter } = Astro.props
 	>
 		{frontmatter.topic}
 	</a>
+	{ frontmatter.type ?
+		<div class='topic type'>{frontmatter.type}</div> : undefined
+	}
 	<div id="pdf">
 		<iframe src={frontmatter.pdf}/>
 	</div>
@@ -52,9 +55,15 @@ h1 {
 	text-decoration: none;
 }
 
+
 .topic:hover, .topic:focus {
 	background: var(--secondary);
 }
+
+.type:hover, .type:focus {
+	background: linear-gradient(to right, #fcd5e1, #fff, #def8f8);
+}
+
 
 #pdf {
 	height: 85vh;

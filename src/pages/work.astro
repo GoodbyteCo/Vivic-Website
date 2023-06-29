@@ -12,6 +12,7 @@ const work = data.map((post) => {
 		pdf: post.frontmatter.pdf,
 		date: toDate(post.frontmatter.date),
 		topic: post.frontmatter.topic,
+		type: post.frontmatter.type,
 		source: post.rawContent(),
 		url: post.url,
 		externalLink: post.frontmatter.externalLink,

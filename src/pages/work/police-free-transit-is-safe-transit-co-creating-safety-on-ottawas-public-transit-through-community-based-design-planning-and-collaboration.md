@@ -1,8 +1,9 @@
 ---
-title: "Community-Based Research: Police-Free transit is Safe Transit: Co-Creating Safety on Ottawa’s Public Transit Through Community-Based Design, Planning, and Collaboration "
+title: "Police-Free Transit is Safe Transit: Co-Creating Safety on Ottawa’s Public Transit Through Community-Based Design, Planning, and Collaboration "
 pdf: "/PDFS/Final Report - Courage x Vivic - 2023.06.06.pdf"
 date: "2023-06"
 topic: "Municipal"
+type: "Community-Based Research"
 externalLink: False
 layout: ../../layouts/PDFViewer.astro
 ---

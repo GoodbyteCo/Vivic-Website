@@ -1,8 +1,9 @@
 ---
-title: "Data Analysis and Collaborative Report Writing – Pandemic Lessons: Ending Child and Family Poverty is Possible"
+title: "Pandemic Lessons: Ending Child and Family Poverty is Possible"
 pdf: "https://campaign2000.ca/wp-content/uploads/2023/02/English-Pandemic-Lessons_Ending-Child-and-Family-Poverty-is-Possible_2022-National-Report-Card-on-Child-and-Family-Poverty.pdf"
 date: "2023-02"
 topic: "Federal"
+type: "Data Analysis and Collaborative Report Writing"
 externalLink: True
 layout: ../../layouts/PDFViewer.astro
 ---
