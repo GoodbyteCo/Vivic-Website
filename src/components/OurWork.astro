@@ -10,7 +10,11 @@ type WorkWithNum = {
 }
 
 const data = await Astro.glob('../pages/work/*.md')
-
+function getRandomInt(min: number, max: number): number {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 const work = data.map((post) => {
 	return {
 		title: post.frontmatter.title,
@@ -27,6 +31,8 @@ const work = data.map((post) => {
 		[...finalArr, {title: post.title, content: post.content, url: post.url, work: index}]
   ,[])
 
+const start = getRandomInt(0, work.length - 1)
+
 
 ---
 <h2>
@@ -39,7 +45,7 @@ const work = data.map((post) => {
 		work.map((post) => (
 				<div 
 					id={`work-${post.work}`} 
-					class={`work work-${(post.work == 0) ? 'selected': 'unselected'}`}
+					class={`work work-${(post.work == start) ? 'selected': 'unselected'}`}
 				>
 					<h3>
 						{post.title}
@@ -151,7 +157,7 @@ h2 a:hover::after {
 .our-work {
 	max-width: 900px;
 	width: 95%;
-	height: 300px;
+	height: 400px;
 	margin: 10px auto 18px auto;
 	position: relative;
 	overflow: hidden;
