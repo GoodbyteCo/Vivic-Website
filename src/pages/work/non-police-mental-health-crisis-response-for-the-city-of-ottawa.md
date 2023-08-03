@@ -1,17 +1,11 @@
 ---
-title: Non-Police Mental Health Crisis Response for the City of Ottawa
+title: "Alternatives for a Safer Ottawa: Non-Police Mental Health Crisis Response"
 pdfs: [{title: "Executive Summary", link: "/PDFS/BH-Final-Executive-Summary.pdf"},{title: "Report", link: "/PDFS/BH-Final-Report.pdf"}, {title: "Strategy", link: "/PDFS/BH-Final-Strategy.pdf"}]
 date: "2021-06"
 topic: "Municipal"
+type: "Community-Based Research"
 externalLink: False
 layout: ../../layouts/MultiPDFViewer.astro
 ---
 
-Vivic, sponsored by 613-819 Black Hub, undertook community consultations to explore
-the possibility of a non-police response to mental health crises. The report reviews
-public policies that have contributed to crises situations, the history and current
-operations of emergency responses, existing alternatives across North America and
-available responses in Ottawa. The strategy is a detailed proposal of a non-police
-mental health crisis response that would better meet community needs, and includes
-the cost of the program and concrete steps to reallocate funding from the Ottawa
-Police Service.
+Vivic Research collaborated with 613-819 Black Hub to produce a comprehensive report that would explore the feasibility and cost of a non-police response model to mental health crises in Ottawa. The final report is a combination of extensive community consultations and a thorough review of other crisis response models in jurisdictions across North America. We explored why co-response models fall short of meeting the needs of people in crisis, and unpacked the social determinants of mental health to incorporate a heavy focus on preventing crisis through adequately supporting all residents and transforming systems that cause harm. 
