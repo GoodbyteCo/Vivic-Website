@@ -3,6 +3,7 @@ title: "Job Creation Through Transformational Climate Investments: Assessing the
 pdf: "/PDFS/Employment-Impacts-of-Spending-What-it-Takes-Report.pdf"
 date: "2023-03"
 topic: "Federal"
+type: "Input-Output Modelling"
 externalLink: False
 layout: ../../layouts/PDFViewer.astro
 ---
