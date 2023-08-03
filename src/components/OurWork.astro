@@ -70,8 +70,8 @@ const start = getRandomInt(0, work.length - 1)
 </CtaButtom>
 
 
-<script>
-	let current = 0;
+<script define:vars={{start}}>
+	let current = start;
 	let total = document.getElementsByClassName("work").length;
 
 	function changeWork(change = 1) {
