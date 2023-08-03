@@ -1,7 +1,7 @@
 ---
-title: "Making Ontario a Safer Place to Work"
+title: "Making Ontario a Safer Place to Work: Funding and Safety Outcomes of Ontario’s Health and Safety Associations"
 pdf: "/PDFS/HSA-Funding-Blogpost-with-letterhead-April-27-2022.pdf"
-date: "2022-05"
+date: "2022-04"
 topic: "Provincial"
 externalLink: False
 layout: ../../layouts/PDFViewer.astro
