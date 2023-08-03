@@ -1,13 +1,11 @@
 ---
-title: "Check and balance: The case for improving Canada’s Competition Act to protect workers"
+title: "Check and Balance: The Case for Improving Canada’s Competition Act to Protect Workers"
 pdf: "https://www.policyalternatives.ca/publications/reports/check-and-balance"
 date: "2021-08"
 topic: "Federal"
+type: "Collaborative Report Writing"
 externalLink: True
 layout: ../../layouts/PDFViewer.astro
 ---
 
-The Vivic team along with co-author Ana Qarri outline how the Competition Act could
-be doing more to protect workers, and where it falls short. It also provides a guide
-for advocates and labour unions on how to engage with the Competition Bureau during
-the course of merger investigations.
+In partnership with Ana Qarri, Vivic Research explored how the design of the Competition Act allows for extensive corporate dominance and contains significant loopholes that enable corporations to establish monopolies, resulting in the exploitation of consumers and workers. The report recommended that Canada revise its competition law to incorporate a strong anti-monopoly focus. Additionally, the annex includes a guide on how to effectively engage with the Competition Bureau during the process of merger investigations.
