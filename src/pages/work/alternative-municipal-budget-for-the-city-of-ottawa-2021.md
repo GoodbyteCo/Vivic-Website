@@ -1,7 +1,7 @@
 ---
 title: Alternative Municipal Budget for the City of Ottawa 2021
 pdf: "/PDFS/Alternative_Budget_Report_FINAL_NOV_02_2020.pdf"
-date: "2020-10"
+date: "2020-11"
 topic: "Municipal"
 type: "Community-Based Research"
 externalLink: False
