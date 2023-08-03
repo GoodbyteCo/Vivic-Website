@@ -1,13 +1,11 @@
 ---
-title: Reforming the Competition Act
+title: "Reforming the Competition Act: Suggested Changes to Enhance Competitiveness and Equity of the Canadian Economy"
 pdf: "/PDFS/INDU-Committee-Submission-April-29-2021.pdf"
 date: "2021-04"
 topic: "Federal"
+type: "Briefing Note"
 externalLink: False
 layout: ../../layouts/PDFViewer.astro
 ---
 
-Vivic’s Robin Shaban testified to the Standing Committee on Industry, Science, and
-Technology on April 6th and 20th, 2021. She highlighted the need for reform to Canada’s
-Competition Policy to make our economy more equitable for all Canadians. To learn
-more, check out our briefing note to the Committee.
+Vivic Research testified to the Standing Committee on Industry, Science, and Technology on April 6th and 20th, 2021 to highlight potential changes to the Competition Act to enhance its effectiveness as a tool for promoting and protecting competition in our economy. Vivic  put forward eight policy proposals, including re-establishing the Economic Council of Canada to advance further research, adding a provision in the Competition Act that requires the Act to be reviewed every five years, and abolishing the efficiencies defense for mergers. This briefing note outlines proposed changes in greater detail.
