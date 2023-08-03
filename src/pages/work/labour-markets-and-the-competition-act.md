@@ -1,5 +1,5 @@
 ---
-title: Competition Policy in Labour Markets: Towards a More Just Society
+title: "Competition Policy in Labour Markets: Towards a More Just Society"
 pdf: "/PDFS/Western-Law-Labour-Markets-and-the-Competition-Act-April-7-2022.pdf"
 date: "2022-06"
 topic: "Federal"
