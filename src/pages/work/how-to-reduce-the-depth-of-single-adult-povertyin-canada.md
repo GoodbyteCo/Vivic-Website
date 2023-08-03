@@ -1,9 +1,10 @@
 ---
-title: "Research support for report: How to Reduce the Depth of Single Adult Poverty in Canada"
+title: "How to Reduce the Depth of Single Adult Poverty in Canada: Proposal for a Canada Working-Age Supplement"
 pdf: "https://maytree.com/publications/canada-working-age-supplement/"
 date: "2022-09"
 topic: "Federal"
+type: "Budget Impact Analysis"
 externalLink: True
 ---
 
-Vivic was engaged by the Maytree Foundation and Community Food Centres Canada to develop a microsimulation model of a new federal tax credit targeted to low-income, working-age singles. Using data from the SPSD/M and the programming language R, the team built the model and produced several metrics of program efficiency and effectiveness, including some custom metrics. As part of the project, the Vivic team also undertook a scan of other jurisdictions which was used to benchmark the proposed program against those of other nations.
+In partnership with the Maytree Foundation and Community Food Centres Canada, Vivic Research developed a microsimulation model of a new federal tax credit targeted to low-income, working-age single adults. Programmed in R and using SPSD/M data, several custom and industry-standard metrics were implemented to evaluate program efficiency and effectiveness. In total, Vivic modelled eleven scenarios to understand their cost and impact. The Vivic team also undertook an international jurisdictional scan of programs that target working-age single adults to inform a literature review of existing and proposed models.
