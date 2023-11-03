@@ -1,6 +1,6 @@
 ---
 title: "From Punishment to Prevention: Reframing the Narrative on Street-Based Youth Violence in Ottawa"
-pdf: "/PDFS/Rethinking Youth Violence - VR x CTR-CAN - 2023.10.23.pdf"
+pdf: "/PDFS/From Punishment to Prevention VR x CRSD x OCCH - 2023.10.23.pdf"
 date: "2023-07"
 topic: "Municipal"
 type: "Community-Based Research"
