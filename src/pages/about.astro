@@ -5,7 +5,7 @@ import CtaButtom from "../components/InlineCtaButton.astro";
 
 <MainCentered>
   <div id="about-section">
-    <section>
+    <section id="description">
       <h3>Our Story</h3>
       <p>
         Founded in 2020 by Inez Hillel and Robin Shaban, Vivic Research supports
@@ -30,11 +30,23 @@ import CtaButtom from "../components/InlineCtaButton.astro";
         alternatives to traditional economic and public policy research.
       </p>
     </section>
+    <section id="picture">
+      <figure>
+				<img src="/images/about-img.png" alt="" />
+				<figcaption>created by Melissa and can be found at <a href="https://instagram.com/thedeepend.designs">@thedeepend.designs</a></figcaption>
+			</figure>
+    </section>
   </div>
 
   <h2>Our Team</h2>
   <div class="team">
+    <div>
     <section>
+      <picture>
+        <source type="image/avif" srcset="/images/inez.avif" />
+        <source type="image/webp" srcset="/images/inez.webp" />
+        <img src="/images/inez.jpg" alt="inez" />
+      </picture>
       <h3>
         Inez Hillel <span class="pronouns">(she/her)</span>
       </h3>
@@ -59,7 +71,9 @@ import CtaButtom from "../components/InlineCtaButton.astro";
         Get in Touch
       </CtaButtom>
     </section>
+  </div>
 
+  <diV class="other-team">
     <section>
       <h3>Farnaz <span class="pronouns">(she/her)</span></h3>
       <h4>Researcher</h4>
@@ -80,6 +94,15 @@ import CtaButtom from "../components/InlineCtaButton.astro";
         in her work at Vivic Research.
       </p>
     </section>
+    <section>
+      <h3>Jay <span class="pronouns">(they/them)</span></h3>
+      <h4>Researcher</h4>
+      <p>
+        Jay is a researcher at Vivic Research. Their work highlights and challenges discourses and rhetoric that perpetuate stigma, harm, and inaction by institutions and government by situating policy narratives within a sociopolitical context.
+        Jay's responsibilities at Vivic include qualitative and quantitative research and analysis, report writing, and knowledge translation including social media content and public presentations. They believe that people are better equipped to act and organize on the issues that affect their lives when they have access to accessible and relevant research and data. Jay holds two graduate degrees in Education and Health Sciences and their previous work has included critical analysis of discourse on trans and gender non-conforming youth in sport and research projects advocating for COVID safety for workers.
+      </p>
+    </section>
+  </diV>
 
 
   </div>
@@ -93,11 +116,30 @@ import CtaButtom from "../components/InlineCtaButton.astro";
   }
 
   #about-section {
-    width: 60%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     gap: 40px;
   }
+
+  #about-section #description {
+    width: 50%;
+  }
+  
+  #about-section #picture {
+    width: 50%;
+  }
+
+  #about-section #picture figure {
+    width: 100%;
+  }
+  #about-section #picture figure img {
+    width: 100%;
+  }
+  #about-section #picture figure figcaption a {
+    color: var(--secondary)
+  }
+
 
   #about-section h3 {
     font-size: 1.6rem;
@@ -116,6 +158,7 @@ import CtaButtom from "../components/InlineCtaButton.astro";
 
   .team {
     display: flex;
+    flex-direction: column;
     gap: 5%;
     padding: 5%;
   }
@@ -151,6 +194,27 @@ import CtaButtom from "../components/InlineCtaButton.astro";
     font-weight: 100;
   }
 
+  .other-team {
+    display: flex;
+    gap: 5%;
+  }
+
+  @media screen and (max-width: 945px) {
+    #about-section {
+      flex-direction: column;
+    }
+    #about-section #description {
+      width: 100%;
+    }
+    #about-section #picture {
+      width: 100%;
+      margin: auto;
+    }
+    #about-section #picture figure {
+      width: unset;
+    }
+  }
+
   @media screen and (max-width: 870px) {
     .big-text {
       font-size: 1.3rem;
@@ -167,5 +231,10 @@ import CtaButtom from "../components/InlineCtaButton.astro";
     .team section {
       margin-bottom: 120px;
     }
+
+    .other-team {
+      flex-direction: column;
+    }
+
   }
 </style>
