@@ -14,12 +14,22 @@ const services: { title: string; order: number }[] = data.map((service) => {
 
 <Main title="Vivic Research">
 	<section id="hero">
-		<h1>Today. Tomorrow. Together.</h1>
+		<h1 id="hero-img">
+			<figure>
+				<img src="/images/Illustration.png" alt="image created by csslackdesign" />
+				<figcaption>created by cslackdesign and can be found at their website <a href="https://cslackdesign.com">cslackdesign.com</a></figcaption>
+			  </figure>
+		</h1>
+		<div id="hero-text">
 		<p>
+			TODAY TOMMOROW TOGHETHER
+		</p>
+		<p >
 			Vivic Research is an economic and public policy research firm
 			dedicated to supporting actors working towards systems change with
 			evidence-based research.
 		</p>
+		</div>
 	</section>
 	<section id="services">
 		<h2>
@@ -46,22 +56,53 @@ const services: { title: string; order: number }[] = data.map((service) => {
 		margin: 0 auto 75px auto;
 	}
 
-	#hero {
-		margin: 325px 8% 155px 8%;
-		width: 65%;
+	#hero-img {
+		width: 70%;
+		margin: auto;
 	}
 
+	#hero-img img {
+		width: 100%;
+	}
+
+	#hero {
+		margin: 10px 8% 155px 8%;
+		text-align: center;
+		display: flex;
+		flex-direction: row-reverse;
+	}
+	#hero #hero-text {
+		width: 40%;
+		text-align: right;
+		display: inline-block;
+  		align-self: flex-end;
+		margin-bottom: 10%;
+	}
+
+	
 	h1 {
 		font-weight: 200;
 		font-size: 3.2rem;
 		letter-spacing: 0.08em;
 		text-transform: uppercase;
 	}
+	
+	#hero-img figcaption {
+		font-size: 8pt;
+		text-transform: none;
+		letter-spacing: normal;
+		font-weight: 100;
+	}
+	#hero-img figcaption a {
+		color: var(--secondary);
+	}
+
+
 
 	#hero p {
 		width: 75%;
 		font-weight: 100;
-		font-size: 1.2rem;
+		font-size: 1.5rem;
 	}
 
 	h2 {
@@ -162,6 +203,9 @@ const services: { title: string; order: number }[] = data.map((service) => {
 	}
 
 	@media screen and (max-width: 1050px) {
+		#hero p {
+			font-size: 1.2rem;
+		}
 		.pillars {
 			display: block;
 		}
@@ -208,15 +252,17 @@ const services: { title: string; order: number }[] = data.map((service) => {
 		}
 	}
 
-	@media screen and (max-width: 420px) {
-		h1 {
-			font-size: 2.8rem;
-		}
-	}
 
-	@media screen and (max-width: 350px) {
-		h1 {
-			font-size: 2.3rem;
+	@media screen and (max-width: 750px) {
+		#hero {
+			flex-direction: column;
+		}
+		#hero #hero-text {
+			width: 100%;
+			text-align: left;
+		}
+		#hero #hero-img {
+			width: 80%;
 		}
 	}
 </style>
