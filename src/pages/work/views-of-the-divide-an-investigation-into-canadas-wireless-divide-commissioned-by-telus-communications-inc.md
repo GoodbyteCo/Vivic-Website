@@ -1,6 +1,6 @@
 ---
 title: "Views of the Divide: An Investigation into Canada’s Wireless Divide, Commissioned by TELUS Communications Inc."
-pdf: "/PDFS/20240424 TELUS Views of the Divide Report.pdf"
+pdf: "/PDFS/20240423 TELUS Views of the Divide Report.pdf"
 date: "2023-05"
 topic: "Federal"
 type: "Data Analysis and Literature Review"
