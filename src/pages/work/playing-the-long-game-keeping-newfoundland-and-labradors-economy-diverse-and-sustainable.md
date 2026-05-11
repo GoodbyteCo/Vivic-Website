@@ -1,6 +1,6 @@
 ---
 title: " Playing the Long Game: Keeping Newfoundland and Labrador’s Economy Diverse and Sustainable"
-pdf: "https://monitormag.ca/articles/playing-the-long-game-keeping-newfoundland-and-labradors-economy-diverse-and-sustainable/"
+pdf: "https://www.policyalternatives.ca/news-research/playing-the-long-game-keeping-newfoundland-and-labradors-economy-diverse-and-sustainable/"
 date: "2022-03"
 topic: "Provincial"
 type: "Authoring Engaging Pieces for a Broad Readership"
