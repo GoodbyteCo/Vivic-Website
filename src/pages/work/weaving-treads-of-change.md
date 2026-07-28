@@ -1,6 +1,6 @@
 ---
 title: "Weaving Threads of Change: Transformative Responses to Gender-Based Violence"
-pdf: "https://drive.google.com/file/d/1enBm7E0xkNpPnwUfA0UmDQB5zQQWYmxb/view"
+pdf: "/PDFS/WeavingThreadsOfChange-FinalVersion.pdf"
 date: "2026-03"
 topic: "Municipal"
 type: "Community-Based Research"
