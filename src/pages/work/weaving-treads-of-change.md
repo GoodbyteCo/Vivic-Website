@@ -1,10 +1,10 @@
 ---
 title: "Weaving Threads of Change: Transformative Responses to Gender-Based Violence"
-pdf: "/public/PDFS/WeavingThreadsOfChange-FinalReport.pdf"
+pdf: "/PDFS/WeavingThreadsOfChange-FinalReport.pdf"
 date: "2026-03"
 topic: "Municipal"
 type: "Community-Based Research"
-externalLink: True
+externalLink: False
 layout: ../../layouts/PDFViewer.astro
 ---
 
