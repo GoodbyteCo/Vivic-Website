@@ -1,6 +1,6 @@
 ---
 title: "“Exactly what I needed when I wanted to change”: The Use of Community Bail Supervision Programs to Reduce the Number of Women in Custody"
-pdfs: [{title: "Report", link: "/PDFS/BH-Final-Executive-Summary.pdf"},{title: "Leaflet", link: "/PDFS/BH-Final-Report.pdf"}]
+pdfs: [{title: "Report", link: "/PDFS/Report-EFSM-Bail-Program.pdf"},{title: "Printable Leaflet", link: "/PDFS/EFSM-Printable-Brochure-Colour.pdf"}]
 date: "2025-10"
 topic: "Provincial"
 type: "Community-Based Research"
